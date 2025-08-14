@@ -1,0 +1,10 @@
+relationship 317cdcd5-ed29-4199-a610-e3ac8cadfc74
+	joinOnDateBehavior: datePartOnly
+	fromColumn: colombianTolls.desde
+	toColumn: LocalDateTable_525e3d7e-de29-4c96-b1ed-8bc43f7d5aa1.Date
+
+relationship 8c56fb6b-e563-4b18-b523-64eb07e8bf46
+	joinOnDateBehavior: datePartOnly
+	fromColumn: colombianTolls.hasta
+	toColumn: LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303.Date
+
