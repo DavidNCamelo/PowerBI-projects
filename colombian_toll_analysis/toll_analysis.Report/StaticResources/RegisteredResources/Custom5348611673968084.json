@@ -1,0 +1,67 @@
+{
+  "name": "Custom",
+  "textClasses": {
+    "label": {
+      "fontFace": "Verdana",
+      "fontSize": 11
+    },
+    "callout": {
+      "fontFace": "Verdana"
+    },
+    "title": {
+      "fontFace": "Verdana"
+    },
+    "header": {
+      "fontFace": "Verdana"
+    }
+  },
+  "dataColors": [
+    "#D34545",
+    "#A23333",
+    "#F6814F",
+    "#6B007B",
+    "#E044A7",
+    "#744EC2",
+    "#D9B300",
+    "#D64550"
+  ],
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 30
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#BEA9A9"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#BEA9A9"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

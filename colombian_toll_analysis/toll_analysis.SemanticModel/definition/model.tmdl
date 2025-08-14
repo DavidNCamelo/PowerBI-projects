@@ -18,6 +18,7 @@ ref table colombianTolls
 ref table DateTableTemplate_4dfbd940-ba1c-4de6-9de9-d7506a562657
 ref table LocalDateTable_525e3d7e-de29-4c96-b1ed-8bc43f7d5aa1
 ref table LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303
+ref table metrics
 
 ref cultureInfo es-ES
 

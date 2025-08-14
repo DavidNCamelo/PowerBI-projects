@@ -1,0 +1,36 @@
+table metrics
+	lineageTag: 468317dd-044c-4ce2-9d1c-8118c228996c
+
+	measure total_traffic = SUM(colombianTolls[cantidadtrafico])
+		formatString: #,0
+		lineageTag: 7f39656e-2eb9-4cd3-a20e-2d647255d525
+
+	measure evaders = SUM(colombianTolls[cantidadevasores])
+		formatString: #,0
+		lineageTag: c9a66890-3be0-4838-8ebf-71d4c872396d
+
+	measure exempts = SUM(colombianTolls[cantidadexentos787])
+		formatString: #,0
+		lineageTag: abb13e89-16ef-45d0-b2f2-e426e217655f
+
+	measure paid_traffic = [total_traffic] - [evaders] - [exempts]
+		formatString: #,0
+		lineageTag: 25f60c97-27bd-406a-96a5-84e09d158259
+
+	column Column
+		formatString: 0
+		lineageTag: 96f653dc-7aec-41df-baac-92b4bc94dc4a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition metrics = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 02fdb4513fc742fb80232dd9e7e13352
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

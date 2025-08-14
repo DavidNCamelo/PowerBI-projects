@@ -1,7 +1,21 @@
 {
-  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}},\"customTheme\":{\"name\":\"Custom5348611673968084.json\",\"version\":{\"visual\":\"2.1.0\",\"report\":\"2.1.0\",\"page\":\"2.0.0\"},\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Custom5348611673968084.json",
+            "path": "Custom5348611673968084.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
     {
       "resourcePackage": {
         "disabled": false,
@@ -25,8 +39,72 @@
       "filters": "[]",
       "height": 720.00,
       "name": "c3664ba100344103640a",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3def02dc0d7693bb8430\",\"layouts\":[{\"id\":0,\"position\":{\"height\":79.81293842556506,\"width\":1226.1262665627435,\"x\":15.962587685113014,\"y\":12.969602494154325,\"z\":0,\"tabOrder\":2}}],\"singleVisualGroup\":{\"displayName\":\"Header\",\"groupMode\":0}}",
+          "height": 79.81,
+          "width": 1226.13,
+          "x": 15.96,
+          "y": 12.97,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"47448d3b34140e8d2bad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":372.4647122692726,\"y\":101.45494028230185,\"z\":2,\"width\":237.65472312703585,\"height\":108.40390879478828,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"metrics.evaders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"evaders\"},\"Name\":\"metrics.evaders\",\"NativeReferenceName\":\"evaders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"evaders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Evaders'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"21D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.40,
+          "width": 237.65,
+          "x": 372.46,
+          "y": 101.45,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"4d3f47a20856c68c52b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":6.983632112236945,\"z\":1000,\"width\":1226.1262665627435,\"height\":72.82930631332813,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Traffic Toll Analysis in Colombia's road ways\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"36pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Title'\"}}}}}]}},\"parentGroupName\":\"3def02dc0d7693bb8430\"}",
+          "filters": "[]",
+          "height": 72.83,
+          "width": 1226.13,
+          "x": 0.00,
+          "y": 6.98,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"71ef56e2c7bcdbce8ba0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1226.1262665627435,\"height\":78.81527669524552,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},\"parentGroupName\":\"3def02dc0d7693bb8430\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 78.82,
+          "width": 1226.13,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8700bdbe05dc00a73b16\",\"layouts\":[{\"id\":0,\"position\":{\"x\":914.484256243214,\"y\":101.45494028230185,\"z\":4,\"width\":326.60152008686214,\"height\":108.40390879478828,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"metrics.paid_traffic\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"paid_traffic\"},\"Name\":\"metrics.paid_traffic\",\"NativeReferenceName\":\"paid_traffic\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"paid_traffic\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Paid Traffic'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"21D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.40,
+          "width": 326.60,
+          "x": 914.48,
+          "y": 101.45,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"95b07845301692e15369\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.287730727470143,\"y\":101.45494028230185,\"z\":1,\"width\":346.05863192182414,\"height\":108.40390879478828,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"metrics.total_traffic\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"total_traffic\"},\"Name\":\"metrics.total_traffic\",\"NativeReferenceName\":\"Total Traffic\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"total_traffic\"}}}]},\"columnProperties\":{\"metrics.total_traffic\":{\"displayName\":\"Total Traffic\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Traffic'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"21D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.40,
+          "width": 346.06,
+          "x": 15.29,
+          "y": 101.45,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"e8dbcc3469ed8d755d90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":621.2377850162867,\"y\":101.45494028230185,\"z\":3,\"width\":282.128121606949,\"height\":108.40390879478828,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"metrics.exempts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"exempts\"},\"Name\":\"metrics.exempts\",\"NativeReferenceName\":\"exempts\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"exempts\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000000D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Exepmts'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"21D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.40,
+          "width": 282.13,
+          "x": 621.24,
+          "y": 101.45,
+          "z": 3.00
+        }
+      ],
       "width": 1280.00
     }
-  ]
+  ],
+  "theme": "Custom5348611673968084.json"
 }
