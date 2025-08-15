@@ -16,10 +16,10 @@ This is a feature characteristics available to activate through the option menu 
 Creat a Power BI project is so easy, you can open an white Power BI desktop file, even without any data, you go to Save As, and then when you're searching where save it, it saving options you need to select the option _Power BI Project Files (*.pbip) in Type. Once accepted you'll see a folder structured by the next way:
 
 ```
-|-- <project name>.SemanticModel: A collection of files and folders representing a Power BI semantic model.
-|-- <project name>.Report: A collection of files and folders representing a Power BI report.
-|-- .gitignore: Specifies intentionally untracked files that Git should ignore for Power BI project files, such as cache.abf and localSettings.json.
-|-- <project name>.pbip: the desktop file ready to edit and work for your project.
+├── <project name>.SemanticModel: A collection of files and folders representing a Power BI semantic model.
+├── <project name>.Report: A collection of files and folders representing a Power BI report.
+├── .gitignore: Specifies intentionally untracked files that Git should ignore for Power BI project files, such as cache.abf and localSettings.json.
+├── <project name>.pbip: the desktop file ready to edit and work for your project.
 ```
 
 Once all this elements are configured, you're ready to work and combine your skills in Power BI with git.
