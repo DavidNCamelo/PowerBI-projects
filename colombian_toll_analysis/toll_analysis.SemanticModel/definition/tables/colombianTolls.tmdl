@@ -98,13 +98,63 @@ table colombianTolls
 
 	partition colombianTolls = m
 		mode: import
-		source =
+		source = ```
 				let
-				    Origen = R.Execute("# Librerías necesarias#(lf)library(httr)#(lf)library(jsonlite)#(lf)library(dplyr)#(lf)library(lubridate)#(lf)library(purrr)#(lf)#(lf)# URL base#(lf)url <- ""https://www.datos.gov.co/resource/8yi9-t44c.json""#(lf)#(lf)# Parámetros iniciales#(lf)limit <- 1000#(lf)offset <- 0#(lf)all_data <- list()#(lf)#(lf)repeat {#(lf)  # Hacer la solicitud GET#(lf)  res <- GET(url, query = list(""$limit"" = limit, ""$offset"" = offset))#(lf)  #(lf)  # Verificar código de estado#(lf)  if (status_code(res) != 200) {#(lf)    message(""Error en la solicitud: "", status_code(res))#(lf)    break#(lf)  }#(lf)  #(lf)  # Parsear el contenido como lista#(lf)  data <- fromJSON(content(res, ""text"", encoding = ""UTF-8""), flatten = TRUE)#(lf)  #(lf)  # Salir del bucle si no hay datos#(lf)  if (length(data) == 0) {#(lf)    break#(lf)  }#(lf)  #(lf)  # Agregar al acumulador#(lf)  all_data <- append(all_data, list(data))#(lf)  #(lf)  # Incrementar offset#(lf)  offset <- offset + limit#(lf)}#(lf)#(lf)# Combinar todos los bloques de datos en un solo data frame#(lf)df <- bind_rows(all_data)#(lf)#(lf)# Convertir las columnas de fecha (si existen)#(lf)if (""desde"" %in% names(df)) {#(lf)  df$desde <- as_date(df$desde)#(lf)}#(lf)if (""hasta"" %in% names(df)) {#(lf)  df$hasta <- as_date(df$hasta)#(lf)}"),
+				    Origen = R.Execute("
+				        # Librerías necesarias
+				        #(lf)library(httr)
+				        #(lf)library(jsonlite)
+				        #(lf)library(dplyr)
+				        #(lf)library(lubridate)
+				        #(lf)library(purrr)
+				        #(lf)
+				        #(lf)# URL base
+				        #(lf)url <- ""https://www.datos.gov.co/resource/8yi9-t44c.json""
+				        #(lf)
+				        #(lf)# Parámetros iniciales
+				        #(lf)limit <- 1000
+				        #(lf)offset <- 0
+				        #(lf)all_data <- list()
+				        #(lf)
+				        #(lf)repeat {
+				            #(lf)  # Hacer la solicitud GET#(lf)  res <- GET(url, query = list(""$limit"" = limit, ""$offset"" = offset))
+				            #(lf)  
+				            #(lf)  # Verificar código de estado
+				            #(lf)  if (status_code(res) != 200) {
+				            #(lf)    message(""Error en la solicitud: "", status_code(res))
+				            #(lf)    break
+				            #(lf)  }
+				            #(lf)  
+				            #(lf)  # Parsear el contenido como lista
+				            #(lf)  data <- fromJSON(content(res, ""text"", encoding = ""UTF-8""), flatten = TRUE)
+				            #(lf)  
+				            #(lf)  # Salir del bucle si no hay datos
+				            #(lf)  if (length(data) == 0) {
+				            #(lf)    break
+				            #(lf)  }
+				            #(lf)  
+				            #(lf)  # Agregar al acumulador
+				            #(lf)  all_data <- append(all_data, list(data))
+				            #(lf)  
+				            #(lf)  # Incrementar offset
+				            #(lf)  offset <- offset + limit
+				            #(lf)}
+				            #(lf)
+				            #(lf)# Combinar todos los bloques de datos en un solo data frame
+				            #(lf)df <- bind_rows(all_data)
+				            #(lf)
+				            #(lf)# Convertir las columnas de fecha (si existen)
+				            #(lf)if (""desde"" %in% names(df)) {
+				            #(lf)  df$desde <- as_date(df$desde)
+				            #(lf)}
+				            #(lf)if (""hasta"" %in% names(df)) {
+				            #(lf)  df$hasta <- as_date(df$hasta)
+				            #(lf)}"),
 				    df1 = Origen{[Name="df"]}[Value],
 				    #"Tipo cambiado" = Table.TransformColumnTypes(df1,{{"valortarifa", Currency.Type}, {"cantidadtrafico", Int64.Type}, {"cantidadevasores", Int64.Type}, {"cantidadexentos787", Int64.Type}})
 				in
 				    #"Tipo cambiado"
+				```
 
 	annotation PBI_NavigationStepName = Navegación
 
