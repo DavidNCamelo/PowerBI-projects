@@ -1,0 +1,198 @@
+table DIM_Calendar
+	lineageTag: b9fc2868-87e5-4f90-9754-c65fba464bf5
+
+	column Date
+		formatString: General Date
+		lineageTag: 73a6364a-59bb-481e-be4f-416986c02658
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: f04e74fb-bc18-4913-aa69-fc49d412d60e
+			defaultHierarchy: LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateSK
+		lineageTag: 3007fd6e-8eb3-4007-b0b4-4c234ba7bb02
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DateSK]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Year
+		formatString: 0
+		lineageTag: cb15e575-3306-4636-be80-0dff30604366
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Quarter
+		formatString: 0
+		lineageTag: 77b75328-12be-4700-882b-e3815daa8cd6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Month
+		formatString: 0
+		lineageTag: 3772ea45-28de-40ca-b76a-27fdfa448ef8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Day
+		formatString: 0
+		lineageTag: df24b724-5746-4c0f-9f0c-5196068e3363
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: fdc0bb7d-132b-40ac-9047-22aafe40c0e0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 83cc858a-b6d2-4665-824b-7f29696df0c6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShortMonth
+		lineageTag: 3359398f-703e-41e2-84be-7b5e5a96dee8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ShortMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #WeekDay
+		formatString: 0
+		lineageTag: 77f5afea-2a4b-4906-957c-3689f41551cd
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#WeekDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #WeekYear
+		formatString: 0
+		lineageTag: c25a9ac2-cbee-4b38-9dbf-3238e65493db
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#WeekYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekClosing
+		formatString: General Date
+		lineageTag: f3847620-4c0f-4a76-9eae-154d5b4efe63
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekClosing]
+
+		variation Variación
+			isDefault
+			relationship: 1862970d-b0b4-4905-9bfe-6aa30844d248
+			defaultHierarchy: LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		lineageTag: 997a2e3e-295f-4f6a-8ce8-97fd2c7cd555
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShortDay
+		lineageTag: f61c354a-5bf2-47d8-b3cf-2149bc2cc710
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ShortDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearQuarter
+		lineageTag: 0d8c471c-d372-426c-84a5-4c400f2d13fb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year#Month
+		lineageTag: eeafde3b-af8f-40f2-91ce-5958d5430425
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year#Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShortYearMonth
+		lineageTag: ba298858-b506-4c7e-91e2-91fc6bc51529
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ShortYearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_Calendar = calculated
+		mode: import
+		source =
+				ADDCOLUMNS (
+				
+				CALENDAR (MIN(colombianTolls[desde]), MAX(colombianTolls[hasta])),
+				
+				"DateSK", FORMAT ( [Date], "YYYYMMDD" ),
+				
+				"#Year", YEAR ( [Date] ),
+				
+				"#Quarter", QUARTER ( [Date] ),
+				
+				"#Month", MONTH ( [Date] ),
+				
+				"#Day", DAY ( [Date] ),
+				
+				"Quarter", "Q" & FORMAT ( [Date], "Q" ),
+				
+				"Month", FORMAT ( [Date], "MMMM" ),
+				
+				"ShortMonth", FORMAT ( [Date], "MMM" ),
+				
+				"#WeekDay", WEEKDAY ( [Date],2 ),
+				
+				"#WeekYear", WEEKNUM ( [Date],2 ),
+				
+				"WeekClosing", ( [Date] + 7 - WEEKDAY( [Date],2 ) ),
+				
+				"Day", FORMAT ( [Date], "DDDD" ),
+				
+				"ShortDay", FORMAT ( [Date], "DDD" ),
+				
+				"YearQuarter", FORMAT ( [Date], "YYYY" ) & "/Q" & FORMAT ( [Date], "Q" ),
+				
+				"Year#Month", FORMAT ( [Date], "YYYY/MM" ),
+				
+				"ShortYearMonth", FORMAT ( [Date], "YYYY/mmm" ) )
+
+	annotation PBI_Id = 825eeb402fbe43afa6d3a3f10d0f09c4
+

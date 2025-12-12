@@ -27,15 +27,13 @@ table colombianTolls
 
 	column desde
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 55279556-be70-4611-a422-726c1569bbe7
 		summarizeBy: none
 		sourceColumn: desde
 
-		variation Variación
-			isDefault
-			relationship: 317cdcd5-ed29-4199-a610-e3ac8cadfc74
-			defaultHierarchy: LocalDateTable_525e3d7e-de29-4c96-b1ed-8bc43f7d5aa1.'Jerarquía de fechas'
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -43,6 +41,7 @@ table colombianTolls
 
 	column hasta
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 32421407-64e5-4537-a78f-18d27e15ee3c
 		summarizeBy: none
@@ -52,6 +51,8 @@ table colombianTolls
 			isDefault
 			relationship: 8c56fb6b-e563-4b18-b523-64eb07e8bf46
 			defaultHierarchy: LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

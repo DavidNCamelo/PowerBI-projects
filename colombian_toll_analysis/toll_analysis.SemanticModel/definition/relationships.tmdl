@@ -1,10 +1,19 @@
-relationship 317cdcd5-ed29-4199-a610-e3ac8cadfc74
-	joinOnDateBehavior: datePartOnly
-	fromColumn: colombianTolls.desde
-	toColumn: LocalDateTable_525e3d7e-de29-4c96-b1ed-8bc43f7d5aa1.Date
-
 relationship 8c56fb6b-e563-4b18-b523-64eb07e8bf46
 	joinOnDateBehavior: datePartOnly
 	fromColumn: colombianTolls.hasta
 	toColumn: LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303.Date
+
+relationship f04e74fb-bc18-4913-aa69-fc49d412d60e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_Calendar.Date
+	toColumn: LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f.Date
+
+relationship 1862970d-b0b4-4905-9bfe-6aa30844d248
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_Calendar.WeekClosing
+	toColumn: LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682.Date
+
+relationship 7cee7a26-4935-c1bb-e740-7c076eded910
+	fromColumn: colombianTolls.desde
+	toColumn: DIM_Calendar.Date
 
