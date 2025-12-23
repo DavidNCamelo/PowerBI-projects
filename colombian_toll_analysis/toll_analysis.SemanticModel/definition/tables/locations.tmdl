@@ -1,0 +1,160 @@
+table locations
+	lineageTag: e9741647-b3d3-488c-9a68-343ffe6c6337
+
+	column nombre_peaje
+		dataType: string
+		lineageTag: 3017abbe-7510-4062-bd3f-f783aef80877
+		summarizeBy: none
+		sourceColumn: nombre_peaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicaci_n
+		dataType: string
+		lineageTag: e3cc926a-63a6-492e-9154-75286d8d37b4
+		summarizeBy: none
+		sourceColumn: ubicaci_n
+
+		annotation SummarizationSetBy = Automatic
+
+	column sector
+		dataType: string
+		lineageTag: ebcac17d-3524-448e-ac6a-376ba2281fa8
+		summarizeBy: none
+		sourceColumn: sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentido
+		dataType: string
+		lineageTag: ddb54448-bfb4-4ae6-998b-c7c293ae4ca1
+		summarizeBy: none
+		sourceColumn: sentido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'url_foto.url'
+		dataType: string
+		lineageTag: 181bc0df-a631-4584-a68e-7a36cdcefd3e
+		summarizeBy: none
+		sourceColumn: url_foto.url
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsable
+		dataType: string
+		lineageTag: 200da057-ec04-4601-8dfa-7b42c489be02
+		summarizeBy: none
+		sourceColumn: responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	column territorial
+		dataType: string
+		lineageTag: 1357b1bc-0f7f-4e2d-9314-04f7f62e6a2b
+		summarizeBy: none
+		sourceColumn: territorial
+
+		annotation SummarizationSetBy = Automatic
+
+	column poste_de_referencia_pr
+		dataType: int64
+		formatString: 0
+		lineageTag: 1667da91-11af-40c5-a656-6d5961141c07
+		summarizeBy: none
+		sourceColumn: poste_de_referencia_pr
+
+		annotation SummarizationSetBy = Automatic
+
+	column distancia_pr
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d2e1c4b-add0-41f3-896f-360156b14227
+		summarizeBy: none
+		sourceColumn: distancia_pr
+
+		annotation SummarizationSetBy = Automatic
+
+	column longitud
+		dataType: double
+		lineageTag: d5984f6c-4085-43a3-9976-f642665fb765
+		summarizeBy: none
+		sourceColumn: longitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column latitud
+		dataType: double
+		lineageTag: 7555eeae-db3a-40c2-9da0-1837df2370c6
+		summarizeBy: none
+		sourceColumn: latitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column c_digo_peaje
+		dataType: string
+		lineageTag: 6df9769d-b43e-4af4-a004-ab75b8e9fc42
+		summarizeBy: none
+		sourceColumn: c_digo_peaje
+
+		annotation SummarizationSetBy = Automatic
+
+	partition locations = m
+		mode: import
+		source =
+				let
+				    Origen = R.Execute("
+				        # Required Libraries
+				            library(httr)
+				            library(jsonlite)
+				            library(dplyr)
+				            library(lubridate)
+				            library(purrr)
+				            library(tidyr)
+				
+				            # URL base
+				            url <- 'https://www.datos.gov.co/resource/68qj-5xux.json'
+				
+				            res <- GET(url)
+				
+				
+				            # JSON
+				            ubication_data <- fromJSON(
+				            content(res, 'text', encoding = 'UTF-8'),
+				            flatten = TRUE
+				            )
+				
+				            ubication_data <- ubication_data |>
+				            select(
+				                c_digo_peaje,
+				                nombre_peaje,
+				                ubicaci_n,
+				                sector,
+				                sentido,
+				                url_foto.url,
+				                responsable,
+				                territorial,
+				                poste_de_referencia_pr,
+				                distancia_pr,
+				                point.coordinates
+				            ) |>
+				            mutate(
+				                longitud = map_dbl(point.coordinates, ~ .x[1]),
+				                latitud = map_dbl(point.coordinates, ~ .x[2])
+				            ) |>
+				            select(-point.coordinates)
+				            "),
+				    df1 = Origen{[Name="ubication_data"]}[Value],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(df1,{{"distancia_pr", Int64.Type}, {"poste_de_referencia_pr", Int64.Type}}),
+				    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado", {"nombre_peaje"})
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

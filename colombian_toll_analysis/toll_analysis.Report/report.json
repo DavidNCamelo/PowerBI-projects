@@ -34,6 +34,27 @@
   "sections": [
     {
       "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "578d49b36e7fc41ba80d",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"05beaa9be4b4bb00a17c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.703652653342523,\"y\":0,\"z\":0,\"width\":668.6698828394211,\"height\":557.5189524465886,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"azureMap\",\"projections\":{\"X\":[{\"queryRef\":\"locations.longitud\"}],\"Y\":[{\"queryRef\":\"locations.latitud\"}],\"Size\":[{\"queryRef\":\"metrics.total_traffic\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"locations\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"metrics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"longitud\"},\"Name\":\"locations.longitud\",\"NativeReferenceName\":\"longitud\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"latitud\"},\"Name\":\"locations.latitud\",\"NativeReferenceName\":\"latitud\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"total_traffic\"},\"Name\":\"metrics.total_traffic\",\"NativeReferenceName\":\"total_traffic\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"defaultStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}},\"showStylePicker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showNavigationControls\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showSelectionControl\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbleLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"minBubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"maxRadius\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}},\"bubbleStrokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"autoStrokeColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"layerPosition\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 557.52,
+          "width": 668.67,
+          "x": 9.70,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
       "displayName": "Página 1",
       "displayOption": 1,
       "filters": "[]",
@@ -75,7 +96,7 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"510e2679d3993b4aa5aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":475.855699439472,\"y\":0.41463553440542,\"z\":1500,\"width\":190.44452271926735,\"height\":63.48150757308912}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"colombianTolls.peaje\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"colombianTolls\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"peaje\"},\"Name\":\"colombianTolls.peaje\",\"NativeReferenceName\":\"Peaje\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"peaje\"}}}]},\"columnProperties\":{\"colombianTolls.peaje\":{\"displayName\":\"Peaje\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Toll'\"}}}}}]}},\"parentGroupName\":\"9f49a430456751dee046\"}",
+          "config": "{\"name\":\"510e2679d3993b4aa5aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":475.855699439472,\"y\":0.41463553440542,\"z\":1500,\"width\":190.44452271926735,\"height\":63.48150757308912,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"colombianTolls.peaje\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"colombianTolls\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"peaje\"},\"Name\":\"colombianTolls.peaje\",\"NativeReferenceName\":\"Peaje\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"peaje\"}}}]},\"columnProperties\":{\"colombianTolls.peaje\":{\"displayName\":\"Peaje\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Toll'\"}}}}}]}},\"parentGroupName\":\"9f49a430456751dee046\"}",
           "filters": "[]",
           "height": 63.48,
           "width": 190.44,

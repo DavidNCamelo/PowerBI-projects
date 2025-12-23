@@ -10,10 +10,11 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 340,
+            "y": 247
           },
           "nodeIndex": "colombianTolls",
+          "nodeLineageTag": "a6cd3b0e-7e55-4556-a219-2fbff2a4cd6c",
           "size": {
             "height": 296,
             "width": 234
@@ -22,8 +23,8 @@
         },
         {
           "location": {
-            "x": 353,
-            "y": 375
+            "x": 0,
+            "y": 211
           },
           "nodeIndex": "metrics",
           "nodeLineageTag": "468317dd-044c-4ce2-9d1c-8118c228996c",
@@ -42,6 +43,19 @@
           "nodeLineageTag": "b9fc2868-87e5-4f90-9754-c65fba464bf5",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 637,
+            "y": 137.5
+          },
+          "nodeIndex": "locations",
+          "nodeLineageTag": "e9741647-b3d3-488c-9a68-343ffe6c6337",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

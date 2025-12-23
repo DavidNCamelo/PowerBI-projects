@@ -17,3 +17,7 @@ relationship 7cee7a26-4935-c1bb-e740-7c076eded910
 	fromColumn: colombianTolls.desde
 	toColumn: DIM_Calendar.Date
 
+relationship 31d50c88-c850-ac24-5328-24920db7698a
+	fromColumn: colombianTolls.peaje
+	toColumn: locations.nombre_peaje
+
