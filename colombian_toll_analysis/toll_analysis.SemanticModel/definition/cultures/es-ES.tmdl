@@ -2,8 +2,4902 @@ cultureInfo es-ES
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "colombian_toll": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colombian toll": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "colombianTolls": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "toll": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colombian peal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colombian ring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colombian dingdong": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colombian ding-dong": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colombian clang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colombian ding-a-ling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "peal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dingdong": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ding-dong": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.idpeaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "idpeaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "idpeaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.peaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "peaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "peaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.categoriatarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "categoriatarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoriatarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.desde": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "desde"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "desde": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "colombian_toll.hasta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "hasta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "hasta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "colombian_toll.hasta.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "VariationSource": "hasta",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.hasta.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "VariationSource": "hasta",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hasta año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.hasta.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "VariationSource": "hasta",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hasta trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.hasta.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "VariationSource": "hasta",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hasta me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.hasta.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "VariationSource": "hasta",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hasta día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.valortarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "valortarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valortarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.cantidadtrafico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "cantidadtrafico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadtrafico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.cantidadevasore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "cantidadevasores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadevasore": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_toll.cantidadexentos_787": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTolls",
+			          "ConceptualProperty": "cantidadexentos787"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadexentos 787": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cantidadexento 787": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cantidadexentos787": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "metrics": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metrics": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.total_traffic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "total_traffic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total traffic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_traffic": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "traffic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate traffic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall traffic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total transportation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "total movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "transportation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "total passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "total travel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.evaders": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "evaders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "evaders": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.exempts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "exempts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "exempts": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.paid_traffic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "paid_traffic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "paid traffic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "paid_traffic": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "traffic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "paid circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "paid transportation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "paid movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "transportation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "paid passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "paid travel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "paid transport": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "paid transfer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DIM calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DIM_Calendar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "DIM_calendar.date.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.date_SK": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "DateSK"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date SK": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DateSK": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "SK": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moment sk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period sk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "# yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "no year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "DIM_calendar.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "# qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "no quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "# mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "no month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.quarter1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.month1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.short_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "ShortMonth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "short month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ShortMonth": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "short mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.WeekDay": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#WeekDay"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#WeekDay": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no weekday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num weekday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number weekday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.WeekYear": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "#WeekYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#WeekYear": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no weekyear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num weekyear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number weekyear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.week_closing": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "WeekClosing"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week closing": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WeekClosing": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "closing": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "final": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "concluding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "finishing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ultimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dying": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "terminating": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "departing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "WeekClosing",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.week_closing.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "WeekClosing",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week closing año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.week_closing.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "WeekClosing",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week closing trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.week_closing.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "WeekClosing",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week closing me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.week_closing.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "VariationSource": "WeekClosing",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week closing día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.day1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.short_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "ShortDay"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "short day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ShortDay": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.year_quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "YearQuarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "YearQuarter": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "yr quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.yearmonth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "Year#Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year#month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year# mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr #month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "year no month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "year num month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "year number month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "DIM_calendar.short_year_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DIM_Calendar",
+			          "ConceptualProperty": "ShortYearMonth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "short year month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ShortYearMonth": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "short year mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "year mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "short yr month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yr month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "location": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "placement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "venue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "setting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "spot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "location.nombre_peaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "nombre_peaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre peaje": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_peaje": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Toll": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "location.ubicaci_n": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "ubicaci_n"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ubicaci n": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicaci_n": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "location.sector": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "sector"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sector": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "location.sentido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "sentido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sentido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "location.url_foto_url": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "url_foto.url"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "url foto url": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "url_foto.url": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "url foto website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "url foto site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "website foto url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "url foto web address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        },
+			        {
+			          "site foto url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "web address foto url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "location.responsable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "responsable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "responsable": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "location.territorial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "territorial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "territorial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "regional": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "local": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "national": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "international": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "defensive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "possessive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "location.poste_de_referencia_pr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "poste_de_referencia_pr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "poste de referencia pr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "poste_de_referencia_pr": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "location.distancia_pr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "distancia_pr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distancia pr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "distancia_pr": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "location.longitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "longitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "location.latitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "latitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "location.c_digo_peaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "locations",
+			          "ConceptualProperty": "c_digo_peaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "c digo peaje": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "c_digo_peaje": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "colombian_toll_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.valortarifa": {
+			          "Target": {
+			            "Entity": "colombian_toll.valortarifa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "colombian_toll.valortarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valortarifa_indicates_how_expensive_colombian_tolls_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.valortarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_valortarifas"
+			        }
+			      ]
+			    },
+			    "colombian_toll_in_location": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "location"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_are_in_locations"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_idpeaje": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.idpeaje": {
+			          "Target": {
+			            "Entity": "colombian_toll.idpeaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.idpeaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_idpeajes"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_categoriatarifa": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.categoriatarifa": {
+			          "Target": {
+			            "Entity": "colombian_toll.categoriatarifa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.categoriatarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_categoriatarifas"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_cantidadtrafico": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.cantidadtrafico": {
+			          "Target": {
+			            "Entity": "colombian_toll.cantidadtrafico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.cantidadtrafico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_cantidadtraficos"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_cantidadevasore": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.cantidadevasore": {
+			          "Target": {
+			            "Entity": "colombian_toll.cantidadevasore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.cantidadevasore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_cantidadevasores"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_cantidadexentos_787": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "colombian_toll.cantidadexentos_787": {
+			          "Target": {
+			            "Entity": "colombian_toll.cantidadexentos_787"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll.cantidadexentos_787"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_cantidadexentos_787"
+			        }
+			      ]
+			    },
+			    "metrics_has_column": {
+			      "Binding": {
+			        "ConceptualEntity": "metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.column": {
+			          "Target": {
+			            "Entity": "metrics.column"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.column"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_columns"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_metrics_total_traffic": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "metrics.total_traffic": {
+			          "Target": {
+			            "Entity": "metrics.total_traffic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "metrics.total_traffic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_total_traffic"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_metrics_evaders": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "metrics.evaders": {
+			          "Target": {
+			            "Entity": "metrics.evaders"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "metrics.evaders"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_evaders"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_metrics_exempts": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "metrics.exempts": {
+			          "Target": {
+			            "Entity": "metrics.exempts"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "metrics.exempts"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_exempts"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_metrics_paid_traffic": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "metrics.paid_traffic": {
+			          "Target": {
+			            "Entity": "metrics.paid_traffic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "metrics.paid_traffic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_paid_traffic"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.date": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_date_SK": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.date_SK": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date_SK"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date_SK"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_date_SK"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.year": {
+			          "Target": {
+			            "Entity": "DIM_calendar.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_years"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.quarter": {
+			          "Target": {
+			            "Entity": "DIM_calendar.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_quarters"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_months"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.day": {
+			          "Target": {
+			            "Entity": "DIM_calendar.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_days"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_quarter1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.quarter1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.quarter1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.quarter1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_quarters1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_month1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.month1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.month1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.month1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_months1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.short_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_short_months"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_WeekDay": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.WeekDay": {
+			          "Target": {
+			            "Entity": "DIM_calendar.WeekDay"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.WeekDay"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_WeekDays"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_WeekYear": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.WeekYear": {
+			          "Target": {
+			            "Entity": "DIM_calendar.WeekYear"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.WeekYear"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_WeekYears"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_week_closing": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.week_closing": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_week_closing"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_day1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.day1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.day1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.day1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_days1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_day": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.short_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_short_days"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_year_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.year_quarter": {
+			          "Target": {
+			            "Entity": "DIM_calendar.year_quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.year_quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_year_quarters"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_yearmonth": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.yearmonth": {
+			          "Target": {
+			            "Entity": "DIM_calendar.yearmonth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.yearmonth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_yearmonths"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_year_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_year_month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_year_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.short_year_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_short_year_months"
+			        }
+			      ]
+			    },
+			    "location_has_nombre_peaje": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.nombre_peaje": {
+			          "Target": {
+			            "Entity": "location.nombre_peaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.nombre_peaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_nombre_peajes"
+			        }
+			      ]
+			    },
+			    "location_has_ubicaci_n": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.ubicaci_n": {
+			          "Target": {
+			            "Entity": "location.ubicaci_n"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.ubicaci_n"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_ubicaci_Ns"
+			        }
+			      ]
+			    },
+			    "location_has_sector": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.sector": {
+			          "Target": {
+			            "Entity": "location.sector"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.sector"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_sectors"
+			        }
+			      ]
+			    },
+			    "location_has_sentido": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.sentido": {
+			          "Target": {
+			            "Entity": "location.sentido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.sentido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_sentidos"
+			        }
+			      ]
+			    },
+			    "location_has_url_foto_url": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.url_foto_url": {
+			          "Target": {
+			            "Entity": "location.url_foto_url"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.url_foto_url"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_url_foto_urls"
+			        }
+			      ]
+			    },
+			    "location_has_responsable": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.responsable": {
+			          "Target": {
+			            "Entity": "location.responsable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.responsable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_responsables"
+			        }
+			      ]
+			    },
+			    "location_has_territorial": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.territorial": {
+			          "Target": {
+			            "Entity": "location.territorial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.territorial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_territorials"
+			        }
+			      ]
+			    },
+			    "location_has_poste_de_referencia_pr": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.poste_de_referencia_pr": {
+			          "Target": {
+			            "Entity": "location.poste_de_referencia_pr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.poste_de_referencia_pr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_poste_de_referencia_pr"
+			        }
+			      ]
+			    },
+			    "location_has_distancia_pr": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.distancia_pr": {
+			          "Target": {
+			            "Entity": "location.distancia_pr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.distancia_pr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_distancia_pr"
+			        }
+			      ]
+			    },
+			    "location_has_longitud": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.longitud": {
+			          "Target": {
+			            "Entity": "location.longitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.longitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_longituds"
+			        }
+			      ]
+			    },
+			    "location_has_latitud": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.latitud": {
+			          "Target": {
+			            "Entity": "location.latitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.latitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_latituds"
+			        }
+			      ]
+			    },
+			    "location_has_c_digo_peaje": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.c_digo_peaje": {
+			          "Target": {
+			            "Entity": "location.c_digo_peaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.c_digo_peaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_c_digo_peajes"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_DIM_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_DIM_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_colombian_tolls"
+			        }
+			      ]
+			    },
+			    "colombian_toll_has_location": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTolls"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_toll": {
+			          "Target": {
+			            "Entity": "colombian_toll"
+			          }
+			        },
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_toll"
+			            },
+			            "Object": {
+			              "Role": "location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_have_locations"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "colombian_toll"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_colombian_tolls"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date"
+			          }
+			        },
+			        "DIM_calendar.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_jerarquía_de_fecha_has_DIM_calendar_date_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.date.año": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_jerarquía_de_fecha_has_DIM_calendar_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.date.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_jerarquía_de_fecha_has_DIM_calendar_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.date.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_jerarquía_de_fecha_has_DIM_calendar_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.date.día": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_año_has_DIM_calendar_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.año": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.año"
+			          }
+			        },
+			        "DIM_calendar.date.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.año"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_trimestre_has_DIM_calendar_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.trimestre"
+			          }
+			        },
+			        "DIM_calendar.date.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.me"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_date_me_has_DIM_calendar_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.date.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.me"
+			          }
+			        },
+			        "DIM_calendar.date.día": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.me"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.día"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.date.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing"
+			          }
+			        },
+			        "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "week_closing_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_jerarquía_de_fecha_has_DIM_calendar_week_closing_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.week_closing.año": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_jerarquía_de_fecha_has_DIM_calendar_week_closing_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.week_closing.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_jerarquía_de_fecha_has_DIM_calendar_week_closing_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.week_closing.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_jerarquía_de_fecha_has_DIM_calendar_week_closing_día": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			          }
+			        },
+			        "DIM_calendar.week_closing.día": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_año_has_DIM_calendar_week_closing_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.año": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.año"
+			          }
+			        },
+			        "DIM_calendar.week_closing.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.año"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_trimestre_has_DIM_calendar_week_closing_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.trimestre": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.trimestre"
+			          }
+			        },
+			        "DIM_calendar.week_closing.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_week_closing_me_has_DIM_calendar_week_closing_día": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar.week_closing.me": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.me"
+			          }
+			        },
+			        "DIM_calendar.week_closing.día": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.día"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "DIM_calendar.week_closing.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 

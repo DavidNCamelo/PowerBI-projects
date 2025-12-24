@@ -150,9 +150,15 @@ table locations
 				            "),
 				    df1 = Origen{[Name="ubication_data"]}[Value],
 				    #"Tipo cambiado" = Table.TransformColumnTypes(df1,{{"distancia_pr", Int64.Type}, {"poste_de_referencia_pr", Int64.Type}}),
-				    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado", {"nombre_peaje"})
+				    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado", {"nombre_peaje"}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Duplicados quitados","ABURRA","ABURRÁ",Replacer.ReplaceText,{"nombre_peaje"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","SANTAGUEDA","SANTÁGUEDA",Replacer.ReplaceText,{"nombre_peaje"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","CAIQUEROS","CAIQUERO",Replacer.ReplaceText,{"nombre_peaje"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","CHUSACÁ","CHUSACA",Replacer.ReplaceText,{"nombre_peaje"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","PASO DE LA TORRE","PASO LA TORRE",Replacer.ReplaceText,{"nombre_peaje"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","PAVAS (TRINIDAD I)","PAVAS",Replacer.ReplaceText,{"nombre_peaje"})
 				in
-				    #"Duplicados quitados"
+				    #"Valor reemplazado5"
 
 	annotation PBI_NavigationStepName = Navegación
 
