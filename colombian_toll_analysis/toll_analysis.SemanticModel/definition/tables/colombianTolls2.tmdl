@@ -1,0 +1,218 @@
+table colombianTolls2
+	lineageTag: 6ad83ad1-9bd5-4262-bdc8-964adac444bd
+
+	column peaje
+		dataType: string
+		lineageTag: 05445a42-c58b-4334-b679-0117d4454c79
+		summarizeBy: none
+		sourceColumn: peaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 88739878-d595-4b40-b63d-80ce5ec17032
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: b9058a2f-f4ba-4929-a310-54aa2a47edb7
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_estacion
+		dataType: string
+		lineageTag: 97330ea5-8c8e-43c3-a8d3-6ffb435c9e54
+		summarizeBy: none
+		sourceColumn: codigo_estacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: 9f53203f-a4ba-4e02-ade6-54fcfdac7e6d
+		summarizeBy: none
+		sourceColumn: departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: a0d90b8e-dca3-48d2-b393-c190ade41d4a
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidadtrafico
+		dataType: double
+		lineageTag: eb603ba4-127b-4923-a46d-e7ad1a3f42a9
+		summarizeBy: sum
+		sourceColumn: cantidadtrafico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cantidadevasores
+		dataType: double
+		lineageTag: 47d51af9-065a-4f8c-a678-04f5b6b8a1c7
+		summarizeBy: sum
+		sourceColumn: cantidadevasores
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cantidadexentos787
+		dataType: double
+		lineageTag: 222a7e25-8e02-4261-92d7-d3358c0ebe12
+		summarizeBy: sum
+		sourceColumn: cantidadexentos787
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column desde
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 303d866e-a57c-4bf7-aebd-184996290c3a
+		summarizeBy: none
+		sourceColumn: desde
+
+		variation Variación
+			isDefault
+			relationship: 6e17b4f9-1766-4c88-8ac8-eccb1983e4da
+			defaultHierarchy: LocalDateTable_a270d3c4-a58a-4efe-bd41-b9c569870600.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition colombianTolls2 = m
+		mode: import
+		source =
+				let
+				    Origen = R.Execute("
+				        library(httr)
+				        library(jsonlite)
+				        library(dplyr)
+				        library(tidyr)
+				        library(lubridate)
+				        library(purrr)
+				
+				        # URL base (nuevo recurso)
+				        url <- 'https://www.datos.gov.co/resource/tcfu-jngt.json'
+				
+				        # Parámetros de paginación
+				        limit <- 1000
+				        offset <- 0
+				        all_data <- list()
+				
+				        repeat {
+				        # Solicitud GET con paginación
+				        res <- GET(
+				            url,
+				            query = list(
+				            '$limit' = limit,
+				            '$offset' = offset
+				            )
+				        )
+				
+				        # Verificar estado
+				        if (status_code(res) != 200) {
+				            message('Error en la solicitud: ', status_code(res))
+				            break
+				        }
+				
+				        # Parsear JSON
+				        data <- fromJSON(
+				            content(res, 'text', encoding = 'UTF-8'),
+				            flatten = TRUE
+				        )
+				
+				        # Salir si no hay más registros
+				        if (length(data) == 0) {
+				            break
+				        }
+				
+				        # Acumular
+				        all_data <- append(all_data, list(data))
+				
+				        # Avanzar offset
+				        offset <- offset + limit
+				        }
+				
+				        # Unir todo en un solo data frame
+				        df1 <- bind_rows(all_data)
+				
+				        # Asegurar que 'anio' sea numérico
+				        if ('anio' %in% names(df1)) {
+				        df1$anio <- as.integer(df1$anio)
+				        }
+				        df1 <- df1 |>
+				        select(
+				            estacion_de_peaje,
+				            anio,
+				            mes,
+				            codigo_estacion,
+				            departamento,
+				            starts_with(c('trafico', 'evasores', 'exentos'))
+				        )
+				
+				        # deleting columns
+				        df2 <- df1 |>
+				        select(
+				            -c(
+				            ends_with('_total'),
+				            'exentos_emergencia_vial_cat',
+				            'exentos_res0000015_koran',
+				            'exentos_emergencia_vial_cat_1',
+				            'exentos_res0000015_koran_1'
+				            )
+				        )
+				
+				        # Pivoting
+				
+				        df2 <- df2 |>
+				        pivot_longer(
+				            cols = c(
+				            starts_with('trafico_efectivo_'),
+				            starts_with('evasores_unidad_'),
+				            starts_with('exentos_ley_787_2002_')
+				            ),
+				            names_to = c('.value', 'categoria'),
+				            names_pattern = '(trafico_efectivo|evasores_unidad|exentos_ley_787_2002)_(.*)'
+				        ) |>
+				        mutate(
+				            across(
+				            c(trafico_efectivo, evasores_unidad, exentos_ley_787_2002),
+				            ~ replace_na(as.numeric(.x), 0)
+				            ),
+				            categoria = toupper(categoria)
+				        ) |>
+				        rename(
+				            cantidadtrafico = trafico_efectivo,
+				            cantidadevasores = evasores_unidad,
+				            cantidadexentos787 = exentos_ley_787_2002
+				        )
+				    "),
+				
+				    df1 = Origen{[Name = "df2"]}[Value],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(df1,{{"estacion_de_peaje", "peaje"}}),
+				    #"Columna combinada insertada" = Table.AddColumn(#"Columnas con nombre cambiado", "desde", each Text.Combine({Text.From([anio], "es-CO"), [mes]}, "-"), type text),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna combinada insertada",{{"desde", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

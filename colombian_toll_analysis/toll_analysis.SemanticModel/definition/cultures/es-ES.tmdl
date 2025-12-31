@@ -210,32 +210,6 @@ cultureInfo es-ES
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "colombian_toll.hasta": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "hasta"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "hasta": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "colombian_toll.hasta.jerarquía_de_fecha": {
 			      "Definition": {
 			        "Binding": {

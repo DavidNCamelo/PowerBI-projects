@@ -39,25 +39,6 @@ table colombianTolls
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column hasta
-		dataType: dateTime
-		isHidden
-		formatString: Long Date
-		lineageTag: 32421407-64e5-4537-a78f-18d27e15ee3c
-		summarizeBy: none
-		sourceColumn: hasta
-
-		variation Variación
-			isDefault
-			relationship: 8c56fb6b-e563-4b18-b523-64eb07e8bf46
-			defaultHierarchy: LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303.'Jerarquía de fechas'
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column valortarifa
 		dataType: decimal
 		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
@@ -96,6 +77,23 @@ table colombianTolls
 
 		annotation SummarizationSetBy = Automatic
 
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: c7866a63-4fb4-4594-ba22-838ec7bef0b2
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 6537e23f-23b9-49e9-b0f4-73b1e5dc7be4
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
 	partition colombianTolls = m
 		mode: import
 		source =
@@ -105,6 +103,7 @@ table colombianTolls
 				        library(jsonlite)
 				        library(dplyr)
 				        library(lubridate)
+				        library(stringr)
 				
 				        url <- 'https://www.datos.gov.co/resource/8yi9-t44c.json'
 				
@@ -164,6 +163,13 @@ table colombianTolls
 				        if ('hasta' %in% names(df)) {
 				            df$hasta <- as_date(df$hasta)
 				        }
+				
+				        df <- df |>
+				        mutate(
+				            anio = as.integer(year(desde)),
+				            mes = str_to_title(month(desde, label = TRUE, abbr = FALSE))
+				        ) |>
+				        select(-hasta)
 				    "),
 				
 				    df1 = Origen{[Name = "df"]}[Value],

@@ -8,18 +8,19 @@ model Model
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["colombianTolls","locations"]
+annotation PBI_QueryOrder = ["colombianTolls","locations","colombianTolls2"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
 ref table colombianTolls
 ref table DateTableTemplate_4dfbd940-ba1c-4de6-9de9-d7506a562657
-ref table LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303
 ref table metrics
 ref table DIM_Calendar
+ref table locations
+ref table colombianTolls2
+ref table LocalDateTable_a270d3c4-a58a-4efe-bd41-b9c569870600
 ref table LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f
 ref table LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682
-ref table locations
 
 ref cultureInfo es-ES
 

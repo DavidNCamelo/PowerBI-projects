@@ -1,23 +1,23 @@
-relationship 8c56fb6b-e563-4b18-b523-64eb07e8bf46
-	joinOnDateBehavior: datePartOnly
-	fromColumn: colombianTolls.hasta
-	toColumn: LocalDateTable_bc8ef40f-3b0c-4574-8eff-20596bd5b303.Date
+relationship 0101c2c5-03dd-33da-3a5e-1a97f3448a9a
+	fromColumn: colombianTolls.peaje
+	toColumn: locations.nombre_peaje
 
-relationship f04e74fb-bc18-4913-aa69-fc49d412d60e
+relationship 6e17b4f9-1766-4c88-8ac8-eccb1983e4da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: colombianTolls2.desde
+	toColumn: LocalDateTable_a270d3c4-a58a-4efe-bd41-b9c569870600.Date
+
+relationship 07961600-839b-4c85-85f7-f1af206e7485
 	joinOnDateBehavior: datePartOnly
 	fromColumn: DIM_Calendar.Date
 	toColumn: LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f.Date
-
-relationship 1862970d-b0b4-4905-9bfe-6aa30844d248
-	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_Calendar.WeekClosing
-	toColumn: LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682.Date
 
 relationship 7cee7a26-4935-c1bb-e740-7c076eded910
 	fromColumn: colombianTolls.desde
 	toColumn: DIM_Calendar.Date
 
-relationship 0101c2c5-03dd-33da-3a5e-1a97f3448a9a
-	fromColumn: colombianTolls.peaje
-	toColumn: locations.nombre_peaje
+relationship a0dfd1e5-3dd6-4171-b69e-99a01d6cb642
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_Calendar.WeekClosing
+	toColumn: LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682.Date
 
