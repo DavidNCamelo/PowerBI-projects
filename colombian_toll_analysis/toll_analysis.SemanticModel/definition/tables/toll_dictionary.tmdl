@@ -1,0 +1,32 @@
+table toll_dictionary
+	/// Nombre del peaje
+	column peaje
+		dataType: string
+		summarizeBy: none
+
+	/// Categoría de la tarifa
+	column categoriatarifa
+		dataType: string
+		summarizeBy: none
+
+	/// Valor de la tarifa
+	column valortarifa
+		dataType: decimal
+		formatString: $ #,0.###############;- $ #,0.###############;$ #,0.###############
+		summarizeBy: none
+
+	/// Mes extraído de la fecha 'desde' en formato dd/MM/yyyy
+	column month
+		dataType: string
+		summarizeBy: none
+
+	partition toll_dictionary = m
+		mode: import
+		source =
+			let
+				Source = colombianTolls,
+				AddMonth = Table.AddColumn(Source, "month", each Date.ToText([desde], "dd/MM/yyyy")),
+				SelectCols = Table.SelectColumns(AddMonth, {"peaje", "categoriatarifa", "valortarifa", "month"}),
+				DistinctRows = Table.Distinct(SelectCols)
+			in
+				DistinctRows
