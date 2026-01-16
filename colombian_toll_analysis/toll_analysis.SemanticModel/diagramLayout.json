@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 272,
         "y": 0
       },
       "nodes": [
@@ -56,6 +56,31 @@
           "nodeLineageTag": "e9741647-b3d3-488c-9a68-343ffe6c6337",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 921,
+            "y": 121.5
+          },
+          "nodeIndex": "colombianTolls2",
+          "nodeLineageTag": "6ad83ad1-9bd5-4262-bdc8-964adac444bd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1205,
+            "y": 183.5
+          },
+          "nodeIndex": "toll_dictionary",
+          "size": {
+            "height": 176,
             "width": 234
           },
           "zIndex": 0

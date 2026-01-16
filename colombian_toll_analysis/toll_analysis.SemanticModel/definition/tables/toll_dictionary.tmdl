@@ -1,32 +1,49 @@
 table toll_dictionary
-	/// Nombre del peaje
+	lineageTag: ab931d23-ab63-4c86-8bd0-03656a075583
+
 	column peaje
 		dataType: string
+		lineageTag: 2f951db6-088b-4757-9a8d-ffa5977de436
 		summarizeBy: none
+		sourceColumn: peaje
 
-	/// Categoría de la tarifa
+		annotation SummarizationSetBy = Automatic
+
 	column categoriatarifa
 		dataType: string
+		lineageTag: 496a83ba-b489-47c8-b3af-86398ea0943e
 		summarizeBy: none
+		sourceColumn: categoriatarifa
 
-	/// Valor de la tarifa
+		annotation SummarizationSetBy = Automatic
+
 	column valortarifa
 		dataType: decimal
-		formatString: $ #,0.###############;- $ #,0.###############;$ #,0.###############
-		summarizeBy: none
+		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+		lineageTag: aad86150-da35-46cb-8d9b-56b3ceffc81c
+		summarizeBy: sum
+		sourceColumn: valortarifa
 
-	/// Mes extraído de la fecha 'desde' en formato dd/MM/yyyy
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
+
 	column month
 		dataType: string
+		lineageTag: dadc638d-53e0-4827-a158-39473fb87fa1
 		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
 
 	partition toll_dictionary = m
 		mode: import
 		source =
-			let
-				Source = colombianTolls,
-				AddMonth = Table.AddColumn(Source, "month", each Date.ToText([desde], "dd/MM/yyyy")),
-				SelectCols = Table.SelectColumns(AddMonth, {"peaje", "categoriatarifa", "valortarifa", "month"}),
-				DistinctRows = Table.Distinct(SelectCols)
-			in
-				DistinctRows
+				let
+					Source = colombianTolls,
+					AddMonth = Table.AddColumn(Source, "month", each Date.ToText([desde], "dd/MM/yyyy")),
+					SelectCols = Table.SelectColumns(AddMonth, {"peaje", "categoriatarifa", "valortarifa", "month"}),
+					DistinctRows = Table.Distinct(SelectCols)
+				in
+					DistinctRows
+

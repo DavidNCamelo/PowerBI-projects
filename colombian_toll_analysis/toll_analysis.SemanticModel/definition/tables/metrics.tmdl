@@ -22,12 +22,12 @@ table metrics
 		lineageTag: 25f60c97-27bd-406a-96a5-84e09d158259
 
 	column Column
+		isHidden
 		formatString: 0
 		lineageTag: 96f653dc-7aec-41df-baac-92b4bc94dc4a
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Column]
-		isHidden: true
 
 		annotation SummarizationSetBy = Automatic
 
