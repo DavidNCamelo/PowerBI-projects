@@ -195,7 +195,7 @@ expression colombianTolls2 =
 		    #"Columnas con nombre cambiado" = Table.RenameColumns(df1,{{"estacion_de_peaje", "peaje"}}),
 		    #"Columna combinada insertada" = Table.AddColumn(#"Columnas con nombre cambiado", "desde", each Text.Combine({Text.From([anio], "es-CO"), [mes]}, "-"), type text),
 		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna combinada insertada",{{"desde", type date}}),
-		    #"Consultas combinadas" = Table.NestedJoin(#"Tipo cambiado", {"peaje", "categoria", "mes"}, toll_dictionary, {"peaje", "categoriatarifa", "Nombre del mes"}, "toll_dictionary", JoinKind.LeftOuter),
+		    #"Consultas combinadas" = Table.NestedJoin(#"Tipo cambiado", {"peaje", "categoria", "mes", "anio"}, toll_dictionary, {"peaje", "categoriatarifa", "Nombre del mes", "Año"}, "toll_dictionary", JoinKind.LeftOuter),
 		    #"Se expandió toll_dictionary" = Table.ExpandTableColumn(#"Consultas combinadas", "toll_dictionary", {"valortarifa"}, {"valortarifa"}),
 		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió toll_dictionary",{{"categoria", "categoriatarifa"}})
 		in

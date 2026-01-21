@@ -114,9 +114,10 @@ table colombianTollsFusion
 		mode: import
 		source =
 				let
-				    Origen = Table.Combine({colombianTolls, colombianTolls2})
+				    Origen = Table.Combine({colombianTolls, colombianTolls2}),
+				    #"Duplicados quitados" = Table.Distinct(Origen, {"peaje", "categoriatarifa", "anio", "mes"})
 				in
-				    Origen
+				    #"Duplicados quitados"
 
 	annotation PBI_NavigationStepName = Navegación
 
