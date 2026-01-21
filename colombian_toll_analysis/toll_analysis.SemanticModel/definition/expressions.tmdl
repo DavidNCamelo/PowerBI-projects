@@ -1,0 +1,208 @@
+expression colombianTolls =
+		let
+		    Origen = R.Execute("
+		        library(httr)
+		        library(jsonlite)
+		        library(dplyr)
+		        library(lubridate)
+		        library(stringr)
+		
+		        url <- 'https://www.datos.gov.co/resource/8yi9-t44c.json'
+		
+		        limit <- 1000
+		        all_data <- list()
+		
+		        start_dates <- seq(
+		            from = as.Date('2014-01-01'),
+		            to   = Sys.Date(),
+		            by   = 'month'
+		        )
+		
+		        end_dates <- c(start_dates[-1] - 1, Sys.Date())
+		
+		        for (i in seq_along(start_dates)) {
+		
+		            offset <- 0
+		
+		            repeat {
+		
+		                where_clause <- paste0(
+		                    ""desde >= '"",
+		                    start_dates[i],
+		                    ""' AND desde <= '"",
+		                    end_dates[i],
+		                    ""'""
+		                )
+		
+		                res <- GET(
+		                    url,
+		                    query = list(
+		                        '$limit'  = limit,
+		                        '$offset' = offset,
+		                        '$where'  = where_clause
+		                    )
+		                )
+		
+		                if (status_code(res) != 200) break
+		
+		                data <- fromJSON(
+		                    content(res, 'text', encoding = 'UTF-8'),
+		                    flatten = TRUE
+		                )
+		
+		                if (length(data) == 0) break
+		
+		                all_data <- append(all_data, list(data))
+		                offset <- offset + limit
+		            }
+		        }
+		
+		        df <- bind_rows(all_data)
+		
+		        if ('desde' %in% names(df)) {
+		            df$desde <- as_date(df$desde)
+		        }
+		        if ('hasta' %in% names(df)) {
+		            df$hasta <- as_date(df$hasta)
+		        }
+		
+		        df <- df |>
+		        mutate(
+		            anio = as.integer(year(desde)),
+		            mes = str_to_title(month(desde, label = TRUE, abbr = FALSE))
+		        ) |>
+		        select(-hasta)
+		    "),
+		
+		    df1 = Origen{[Name = "df"]}[Value],
+		    #"Tipo cambiado" = Table.TransformColumnTypes(df1,{{"valortarifa", Currency.Type}, {"cantidadtrafico", Int64.Type}, {"cantidadevasores", Int64.Type}, {"cantidadexentos787", Int64.Type}})
+		in
+		    #"Tipo cambiado"
+	lineageTag: b5db731b-776c-4274-aa05-5d3c584f7dc4
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression colombianTolls2 =
+		let
+		    Origen = R.Execute("
+		        library(httr)
+		        library(jsonlite)
+		        library(dplyr)
+		        library(tidyr)
+		        library(lubridate)
+		        library(purrr)
+		
+		        # URL base (nuevo recurso)
+		        url <- 'https://www.datos.gov.co/resource/tcfu-jngt.json'
+		
+		        # Parámetros de paginación
+		        limit <- 1000
+		        offset <- 0
+		        all_data <- list()
+		
+		        repeat {
+		        # Solicitud GET con paginación
+		        res <- GET(
+		            url,
+		            query = list(
+		            '$limit' = limit,
+		            '$offset' = offset
+		            )
+		        )
+		
+		        # Verificar estado
+		        if (status_code(res) != 200) {
+		            message('Error en la solicitud: ', status_code(res))
+		            break
+		        }
+		
+		        # Parsear JSON
+		        data <- fromJSON(
+		            content(res, 'text', encoding = 'UTF-8'),
+		            flatten = TRUE
+		        )
+		
+		        # Salir si no hay más registros
+		        if (length(data) == 0) {
+		            break
+		        }
+		
+		        # Acumular
+		        all_data <- append(all_data, list(data))
+		
+		        # Avanzar offset
+		        offset <- offset + limit
+		        }
+		
+		        # Unir todo en un solo data frame
+		        df1 <- bind_rows(all_data)
+		
+		        # Asegurar que 'anio' sea numérico
+		        if ('anio' %in% names(df1)) {
+		        df1$anio <- as.integer(df1$anio)
+		        }
+		        df1 <- df1 |>
+		        select(
+		            estacion_de_peaje,
+		            anio,
+		            mes,
+		            codigo_estacion,
+		            departamento,
+		            starts_with(c('trafico', 'evasores', 'exentos'))
+		        )
+		
+		        # deleting columns
+		        df2 <- df1 |>
+		        select(
+		            -c(
+		            ends_with('_total'),
+		            'exentos_emergencia_vial_cat',
+		            'exentos_res0000015_koran',
+		            'exentos_emergencia_vial_cat_1',
+		            'exentos_res0000015_koran_1'
+		            )
+		        )
+		
+		        # Pivoting
+		
+		        df2 <- df2 |>
+		        pivot_longer(
+		            cols = c(
+		            starts_with('trafico_efectivo_'),
+		            starts_with('evasores_unidad_'),
+		            starts_with('exentos_ley_787_2002_')
+		            ),
+		            names_to = c('.value', 'categoria'),
+		            names_pattern = '(trafico_efectivo|evasores_unidad|exentos_ley_787_2002)_(.*)'
+		        ) |>
+		        mutate(
+		            across(
+		            c(trafico_efectivo, evasores_unidad, exentos_ley_787_2002),
+		            ~ replace_na(as.numeric(.x), 0)
+		            ),
+		            categoria = toupper(categoria)
+		        ) |>
+		        rename(
+		            cantidadtrafico = trafico_efectivo,
+		            cantidadevasores = evasores_unidad,
+		            cantidadexentos787 = exentos_ley_787_2002
+		        )
+		    "),
+		
+		    df1 = Origen{[Name = "df2"]}[Value],
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(df1,{{"estacion_de_peaje", "peaje"}}),
+		    #"Columna combinada insertada" = Table.AddColumn(#"Columnas con nombre cambiado", "desde", each Text.Combine({Text.From([anio], "es-CO"), [mes]}, "-"), type text),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna combinada insertada",{{"desde", type date}}),
+		    #"Consultas combinadas" = Table.NestedJoin(#"Tipo cambiado", {"peaje", "categoria", "mes"}, toll_dictionary, {"peaje", "categoriatarifa", "Nombre del mes"}, "toll_dictionary", JoinKind.LeftOuter),
+		    #"Se expandió toll_dictionary" = Table.ExpandTableColumn(#"Consultas combinadas", "toll_dictionary", {"valortarifa"}, {"valortarifa"}),
+		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió toll_dictionary",{{"categoria", "categoriatarifa"}})
+		in
+		    #"Columnas con nombre cambiado1"
+	lineageTag: 2911144b-4492-4a4c-87ec-d44602332660
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

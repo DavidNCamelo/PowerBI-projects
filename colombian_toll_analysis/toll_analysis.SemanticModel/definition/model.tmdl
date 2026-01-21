@@ -6,22 +6,21 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension","DaxQueryView_Desktop"]
 
-annotation PBI_QueryOrder = ["colombianTolls","locations","colombianTolls2","toll_dictionary"]
+annotation PBI_QueryOrder = ["colombianTolls","locations","colombianTolls2","toll_dictionary","colombianTollsFusion"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-ref table colombianTolls
 ref table DateTableTemplate_4dfbd940-ba1c-4de6-9de9-d7506a562657
 ref table metrics
 ref table DIM_Calendar
 ref table locations
-ref table colombianTolls2
-ref table LocalDateTable_a270d3c4-a58a-4efe-bd41-b9c569870600
+ref table toll_dictionary
+ref table colombianTollsFusion
+ref table LocalDateTable_aaab9a24-5d23-4fa4-93a3-d878ac7404b7
 ref table LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f
 ref table LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682
-ref table toll_dictionary
 
 ref cultureInfo es-ES
 

@@ -10,7 +10,7 @@ table DIM_Calendar
 
 		variation Variación
 			isDefault
-			relationship: 07961600-839b-4c85-85f7-f1af206e7485
+			relationship: 1e0ef1ce-933b-4f2f-95e7-fb02c62f0a8e
 			defaultHierarchy: LocalDateTable_f48556b3-2522-4554-9285-5b0800587f2f.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
@@ -110,7 +110,7 @@ table DIM_Calendar
 
 		variation Variación
 			isDefault
-			relationship: a0dfd1e5-3dd6-4171-b69e-99a01d6cb642
+			relationship: 0b0b21e0-c349-4195-97f7-d4d9caf42f3f
 			defaultHierarchy: LocalDateTable_ac5b8e11-a4c7-4e70-b25c-89af9bba7682.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
@@ -160,7 +160,7 @@ table DIM_Calendar
 		source =
 				ADDCOLUMNS (
 				
-				CALENDAR (MIN(colombianTolls[desde]), MAX(colombianTolls[desde])),
+				CALENDAR (MIN(colombianTollsFusion[desde]), MAX(colombianTollsFusion[desde])),
 				
 				"DateSK", FORMAT ( [Date], "YYYYMMDD" ),
 				
