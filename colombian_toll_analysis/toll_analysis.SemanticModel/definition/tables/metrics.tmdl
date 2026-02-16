@@ -17,7 +17,9 @@ table metrics
 		lineageTag: abb13e89-16ef-45d0-b2f2-e426e217655f
 
 	/// Number of vehicles that paid the toll
-	measure paid_traffic = [total_traffic] - [evaders] - [exempts]
+	measure paid_traffic =
+			//Real paid traffic
+			    [total_traffic] - [evaders] - [exempts]
 		formatString: #,0
 		lineageTag: 25f60c97-27bd-406a-96a5-84e09d158259
 
