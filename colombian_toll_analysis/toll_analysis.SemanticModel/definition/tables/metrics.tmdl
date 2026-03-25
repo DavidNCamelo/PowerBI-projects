@@ -23,6 +23,10 @@ table metrics
 		formatString: #,0
 		lineageTag: 25f60c97-27bd-406a-96a5-84e09d158259
 
+	measure example = //testing changes
+		formatString: 0
+		lineageTag: a0b67243-3f13-4ef3-990d-a31c3a4328ae
+
 	column Column
 		isHidden
 		formatString: 0

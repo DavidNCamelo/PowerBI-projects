@@ -49,13 +49,12 @@ table colombianTollsFusion
 
 	column cantidadtrafico
 		dataType: double
+		formatString: #,0.00
 		lineageTag: e7691929-cd75-4574-8e3f-08e36524c791
 		summarizeBy: sum
 		sourceColumn: cantidadtrafico
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column cantidadevasores
 		dataType: double
@@ -69,13 +68,12 @@ table colombianTollsFusion
 
 	column cantidadexentos787
 		dataType: double
+		formatString: #,0.00
 		lineageTag: d4dc9621-b353-4613-a8c7-b9964d28a3f3
 		summarizeBy: sum
 		sourceColumn: cantidadexentos787
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column anio
 		dataType: int64
