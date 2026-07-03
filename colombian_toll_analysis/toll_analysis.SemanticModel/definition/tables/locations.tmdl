@@ -1,6 +1,7 @@
 table locations
 	lineageTag: e9741647-b3d3-488c-9a68-343ffe6c6337
 
+	/// Nombre de la estación del peaje
 	column nombre_peaje
 		dataType: string
 		lineageTag: 3017abbe-7510-4062-bd3f-f783aef80877
@@ -41,6 +42,7 @@ table locations
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Entidad responsable del peaje
 	column responsable
 		dataType: string
 		lineageTag: 200da057-ec04-4601-8dfa-7b42c489be02

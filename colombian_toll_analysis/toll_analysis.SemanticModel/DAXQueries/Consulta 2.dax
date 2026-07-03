@@ -1,0 +1,13 @@
+DEFINE
+    MEASURE 'metrics'[total_traffic] = SUM(colombianTollsFusion[cantidadtrafico])
+    MEASURE 'metrics'[evaders] = SUM(colombianTollsFusion[cantidadevasores])
+    MEASURE 'metrics'[exempts] = SUM(colombianTollsFusion[cantidadexentos787])
+    MEASURE 'metrics'[paid_traffic] = [total_traffic] - [evaders] - [exempts]
+
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "total_traffic", [total_traffic],
+        "evaders", [evaders],
+        "exempts", [exempts],
+        "paid_traffic", [paid_traffic]
+    )

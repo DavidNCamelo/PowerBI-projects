@@ -5,444 +5,6 @@ cultureInfo es-ES
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "colombian_toll": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "colombian toll": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "colombianTolls": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "toll": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "colombian peal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "colombian ring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "colombian dingdong": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "colombian ding-dong": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "colombian clang": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "colombian ding-a-ling": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "peal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "dingdong": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ding-dong": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.idpeaje": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "idpeaje"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "idpeaje": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.peaje": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "peaje"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "peaje": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.categoriatarifa": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "categoriatarifa"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "categoriatarifa": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.desde": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "desde"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "desde": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "colombian_toll.hasta": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "hasta"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "hasta": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "colombian_toll.hasta.jerarquía_de_fecha": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "VariationSource": "hasta",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "jerarquía de fecha": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.hasta.año": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "VariationSource": "hasta",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Año"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "año": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "hasta año": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.hasta.trimestre": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "VariationSource": "hasta",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Trimestre"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "trimestre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "hasta trimestre": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.hasta.me": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "VariationSource": "hasta",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Mes"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "me": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "hasta me": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.hasta.día": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "VariationSource": "hasta",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Jerarquía de fechas",
-			          "HierarchyLevel": "Día"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "día": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "hasta día": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.valortarifa": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "valortarifa"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "valortarifa": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.cantidadtrafico": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "cantidadtrafico"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cantidadtrafico": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.cantidadevasore": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "cantidadevasores"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cantidadevasore": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "colombian_toll.cantidadexentos_787": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "colombianTolls",
-			          "ConceptualProperty": "cantidadexentos787"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cantidadexentos 787": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "cantidadexento 787": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "cantidadexentos787": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "metrics": {
 			      "Definition": {
 			        "Binding": {
@@ -466,6 +28,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -2679,31 +2244,820 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "toll_dictionary": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "toll dictionary": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "toll_dictionary": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dictionary": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "toll lexicon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toll glossary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toll phrasebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toll wordlist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toll thesaurus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lexicon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "glossary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "phrasebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wordlist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "thesaurus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.peaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "peaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.categoriatarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "categoriatarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoriatarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.valortarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "valortarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valortarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "toll_dictionary.month.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "VariationSource": "month",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.month.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "VariationSource": "month",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.month.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "VariationSource": "month",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.month.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "VariationSource": "month",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.month.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "VariationSource": "month",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.nombre_del_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "Nombre del mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre del me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "toll_dictionary.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "toll_dictionary",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colombian tolls fusion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "colombian toll fusion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "colombianTollsFusion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fusion": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tolls fusion": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "toll fusion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "colombian toll synthesis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "colombian toll mixture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "toll synthesis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toll mixture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "colombian toll union": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "colombian toll combination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "colombian toll blend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "colombian toll blending": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "colombian toll merging": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "colombian toll meld": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.idpeaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "idpeaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "idpeaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.peaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "peaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "peaje": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.categoriatarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "categoriatarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoriatarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.desde": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "desde"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desde": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "colombian_tolls_fusion.valortarifa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "valortarifa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valortarifa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.cantidadtrafico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "cantidadtrafico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadtrafico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.cantidadevasore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "cantidadevasores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadevasore": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.cantidadexentos_787": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "cantidadexentos787"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidadexentos 787": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cantidadexento 787": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cantidadexentos787": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.codigo_estacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "codigo_estacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo estacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_estacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion.departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "colombianTollsFusion",
+			          "ConceptualProperty": "departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "State": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "colombian_toll_is_expensive": {
+			    "colombian_tolls_fusion_has_valortarifa": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "colombianTollsFusion"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "colombian_tolls_fusion": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "colombian_tolls_fusion"
 			          }
 			        },
-			        "colombian_toll.valortarifa": {
+			        "colombian_tolls_fusion.valortarifa": {
 			          "Target": {
-			            "Entity": "colombian_toll.valortarifa"
+			            "Entity": "colombian_tolls_fusion.valortarifa"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.valortarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_valortarifas"
+			        },
+			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "colombian_tolls_fusion"
 			            },
 			            "Adjectives": [
 			              {
@@ -2720,87 +3074,287 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "colombian_toll.valortarifa"
+			              "Role": "colombian_tolls_fusion.valortarifa"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "valortarifa_indicates_how_expensive_colombian_tolls_are"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "colombian_toll.valortarifa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_valortarifas"
+			          "ID": "valortarifa_indicates_how_expensive_colombian_tolls_fusions_are"
 			        }
 			      ]
 			    },
-			    "colombian_toll_in_location": {
+			    "colombian_tolls_fusion_has_desde": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "colombianTollsFusion"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "colombian_tolls_fusion": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "colombian_tolls_fusion"
 			          }
 			        },
-			        "location": {
+			        "colombian_tolls_fusion.desde": {
 			          "Target": {
-			            "Entity": "location"
+			            "Entity": "colombian_tolls_fusion.desde"
 			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "location"
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Preposition": {
+			          "Attribute": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "colombian_tolls_fusion"
 			            },
-			            "Prepositions": [
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.desde"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_desdes"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_categoriatarifa": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.categoriatarifa": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.categoriatarifa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.categoriatarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_categoriatarifas"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_idpeaje": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.idpeaje": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.idpeaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.idpeaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_idpeajes"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary": {
+			          "Target": {
+			            "Entity": "toll_dictionary"
+			          }
+			        },
+			        "toll_dictionary.año": {
+			          "Target": {
+			            "Entity": "toll_dictionary.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "toll_dictionaries_have_años"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_has_nombre_del_me": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary": {
+			          "Target": {
+			            "Entity": "toll_dictionary"
+			          }
+			        },
+			        "toll_dictionary.nombre_del_me": {
+			          "Target": {
+			            "Entity": "toll_dictionary.nombre_del_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.nombre_del_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "toll_dictionaries_have_nombre_del_me"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary": {
+			          "Target": {
+			            "Entity": "toll_dictionary"
+			          }
+			        },
+			        "toll_dictionary.month": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "toll_dictionaries_have_months"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_has_valortarifa": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary": {
+			          "Target": {
+			            "Entity": "toll_dictionary"
+			          }
+			        },
+			        "toll_dictionary.valortarifa": {
+			          "Target": {
+			            "Entity": "toll_dictionary.valortarifa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.valortarifa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "toll_dictionaries_have_valortarifas"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "toll_dictionary"
+			            },
+			            "Adjectives": [
 			              {
-			                "in": {
+			                "expensive": {
 			                  "State": "Generated"
 			                }
 			              }
 			            ],
-			            "Object": {
-			              "Role": "location"
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "toll_dictionary.valortarifa"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "colombian_tolls_are_in_locations"
+			          "ID": "valortarifa_indicates_how_expensive_toll_dictionaries_are"
 			        }
 			      ]
 			    },
-			    "colombian_toll_has_idpeaje": {
+			    "toll_dictionary_has_categoriatarifa": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "toll_dictionary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "toll_dictionary": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "toll_dictionary"
 			          }
 			        },
-			        "colombian_toll.idpeaje": {
+			        "toll_dictionary.categoriatarifa": {
 			          "Target": {
-			            "Entity": "colombian_toll.idpeaje"
+			            "Entity": "toll_dictionary.categoriatarifa"
 			          }
 			        }
 			      },
@@ -2808,32 +3362,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "toll_dictionary"
 			            },
 			            "Object": {
-			              "Role": "colombian_toll.idpeaje"
+			              "Role": "toll_dictionary.categoriatarifa"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_idpeajes"
+			          "ID": "toll_dictionaries_have_categoriatarifas"
 			        }
 			      ]
 			    },
-			    "colombian_toll_has_categoriatarifa": {
+			    "toll_dictionary_has_peaje": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "toll_dictionary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "toll_dictionary": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "toll_dictionary"
 			          }
 			        },
-			        "colombian_toll.categoriatarifa": {
+			        "toll_dictionary.peaje": {
 			          "Target": {
-			            "Entity": "colombian_toll.categoriatarifa"
+			            "Entity": "toll_dictionary.peaje"
 			          }
 			        }
 			      },
@@ -2841,1203 +3395,15 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "toll_dictionary"
 			            },
 			            "Object": {
-			              "Role": "colombian_toll.categoriatarifa"
+			              "Role": "toll_dictionary.peaje"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_categoriatarifas"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_cantidadtrafico": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "colombian_toll.cantidadtrafico": {
-			          "Target": {
-			            "Entity": "colombian_toll.cantidadtrafico"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "colombian_toll.cantidadtrafico"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_cantidadtraficos"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_cantidadevasore": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "colombian_toll.cantidadevasore": {
-			          "Target": {
-			            "Entity": "colombian_toll.cantidadevasore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "colombian_toll.cantidadevasore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_cantidadevasores"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_cantidadexentos_787": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "colombian_toll.cantidadexentos_787": {
-			          "Target": {
-			            "Entity": "colombian_toll.cantidadexentos_787"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "colombian_toll.cantidadexentos_787"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_cantidadexentos_787"
-			        }
-			      ]
-			    },
-			    "metrics_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "metrics"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "metrics": {
-			          "Target": {
-			            "Entity": "metrics"
-			          }
-			        },
-			        "metrics.column": {
-			          "Target": {
-			            "Entity": "metrics.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "metrics"
-			            },
-			            "Object": {
-			              "Role": "metrics.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "metrics_have_columns"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_metrics_total_traffic": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "metrics.total_traffic": {
-			          "Target": {
-			            "Entity": "metrics.total_traffic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "metrics.total_traffic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_total_traffic"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_metrics_evaders": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "metrics.evaders": {
-			          "Target": {
-			            "Entity": "metrics.evaders"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "metrics.evaders"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_evaders"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_metrics_exempts": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "metrics.exempts": {
-			          "Target": {
-			            "Entity": "metrics.exempts"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "metrics.exempts"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_exempts"
-			        }
-			      ]
-			    },
-			    "colombian_toll_has_metrics_paid_traffic": {
-			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "colombian_toll": {
-			          "Target": {
-			            "Entity": "colombian_toll"
-			          }
-			        },
-			        "metrics.paid_traffic": {
-			          "Target": {
-			            "Entity": "metrics.paid_traffic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "colombian_toll"
-			            },
-			            "Object": {
-			              "Role": "metrics.paid_traffic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_paid_traffic"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_date": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.date": {
-			          "Target": {
-			            "Entity": "DIM_calendar.date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_dates"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_date_SK": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.date_SK": {
-			          "Target": {
-			            "Entity": "DIM_calendar.date_SK"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.date_SK"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_date_SK"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.year": {
-			          "Target": {
-			            "Entity": "DIM_calendar.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_years"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.quarter": {
-			          "Target": {
-			            "Entity": "DIM_calendar.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_quarters"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.month": {
-			          "Target": {
-			            "Entity": "DIM_calendar.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_months"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.day": {
-			          "Target": {
-			            "Entity": "DIM_calendar.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_days"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_quarter1": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.quarter1": {
-			          "Target": {
-			            "Entity": "DIM_calendar.quarter1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.quarter1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_quarters1"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_month1": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.month1": {
-			          "Target": {
-			            "Entity": "DIM_calendar.month1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.month1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_months1"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_short_month": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.short_month": {
-			          "Target": {
-			            "Entity": "DIM_calendar.short_month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.short_month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_short_months"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_WeekDay": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.WeekDay": {
-			          "Target": {
-			            "Entity": "DIM_calendar.WeekDay"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.WeekDay"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_WeekDays"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_WeekYear": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.WeekYear": {
-			          "Target": {
-			            "Entity": "DIM_calendar.WeekYear"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.WeekYear"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_WeekYears"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_week_closing": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.week_closing": {
-			          "Target": {
-			            "Entity": "DIM_calendar.week_closing"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.week_closing"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_week_closing"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_day1": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.day1": {
-			          "Target": {
-			            "Entity": "DIM_calendar.day1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.day1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_days1"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_short_day": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.short_day": {
-			          "Target": {
-			            "Entity": "DIM_calendar.short_day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.short_day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_short_days"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_year_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.year_quarter": {
-			          "Target": {
-			            "Entity": "DIM_calendar.year_quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.year_quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_year_quarters"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_yearmonth": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.yearmonth": {
-			          "Target": {
-			            "Entity": "DIM_calendar.yearmonth"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.yearmonth"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_yearmonths"
-			        }
-			      ]
-			    },
-			    "DIM_calendar_has_short_year_month": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DIM_calendar": {
-			          "Target": {
-			            "Entity": "DIM_calendar"
-			          }
-			        },
-			        "DIM_calendar.short_year_month": {
-			          "Target": {
-			            "Entity": "DIM_calendar.short_year_month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DIM_calendar"
-			            },
-			            "Object": {
-			              "Role": "DIM_calendar.short_year_month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_short_year_months"
-			        }
-			      ]
-			    },
-			    "location_has_nombre_peaje": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.nombre_peaje": {
-			          "Target": {
-			            "Entity": "location.nombre_peaje"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.nombre_peaje"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_nombre_peajes"
-			        }
-			      ]
-			    },
-			    "location_has_ubicaci_n": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.ubicaci_n": {
-			          "Target": {
-			            "Entity": "location.ubicaci_n"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.ubicaci_n"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_ubicaci_Ns"
-			        }
-			      ]
-			    },
-			    "location_has_sector": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.sector": {
-			          "Target": {
-			            "Entity": "location.sector"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.sector"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_sectors"
-			        }
-			      ]
-			    },
-			    "location_has_sentido": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.sentido": {
-			          "Target": {
-			            "Entity": "location.sentido"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.sentido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_sentidos"
-			        }
-			      ]
-			    },
-			    "location_has_url_foto_url": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.url_foto_url": {
-			          "Target": {
-			            "Entity": "location.url_foto_url"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.url_foto_url"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_url_foto_urls"
-			        }
-			      ]
-			    },
-			    "location_has_responsable": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.responsable": {
-			          "Target": {
-			            "Entity": "location.responsable"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.responsable"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_responsables"
-			        }
-			      ]
-			    },
-			    "location_has_territorial": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.territorial": {
-			          "Target": {
-			            "Entity": "location.territorial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.territorial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_territorials"
-			        }
-			      ]
-			    },
-			    "location_has_poste_de_referencia_pr": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.poste_de_referencia_pr": {
-			          "Target": {
-			            "Entity": "location.poste_de_referencia_pr"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.poste_de_referencia_pr"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_poste_de_referencia_pr"
-			        }
-			      ]
-			    },
-			    "location_has_distancia_pr": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.distancia_pr": {
-			          "Target": {
-			            "Entity": "location.distancia_pr"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.distancia_pr"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_distancia_pr"
-			        }
-			      ]
-			    },
-			    "location_has_longitud": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.longitud": {
-			          "Target": {
-			            "Entity": "location.longitud"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.longitud"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_longituds"
-			        }
-			      ]
-			    },
-			    "location_has_latitud": {
-			      "Binding": {
-			        "ConceptualEntity": "locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.latitud": {
-			          "Target": {
-			            "Entity": "location.latitud"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.latitud"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_latituds"
+			          "ID": "toll_dictionaries_have_peajes"
 			        }
 			      ]
 			    },
@@ -4074,20 +3440,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "colombian_toll_has_DIM_calendar": {
+			    "location_has_latitud": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "locations"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "location": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "location"
 			          }
 			        },
-			        "DIM_calendar": {
+			        "location.latitud": {
 			          "Target": {
-			            "Entity": "DIM_calendar"
+			            "Entity": "location.latitud"
 			          }
 			        }
 			      },
@@ -4095,40 +3461,1326 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "location"
 			            },
 			            "Object": {
-			              "Role": "DIM_calendar"
+			              "Role": "location.latitud"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_DIM_calendars"
+			          "ID": "locations_have_latituds"
+			        }
+			      ]
+			    },
+			    "location_has_longitud": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
 			        },
+			        "location.longitud": {
+			          "Target": {
+			            "Entity": "location.longitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.longitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_longituds"
+			        }
+			      ]
+			    },
+			    "location_has_distancia_pr": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.distancia_pr": {
+			          "Target": {
+			            "Entity": "location.distancia_pr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.distancia_pr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_distancia_pr"
+			        }
+			      ]
+			    },
+			    "location_has_poste_de_referencia_pr": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.poste_de_referencia_pr": {
+			          "Target": {
+			            "Entity": "location.poste_de_referencia_pr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.poste_de_referencia_pr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_poste_de_referencia_pr"
+			        }
+			      ]
+			    },
+			    "location_has_territorial": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.territorial": {
+			          "Target": {
+			            "Entity": "location.territorial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.territorial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_territorials"
+			        }
+			      ]
+			    },
+			    "location_has_responsable": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.responsable": {
+			          "Target": {
+			            "Entity": "location.responsable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.responsable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_responsables"
+			        }
+			      ]
+			    },
+			    "location_has_url_foto_url": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.url_foto_url": {
+			          "Target": {
+			            "Entity": "location.url_foto_url"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.url_foto_url"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_url_foto_urls"
+			        }
+			      ]
+			    },
+			    "location_has_sentido": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.sentido": {
+			          "Target": {
+			            "Entity": "location.sentido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.sentido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_sentidos"
+			        }
+			      ]
+			    },
+			    "location_has_sector": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.sector": {
+			          "Target": {
+			            "Entity": "location.sector"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.sector"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_sectors"
+			        }
+			      ]
+			    },
+			    "location_has_ubicaci_n": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.ubicaci_n": {
+			          "Target": {
+			            "Entity": "location.ubicaci_n"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.ubicaci_n"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_ubicaci_Ns"
+			        }
+			      ]
+			    },
+			    "location_has_nombre_peaje": {
+			      "Binding": {
+			        "ConceptualEntity": "locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.nombre_peaje": {
+			          "Target": {
+			            "Entity": "location.nombre_peaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.nombre_peaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_nombre_peajes"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_year_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_year_month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_year_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "DIM_calendar"
 			            },
 			            "Object": {
-			              "Role": "colombian_toll"
+			              "Role": "DIM_calendar.short_year_month"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "DIM_calendars_have_colombian_tolls"
+			          "ID": "DIM_calendars_have_short_year_months"
 			        }
 			      ]
 			    },
-			    "colombian_toll_has_location": {
+			    "DIM_calendar_has_yearmonth": {
 			      "Binding": {
-			        "ConceptualEntity": "colombianTolls"
+			        "ConceptualEntity": "DIM_Calendar"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "colombian_toll": {
+			        "DIM_calendar": {
 			          "Target": {
-			            "Entity": "colombian_toll"
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.yearmonth": {
+			          "Target": {
+			            "Entity": "DIM_calendar.yearmonth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.yearmonth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_yearmonths"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_year_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.year_quarter": {
+			          "Target": {
+			            "Entity": "DIM_calendar.year_quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.year_quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_year_quarters"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_day": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.short_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_short_days"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_day1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.day1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.day1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.day1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_days"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_week_closing": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.week_closing": {
+			          "Target": {
+			            "Entity": "DIM_calendar.week_closing"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.week_closing"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_week_closing"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_WeekYear": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.WeekYear": {
+			          "Target": {
+			            "Entity": "DIM_calendar.WeekYear"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.WeekYear"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_WeekYears"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_WeekDay": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.WeekDay": {
+			          "Target": {
+			            "Entity": "DIM_calendar.WeekDay"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.WeekDay"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_WeekDays"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_short_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.short_month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.short_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.short_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_short_months"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_month1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.month1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.month1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.month1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_months"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_quarter1": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.quarter1": {
+			          "Target": {
+			            "Entity": "DIM_calendar.quarter1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.quarter1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_quarters"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.day": {
+			          "Target": {
+			            "Entity": "DIM_calendar.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_days1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.month": {
+			          "Target": {
+			            "Entity": "DIM_calendar.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_months1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.quarter": {
+			          "Target": {
+			            "Entity": "DIM_calendar.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_quarters1"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.year": {
+			          "Target": {
+			            "Entity": "DIM_calendar.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_years"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_date_SK": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.date_SK": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date_SK"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date_SK"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_date_SK"
+			        }
+			      ]
+			    },
+			    "DIM_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        },
+			        "DIM_calendar.date": {
+			          "Target": {
+			            "Entity": "DIM_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_metrics_paid_traffic": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "metrics.paid_traffic": {
+			          "Target": {
+			            "Entity": "metrics.paid_traffic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "metrics.paid_traffic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_paid_traffic"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_metrics_exempts": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "metrics.exempts": {
+			          "Target": {
+			            "Entity": "metrics.exempts"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "metrics.exempts"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_exempts"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_metrics_evaders": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "metrics.evaders": {
+			          "Target": {
+			            "Entity": "metrics.evaders"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "metrics.evaders"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_evaders"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_metrics_total_traffic": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "metrics.total_traffic": {
+			          "Target": {
+			            "Entity": "metrics.total_traffic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "metrics.total_traffic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_total_traffic"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_in_location": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "location"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_are_in_locations"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_cantidadtrafico": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.cantidadtrafico": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.cantidadtrafico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.cantidadtrafico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_cantidadtraficos"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_cantidadevasore": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.cantidadevasore": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.cantidadevasore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.cantidadevasore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_cantidadevasores"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_cantidadexentos_787": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.cantidadexentos_787": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.cantidadexentos_787"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.cantidadexentos_787"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_cantidadexentos_787"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_anio": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.anio": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.anio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.anio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_anios"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.me": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_me"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_codigo_estacion": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.codigo_estacion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.codigo_estacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.codigo_estacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_codigo_estacions"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "colombian_tolls_fusion.departamento": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion.departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion.departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_departamentos"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_location": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
 			          }
 			        },
 			        "location": {
@@ -4141,7 +4793,7 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "colombian_toll"
+			              "Role": "colombian_tolls_fusion"
 			            },
 			            "Object": {
 			              "Role": "location"
@@ -4149,7 +4801,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "colombian_tolls_have_locations"
+			          "ID": "colombian_tolls_fusions_have_locations"
 			        },
 			        {
 			          "Attribute": {
@@ -4157,12 +4809,58 @@ cultureInfo es-ES
 			              "Role": "location"
 			            },
 			            "Object": {
-			              "Role": "colombian_toll"
+			              "Role": "colombian_tolls_fusion"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "locations_have_colombian_tolls"
+			          "ID": "locations_have_colombian_tolls_fusions"
+			        }
+			      ]
+			    },
+			    "colombian_tolls_fusion_has_DIM_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "colombianTollsFusion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "colombian_tolls_fusion": {
+			          "Target": {
+			            "Entity": "colombian_tolls_fusion"
+			          }
+			        },
+			        "DIM_calendar": {
+			          "Target": {
+			            "Entity": "DIM_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "colombian_tolls_fusion"
+			            },
+			            "Object": {
+			              "Role": "DIM_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "colombian_tolls_fusions_have_DIM_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DIM_calendar"
+			            },
+			            "Object": {
+			              "Role": "colombian_tolls_fusion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DIM_calendars_have_colombian_tolls_fusions"
 			        }
 			      ]
 			    },
@@ -4889,6 +5587,369 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month"
+			          }
+			        },
+			        "toll_dictionary.month.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "months_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_jerarquía_de_fecha_has_toll_dictionary_month_año": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.jerarquía_de_fecha"
+			          }
+			        },
+			        "toll_dictionary.month.año": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_jerarquía_de_fecha_has_toll_dictionary_month_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.jerarquía_de_fecha"
+			          }
+			        },
+			        "toll_dictionary.month.trimestre": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_jerarquía_de_fecha_has_toll_dictionary_month_me": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.jerarquía_de_fecha"
+			          }
+			        },
+			        "toll_dictionary.month.me": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_jerarquía_de_fecha_has_toll_dictionary_month_día": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.jerarquía_de_fecha"
+			          }
+			        },
+			        "toll_dictionary.month.día": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_año_has_toll_dictionary_month_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.año": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.año"
+			          }
+			        },
+			        "toll_dictionary.month.trimestre": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.año"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "toll_dictionary.month.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_trimestre_has_toll_dictionary_month_me": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.trimestre": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.trimestre"
+			          }
+			        },
+			        "toll_dictionary.month.me": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.me"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "toll_dictionary.month.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres2"
+			        }
+			      ]
+			    },
+			    "toll_dictionary_month_me_has_toll_dictionary_month_día": {
+			      "Binding": {
+			        "ConceptualEntity": "toll_dictionary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "toll_dictionary.month.me": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.me"
+			          }
+			        },
+			        "toll_dictionary.month.día": {
+			          "Target": {
+			            "Entity": "toll_dictionary.month.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.me"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.día"
+			            },
+			            "Object": {
+			              "Role": "toll_dictionary.month.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "toll_dictionary.month.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "toll_dictionary.month.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me2"
 			        }
 			      ]
 			    }

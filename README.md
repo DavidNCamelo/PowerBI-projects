@@ -23,3 +23,24 @@ Creat a Power BI project is so easy, you can open an white Power BI desktop file
 ```
 
 Once all this elements are configured, you're ready to work and combine your skills in Power BI with git.
+
+# Implementing GenIA through Power BI Modeling MCP Server
+
+Follow this repos instructions: (Microsoft powerbi-modeling-mcp)[https://github.com/microsoft/powerbi-modeling-mcp] to install and configure the Power BI MCP Server.
+
+If you're implementing Github Copilot, you'll go to "configure tools" to review the step 4 settings, allow all those options.
+
+You can use any agent or GenIA app to interactute with the report through this tool.
+
+As showed in the repo there are 3 way to connect to a Power BI file:
+
+- Power BI Desktop (.pbix)  →  Connect to `[File Name]` in Power BI Desktop --> In this case you must to have the file open in your device.
+- Semantic Models inside a Fabric Workspace (Power BI Service) →  Connect to semantic model `[Semantic Model Name]' in Fabric Workspace '[Workspace Name]`
+- Power BI Pojects (.pbip) →  Open semantic model from PBIP folder `[Path to the definition/ TMDL folder in the PBIP]` --> You must to have the folder directory open in the VSCode window.
+
+## Add specialized Power BI Skills
+
+Recently in first semester of 2026 was released a new bunch of skill to work with Power BI: (Microsoft skills-for-fabric)[https://github.com/microsoft/skills-for-fabric/tree/main]
+
+New interactions and more context that was missing working just with the existing MCP.
+

@@ -1,0 +1,123 @@
+table colombianTollsFusion
+	lineageTag: db05d967-2635-4144-b07c-6bffd94e107a
+
+	column idpeaje
+		dataType: string
+		lineageTag: fc209087-715b-4464-ae85-3cd5ffeed159
+		summarizeBy: none
+		sourceColumn: idpeaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column peaje
+		dataType: string
+		lineageTag: 2fc93478-30cb-47fe-850a-4d75c4cc2f50
+		summarizeBy: none
+		sourceColumn: peaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoriatarifa
+		dataType: string
+		lineageTag: 0809b1b8-1023-45fb-9521-7393caf158d0
+		summarizeBy: none
+		sourceColumn: categoriatarifa
+
+		annotation SummarizationSetBy = Automatic
+
+	column desde
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 800da6e1-47cd-4db7-9c2c-64d6bdcd8145
+		summarizeBy: none
+		sourceColumn: desde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column valortarifa
+		dataType: decimal
+		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+		lineageTag: 5ecb5620-0685-4e4d-8f90-2b29e5fe1005
+		summarizeBy: sum
+		sourceColumn: valortarifa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-CO"}
+
+	column cantidadtrafico
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e7691929-cd75-4574-8e3f-08e36524c791
+		summarizeBy: sum
+		sourceColumn: cantidadtrafico
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidadevasores
+		dataType: double
+		lineageTag: 88165628-3fbb-446d-849f-6c329e3dcac1
+		summarizeBy: sum
+		sourceColumn: cantidadevasores
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cantidadexentos787
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d4dc9621-b353-4613-a8c7-b9964d28a3f3
+		summarizeBy: sum
+		sourceColumn: cantidadexentos787
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 4fec0625-a30d-4c56-9258-804e39b39044
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 17c720b9-2fe7-40ab-b9d9-03134f607a2e
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_estacion
+		dataType: string
+		lineageTag: 5418f6b2-e945-47d8-82e3-c4313c2732e6
+		summarizeBy: none
+		sourceColumn: codigo_estacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: d88c4114-a9f6-4a85-a44d-295609773cc8
+		summarizeBy: none
+		sourceColumn: departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition colombianTollsFusion = m
+		mode: import
+		source =
+				let
+				    Origen = Table.Combine({colombianTolls, colombianTolls2}),
+				    #"Duplicados quitados" = Table.Distinct(Origen, {"peaje", "categoriatarifa", "anio", "mes"})
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
