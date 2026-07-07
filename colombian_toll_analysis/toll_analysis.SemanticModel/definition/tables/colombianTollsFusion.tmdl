@@ -37,7 +37,7 @@ table colombianTollsFusion
 		annotation UnderlyingDateTimeDataType = Date
 
 	column valortarifa
-		dataType: decimal
+		dataType: double
 		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 		lineageTag: 5ecb5620-0685-4e4d-8f90-2b29e5fe1005
 		summarizeBy: sum

@@ -94,112 +94,108 @@ expression colombianTolls2 =
 		        library(lubridate)
 		        library(purrr)
 		
-		        # URL base (nuevo recurso)
 		        url <- 'https://www.datos.gov.co/resource/tcfu-jngt.json'
-		
-		        # Parámetros de paginación
 		        limit <- 1000
 		        offset <- 0
 		        all_data <- list()
 		
 		        repeat {
-		        # Solicitud GET con paginación
-		        res <- GET(
-		            url,
-		            query = list(
-		            '$limit' = limit,
-		            '$offset' = offset
+		            res <- tryCatch(
+		                GET(
+		                    url,
+		                    add_headers('User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'),
+		                    query = list('$limit' = limit, '$offset' = offset)
+		                ),
+		                error = function(e) NULL
 		            )
-		        )
 		
-		        # Verificar estado
-		        if (status_code(res) != 200) {
-		            message('Error en la solicitud: ', status_code(res))
-		            break
+		            if (is.null(res) || status_code(res) != 200) {
+		                message('La API no respondió, se usará fila de respaldo')
+		                break
+		            }
+		
+		            data <- fromJSON(content(res, 'text', encoding = 'UTF-8'), flatten = TRUE)
+		            if (length(data) == 0) break
+		
+		            all_data <- append(all_data, list(data))
+		            offset <- offset + limit
 		        }
 		
-		        # Parsear JSON
-		        data <- fromJSON(
-		            content(res, 'text', encoding = 'UTF-8'),
-		            flatten = TRUE
-		        )
-		
-		        # Salir si no hay más registros
-		        if (length(data) == 0) {
-		            break
-		        }
-		
-		        # Acumular
-		        all_data <- append(all_data, list(data))
-		
-		        # Avanzar offset
-		        offset <- offset + limit
-		        }
-		
-		        # Unir todo en un solo data frame
 		        df1 <- bind_rows(all_data)
 		
-		        # Asegurar que 'anio' sea numérico
-		        if ('anio' %in% names(df1)) {
-		        df1$anio <- as.integer(df1$anio)
-		        }
-		        df1 <- df1 |>
-		        select(
-		            estacion_de_peaje,
-		            anio,
-		            mes,
-		            codigo_estacion,
-		            departamento,
-		            starts_with(c('trafico', 'evasores', 'exentos'))
-		        )
-		
-		        # deleting columns
-		        df2 <- df1 |>
-		        select(
-		            -c(
-		            ends_with('_total'),
-		            'exentos_emergencia_vial_cat',
-		            'exentos_res0000015_koran',
-		            'exentos_emergencia_vial_cat_1',
-		            'exentos_res0000015_koran_1'
+		        # --- Fila de respaldo si la API no trajo nada ---
+		        if (nrow(df1) == 0) {
+		            df1 <- data.frame(
+		                estacion_de_peaje = 'SIN_DATOS',
+		                anio = as.integer(format(Sys.Date(), '%Y')),
+		                mes = 'Enero',
+		                codigo_estacion = 'SIN_DATOS',
+		                departamento = 'SIN_DATOS',
+		                trafico_efectivo_i = 0,
+		                evasores_unidad_i = 0,
+		                exentos_ley_787_2002_i = 0,
+		                stringsAsFactors = FALSE
 		            )
-		        )
+		        }
 		
-		        # Pivoting
+		        if ('anio' %in% names(df1)) {
+		            df1$anio <- as.integer(df1$anio)
+		        }
+		
+		        df1 <- df1 |>
+		            select(
+		                estacion_de_peaje,
+		                anio,
+		                mes,
+		                codigo_estacion,
+		                departamento,
+		                starts_with(c('trafico', 'evasores', 'exentos'))
+		            )
+		
+		        df2 <- df1 |>
+		            select(
+		                -any_of(c(
+		                    'exentos_emergencia_vial_cat',
+		                    'exentos_res0000015_koran',
+		                    'exentos_emergencia_vial_cat_1',
+		                    'exentos_res0000015_koran_1'
+		                )),
+		                -ends_with('_total')
+		            )
 		
 		        df2 <- df2 |>
-		        pivot_longer(
-		            cols = c(
-		            starts_with('trafico_efectivo_'),
-		            starts_with('evasores_unidad_'),
-		            starts_with('exentos_ley_787_2002_')
-		            ),
-		            names_to = c('.value', 'categoria'),
-		            names_pattern = '(trafico_efectivo|evasores_unidad|exentos_ley_787_2002)_(.*)'
-		        ) |>
-		        mutate(
-		            across(
-		            c(trafico_efectivo, evasores_unidad, exentos_ley_787_2002),
-		            ~ replace_na(as.numeric(.x), 0)
-		            ),
-		            categoria = toupper(categoria)
-		        ) |>
-		        rename(
-		            cantidadtrafico = trafico_efectivo,
-		            cantidadevasores = evasores_unidad,
-		            cantidadexentos787 = exentos_ley_787_2002
-		        )
+		            pivot_longer(
+		                cols = c(
+		                    starts_with('trafico_efectivo_'),
+		                    starts_with('evasores_unidad_'),
+		                    starts_with('exentos_ley_787_2002_')
+		                ),
+		                names_to = c('.value', 'categoria'),
+		                names_pattern = '(trafico_efectivo|evasores_unidad|exentos_ley_787_2002)_(.*)'
+		            ) |>
+		            mutate(
+		                across(
+		                    c(trafico_efectivo, evasores_unidad, exentos_ley_787_2002),
+		                    ~ replace_na(as.numeric(.x), 0)
+		                ),
+		                categoria = toupper(categoria)
+		            ) |>
+		            rename(
+		                cantidadtrafico = trafico_efectivo,
+		                cantidadevasores = evasores_unidad,
+		                cantidadexentos787 = exentos_ley_787_2002
+		            )
 		    "),
-		
 		    df1 = Origen{[Name = "df2"]}[Value],
 		    #"Columnas con nombre cambiado" = Table.RenameColumns(df1,{{"estacion_de_peaje", "peaje"}}),
 		    #"Columna combinada insertada" = Table.AddColumn(#"Columnas con nombre cambiado", "desde", each Text.Combine({Text.From([anio], "es-CO"), [mes]}, "-"), type text),
 		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna combinada insertada",{{"desde", type date}}),
 		    #"Consultas combinadas" = Table.NestedJoin(#"Tipo cambiado", {"peaje", "categoria", "mes", "anio"}, toll_dictionary, {"peaje", "categoriatarifa", "Nombre del mes", "Año"}, "toll_dictionary", JoinKind.LeftOuter),
 		    #"Se expandió toll_dictionary" = Table.ExpandTableColumn(#"Consultas combinadas", "toll_dictionary", {"valortarifa"}, {"valortarifa"}),
-		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió toll_dictionary",{{"categoria", "categoriatarifa"}})
+		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió toll_dictionary",{{"categoria", "categoriatarifa"}}),
+		    #"Valor nulo reemplazado" = Table.ReplaceValue(#"Columnas con nombre cambiado1", null, 0, Replacer.ReplaceValue, {"valortarifa"})
 		in
-		    #"Columnas con nombre cambiado1"
+		    #"Valor nulo reemplazado"
 	lineageTag: 2911144b-4492-4a4c-87ec-d44602332660
 
 	annotation PBI_NavigationStepName = Navegación
