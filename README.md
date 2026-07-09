@@ -26,7 +26,7 @@ Once all this elements are configured, you're ready to work and combine your ski
 
 # Implementing GenIA through Power BI Modeling MCP Server
 
-Follow this repos instructions: (Microsoft powerbi-modeling-mcp)[https://github.com/microsoft/powerbi-modeling-mcp] to install and configure the Power BI MCP Server.
+Follow this repos instructions: [Microsoft powerbi-modeling-mcp](https://github.com/microsoft/powerbi-modeling-mcp) to install and configure the Power BI MCP Server.
 
 If you're implementing Github Copilot, you'll go to "configure tools" to review the step 4 settings, allow all those options.
 
@@ -40,7 +40,7 @@ As showed in the repo there are 3 way to connect to a Power BI file:
 
 ## Add specialized Power BI Skills
 
-Recently in first semester of 2026 was released a new bunch of skill to work with Power BI: (Microsoft skills-for-fabric)[https://github.com/microsoft/skills-for-fabric/tree/main]
+Recently in first semester of 2026 was released a new bunch of skill to work with Power BI: [Microsoft skills-for-fabric](https://github.com/microsoft/skills-for-fabric/tree/main)
 
 New interactions and more context that was missing working just with the existing MCP.
 
