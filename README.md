@@ -40,7 +40,17 @@ As showed in the repo there are 3 way to connect to a Power BI file:
 
 ## Add specialized Power BI Skills
 
-Recently in first semester of 2026 was released a new bunch of skill to work with Power BI: [Microsoft skills-for-fabric](https://github.com/microsoft/skills-for-fabric/tree/main)
+Recently in first semester of 2026 was released a new bunch of skill to work with Power BI: [Microsoft skills-for-fabric](https://github.com/microsoft/skills-for-fabric/tree/main) <-- follow its instructions to install.
 
 New interactions and more context that was missing working just with the existing MCP.
+
+> Something hidden in the process, is that to install skils-for-fabric is requiered to have de mcp connected.
+>
+> **Before connecting the MCP server**
+>
+> ![Before MCP connection](images/beforeconnect.png)
+>
+> **After connecting the MCP server**
+>
+> ![After MCP connection](images/afterconnect.png)
 
