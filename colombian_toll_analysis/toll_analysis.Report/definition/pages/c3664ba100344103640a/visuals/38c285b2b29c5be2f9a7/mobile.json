@@ -2,19 +2,31 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.5.0/schema.json",
   "position": {
     "x": 0,
-    "y": 591,
-    "z": 1000,
-    "height": 200,
+    "y": 872,
+    "z": 2000,
+    "height": 407,
     "width": 324,
-    "tabOrder": 1000
+    "tabOrder": 2000
   },
   "objects": {
-    "data": [],
     "general": [],
-    "header": [
+    "categoryAxis": [
       {
         "properties": {
-          "textSize": {
+          "concatenateLabels": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "labels": [
+      {
+        "properties": {
+          "fontSize": {
             "expr": {
               "Literal": {
                 "Value": "9D"
@@ -23,27 +35,23 @@
           }
         }
       }
-    ],
-    "categoryLabels": [
+    ]
+  },
+  "visualContainerObjects": {
+    "title": [
       {
         "properties": {
-          "textSize": {
+          "fontSize": {
             "expr": {
               "Literal": {
-                "Value": "8.5D"
+                "Value": "12D"
               }
             }
-          }
-        }
-      }
-    ],
-    "valueLabels": [
-      {
-        "properties": {
-          "textSize": {
+          },
+          "bold": {
             "expr": {
               "Literal": {
-                "Value": "8.5D"
+                "Value": "true"
               }
             }
           }
