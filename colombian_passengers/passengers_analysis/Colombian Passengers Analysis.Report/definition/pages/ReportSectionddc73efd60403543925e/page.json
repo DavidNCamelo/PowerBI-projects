@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSectionddc73efd60403543925e",
+  "displayName": "Características superficiales",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "2f7d3133bedd711d9554",
+      "target": "5dbd247976b127a94176",
+      "type": "DataFilter"
+    }
+  ]
+}

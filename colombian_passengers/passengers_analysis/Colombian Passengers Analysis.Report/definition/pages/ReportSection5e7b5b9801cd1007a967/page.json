@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection5e7b5b9801cd1007a967",
+  "displayName": "Distribuciones Destino - Origen",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "c1ed324a07bb5111ab08",
+      "target": "90c56901c3a4aa0ab2d1",
+      "type": "DataFilter"
+    },
+    {
+      "source": "c1ed324a07bb5111ab08",
+      "target": "06920fffd06150cce0b9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "90c56901c3a4aa0ab2d1",
+      "target": "c1ed324a07bb5111ab08",
+      "type": "DataFilter"
+    },
+    {
+      "source": "06920fffd06150cce0b9",
+      "target": "90c56901c3a4aa0ab2d1",
+      "type": "DataFilter"
+    },
+    {
+      "source": "06920fffd06150cce0b9",
+      "target": "c1ed324a07bb5111ab08",
+      "type": "DataFilter"
+    }
+  ]
+}

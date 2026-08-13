@@ -1,0 +1,24 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["transporte","municipiosOrigen","municipiosDestino"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","TMDLView_Desktop","DevMode"]
+
+ref table dateTableTemplateB616fb6eD4cd43fdAb1b4ddea99b556d
+ref table Calendario
+ref table Medidas
+ref table transporte
+ref table localDateTable66d5cb13F83748a1952376af1569c514
+ref table municipiosOrigen
+ref table municipiosDestino
+
+ref cultureInfo es-CO
+

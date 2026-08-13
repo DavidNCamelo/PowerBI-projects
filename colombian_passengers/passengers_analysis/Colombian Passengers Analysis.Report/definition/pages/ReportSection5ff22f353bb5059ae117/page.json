@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection5ff22f353bb5059ae117",
+  "displayName": "Tendencias 2",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "20a76e70ec990816d079",
+      "target": "827c9990578ce206de7e",
+      "type": "DataFilter"
+    },
+    {
+      "source": "827c9990578ce206de7e",
+      "target": "20a76e70ec990816d079",
+      "type": "DataFilter"
+    }
+  ]
+}

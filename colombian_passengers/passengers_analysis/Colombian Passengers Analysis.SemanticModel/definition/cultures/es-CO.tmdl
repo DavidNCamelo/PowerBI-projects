@@ -1,0 +1,3393 @@
+cultureInfo es-CO
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calendario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario.date.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "#Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "num me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "number me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "#Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "num día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "number día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.me1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.día1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.año_trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "AñoTrimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AñoTrimestre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "medida.acumulado_despachos_por_departamentos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "acumulado_despachos_por_departamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "acumulado despachos por departamentos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "acumulado_despachos_por_departamentos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_despachos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_despachos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total despachos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_despachos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate despacho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall despacho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Despachos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_despachos_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_despachos_general"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total despachos general": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_despachos_general": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate despacho general": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall despacho general": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.porcentaje_acum_despachos_por_departamentos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "porcentaje_acum_despachos_por_departamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "porcentaje acum despachos por departamentos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "porcentaje_acum_despachos_por_departamentos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "%Acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.despachos_periodo_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "despachos_periodo_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "despachos periodo anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "despachos_periodo_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_anual_despachos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "variacion_anual_despachos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion anual despachos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacion_anual_despachos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variación Anual Despachos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_pasajeros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_pasajeros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total pasajeros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_pasajeros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate pasajero": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall pasajero": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Pasajeros": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_anual_pasajeros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "variacion_anual_pasajeros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion anual pasajeros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacion_anual_pasajeros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variación Anual Pasajeros": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_trimestral_despachos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "variacion_trimestral_despachos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion trimestral despachos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacion_trimestral_despachos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variación Trimestral Despachos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_trimestral_pasajeros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "variacion_trimestral_pasajeros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion trimestral pasajeros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacion_trimestral_pasajeros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.acumulado_pasajeros_por_departamento_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "acumulado_pasajeros_por_departamento_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "acumulado pasajeros por departamento destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "acumulado_pasajeros_por_departamento_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_pasajeros_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_pasajeros_general"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total pasajeros general": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_pasajeros_general": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate pasajero general": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall pasajero general": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.porcentaje_acum_pasajeros_por_departamento_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "porcentaje_acum_pasajeros_por_departamento_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "porcentaje acum pasajeros por departamento destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "porcentaje_acum_pasajeros_por_departamento_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "%Acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "transporte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transporte": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.terminal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "TERMINAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "terminal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "incurable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mortal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "life-threatening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "depot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "airport": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.clase_vehiculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "CLASE_VEHICULO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clase vehiculo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CLASE_VEHICULO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.nivel_servicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "NIVEL_SERVICIO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel servicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NIVEL_SERVICIO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.municipio_origen_ruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "MUNICIPIO_ORIGEN_RUTA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "municipio origen ruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MUNICIPIO_ORIGEN_RUTA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.municipio_destino_ruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "MUNICIPIO_DESTINO_RUTA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "municipio destino ruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MUNICIPIO_DESTINO_RUTA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.fecha_despacho": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "FECHA_DESPACHO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fecha despacho": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FECHA_DESPACHO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "transporte.hora_despacho": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "HORA_DESPACHO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora despacho": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HORA_DESPACHO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.tipo_despacho": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "TIPO_DESPACHO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo despacho": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TIPO_DESPACHO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.despacho": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "DESPACHOS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "despacho": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "transporte.pasajero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "transporte",
+			          "ConceptualProperty": "PASAJEROS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pasajero": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipios origen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "municipio origen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "municipiosOrigen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.codigo_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "codigo_departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_departamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Departamento Origen": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Origen Departamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.codigo_municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "codigo_municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo municipio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_municipio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Origen Municipio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.longitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "Longitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_origen.latitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosOrigen",
+			          "ConceptualProperty": "Latitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipios destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "municipio destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "municipiosDestino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.codigo_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "codigo_departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_departamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Destino Departamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.codigo_municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "codigo_municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo municipio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo_municipio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Origen Municipio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.longitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "Longitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "municipios_destino.latitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "municipiosDestino",
+			          "ConceptualProperty": "Latitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "calendario_date_me_has_calendario_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        },
+			        "calendario.date.día": {
+			          "Target": {
+			            "Entity": "calendario.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "calendario_date_trimestre_has_calendario_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.date.trimestre"
+			          }
+			        },
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_date_año_has_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.año": {
+			          "Target": {
+			            "Entity": "calendario.date.año"
+			          }
+			        },
+			        "calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.año"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "calendario_date_jerarquía_de_fecha_has_calendario_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "calendario.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "calendario.date.día": {
+			          "Target": {
+			            "Entity": "calendario.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "calendario_date_jerarquía_de_fecha_has_calendario_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "calendario.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "calendario_date_jerarquía_de_fecha_has_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "calendario.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_date_jerarquía_de_fecha_has_calendario_date_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "calendario.date.jerarquía_de_fecha"
+			          }
+			        },
+			        "calendario.date.año": {
+			          "Target": {
+			            "Entity": "calendario.date.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "calendario_date_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date": {
+			          "Target": {
+			            "Entity": "calendario.date"
+			          }
+			        },
+			        "calendario.date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "calendario.date.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "transporte_has_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "transporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_transportes"
+			        }
+			      ]
+			    },
+			    "transporte_has_municipios_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "municipios_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_municipios_destinos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "transporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_transportes"
+			        }
+			      ]
+			    },
+			    "transporte_has_municipios_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "municipios_origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_municipios_origen"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "transporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_transportes"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_latitud": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "municipios_destino.latitud": {
+			          "Target": {
+			            "Entity": "municipios_destino.latitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "municipios_destino.latitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_latituds"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_longitud": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "municipios_destino.longitud": {
+			          "Target": {
+			            "Entity": "municipios_destino.longitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "municipios_destino.longitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_longituds"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_municipio": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "municipios_destino.municipio": {
+			          "Target": {
+			            "Entity": "municipios_destino.municipio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "municipios_destino.municipio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_municipios"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "municipios_destino.departamento": {
+			          "Target": {
+			            "Entity": "municipios_destino.departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "municipios_destino.departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_departamentos"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_latitud": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "municipios_origen.latitud": {
+			          "Target": {
+			            "Entity": "municipios_origen.latitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "municipios_origen.latitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_latituds"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_longitud": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "municipios_origen.longitud": {
+			          "Target": {
+			            "Entity": "municipios_origen.longitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "municipios_origen.longitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_longituds"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_municipio": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "municipios_origen.municipio": {
+			          "Target": {
+			            "Entity": "municipios_origen.municipio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "municipios_origen.municipio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_municipios"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "municipios_origen.departamento": {
+			          "Target": {
+			            "Entity": "municipios_origen.departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "municipios_origen.departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_departamentos"
+			        }
+			      ]
+			    },
+			    "transporte_has_pasajero": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.pasajero": {
+			          "Target": {
+			            "Entity": "transporte.pasajero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.pasajero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_pasajeros"
+			        }
+			      ]
+			    },
+			    "transporte_has_despacho": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.despacho": {
+			          "Target": {
+			            "Entity": "transporte.despacho"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.despacho"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_tipo_despacho": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.tipo_despacho": {
+			          "Target": {
+			            "Entity": "transporte.tipo_despacho"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.tipo_despacho"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_tipo_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_hora_despacho": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.hora_despacho": {
+			          "Target": {
+			            "Entity": "transporte.hora_despacho"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.hora_despacho"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_hora_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_nivel_servicio": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.nivel_servicio": {
+			          "Target": {
+			            "Entity": "transporte.nivel_servicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.nivel_servicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_nivel_servicios"
+			        }
+			      ]
+			    },
+			    "transporte_has_clase_vehiculo": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.clase_vehiculo": {
+			          "Target": {
+			            "Entity": "transporte.clase_vehiculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.clase_vehiculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_clase_vehiculos"
+			        }
+			      ]
+			    },
+			    "transporte_has_terminal": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "transporte.terminal": {
+			          "Target": {
+			            "Entity": "transporte.terminal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "transporte.terminal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_terminals"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_porcentaje_acum_pasajeros_por_departamento_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.porcentaje_acum_pasajeros_por_departamento_destino": {
+			          "Target": {
+			            "Entity": "medida.porcentaje_acum_pasajeros_por_departamento_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.porcentaje_acum_pasajeros_por_departamento_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_porcentaje_acum_pasajeros_por_departamento_destino"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_total_pasajeros_general": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.total_pasajeros_general": {
+			          "Target": {
+			            "Entity": "medida.total_pasajeros_general"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.total_pasajeros_general"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_total_pasajeros_general"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_acumulado_pasajeros_por_departamento_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.acumulado_pasajeros_por_departamento_destino": {
+			          "Target": {
+			            "Entity": "medida.acumulado_pasajeros_por_departamento_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.acumulado_pasajeros_por_departamento_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_acumulado_pasajeros_por_departamento_destino"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_variacion_trimestral_pasajeros": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.variacion_trimestral_pasajeros": {
+			          "Target": {
+			            "Entity": "medida.variacion_trimestral_pasajeros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_trimestral_pasajeros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_variacion_trimestral_pasajeros"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_variacion_trimestral_despachos": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.variacion_trimestral_despachos": {
+			          "Target": {
+			            "Entity": "medida.variacion_trimestral_despachos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_trimestral_despachos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_variacion_trimestral_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_variacion_anual_pasajeros": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.variacion_anual_pasajeros": {
+			          "Target": {
+			            "Entity": "medida.variacion_anual_pasajeros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_anual_pasajeros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_variacion_anual_pasajeros"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_total_pasajeros": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.total_pasajeros": {
+			          "Target": {
+			            "Entity": "medida.total_pasajeros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.total_pasajeros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_total_pasajeros"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_variacion_anual_despachos": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.variacion_anual_despachos": {
+			          "Target": {
+			            "Entity": "medida.variacion_anual_despachos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_anual_despachos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_variacion_anual_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_despachos_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.despachos_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.despachos_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.despachos_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_despachos_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_porcentaje_acum_despachos_por_departamentos": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.porcentaje_acum_despachos_por_departamentos": {
+			          "Target": {
+			            "Entity": "medida.porcentaje_acum_despachos_por_departamentos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.porcentaje_acum_despachos_por_departamentos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_porcentaje_acum_despachos_por_departamentos"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_total_despachos_general": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.total_despachos_general": {
+			          "Target": {
+			            "Entity": "medida.total_despachos_general"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.total_despachos_general"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_total_despachos_general"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_total_despachos": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.total_despachos": {
+			          "Target": {
+			            "Entity": "medida.total_despachos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.total_despachos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_total_despachos"
+			        }
+			      ]
+			    },
+			    "transporte_has_medida_acumulado_despachos_por_departamentos": {
+			      "Binding": {
+			        "ConceptualEntity": "transporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "transporte": {
+			          "Target": {
+			            "Entity": "transporte"
+			          }
+			        },
+			        "medida.acumulado_despachos_por_departamentos": {
+			          "Target": {
+			            "Entity": "medida.acumulado_despachos_por_departamentos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "transporte"
+			            },
+			            "Object": {
+			              "Role": "medida.acumulado_despachos_por_departamentos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "transportes_have_acumulado_despachos_por_departamentos"
+			        }
+			      ]
+			    },
+			    "calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año": {
+			          "Target": {
+			            "Entity": "calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "calendario_has_año_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año_trimestre": {
+			          "Target": {
+			            "Entity": "calendario.año_trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año_trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_año_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_has_día1": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.día1": {
+			          "Target": {
+			            "Entity": "calendario.día1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.día1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_días"
+			        }
+			      ]
+			    },
+			    "calendario_has_me1": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.me1": {
+			          "Target": {
+			            "Entity": "calendario.me1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.me1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_has_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.día": {
+			          "Target": {
+			            "Entity": "calendario.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_días1"
+			        }
+			      ]
+			    },
+			    "calendario_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.me": {
+			          "Target": {
+			            "Entity": "calendario.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_me1"
+			        }
+			      ]
+			    },
+			    "calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.date": {
+			          "Target": {
+			            "Entity": "calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_dates"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

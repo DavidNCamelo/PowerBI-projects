@@ -1,0 +1,18 @@
+{
+  "name": "Custom",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#8BABCF"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
