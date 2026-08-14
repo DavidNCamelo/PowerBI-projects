@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "5f3e1ae20013a846c082",
+  "position": {
+    "x": 731,
+    "y": 431,
+    "z": 4000,
+    "height": 263,
+    "width": 516,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Si bien en cuestión de Despachos de origen el 80% de estos se ubican en 11 departamentos donde la mayoría son de la región Andina y sólo 2 están por fuera de esta, Siendo Valle del Cauca el de mayor proporción de despachos fuera de esta región.",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Los destinos del 80% de pasajeros se encuentran en 13 departamentos diferentes. No obstante, muchos de estos viajes (Ej: Valle con 67% despachos para el mismo departamento destino), son al interior del mismo departamento.",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "42D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

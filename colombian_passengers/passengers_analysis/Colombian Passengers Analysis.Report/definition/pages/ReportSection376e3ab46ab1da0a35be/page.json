@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection376e3ab46ab1da0a35be",
+  "displayName": "Tendencias",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filterdc3ac8d3cd2528b96968",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Transporte"
+              }
+            },
+            "Property": "PASAJEROS"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Transporte",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "t"
+                        }
+                      },
+                      "Property": "PASAJEROS"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "33cc3ed3c0d67434880a",
+      "target": "de2d45b03c0000d0e3cb",
+      "type": "DataFilter"
+    },
+    {
+      "source": "4074acfa03910e454e6e",
+      "target": "de2d45b03c0000d0e3cb",
+      "type": "DataFilter"
+    },
+    {
+      "source": "53def41d68e2ed5d203a",
+      "target": "de2d45b03c0000d0e3cb",
+      "type": "DataFilter"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "95abcc2f4c6eb30594e2",
+  "position": {
+    "x": 16.839799262656339,
+    "y": 75.503068421917376,
+    "z": 7000,
+    "height": 78.234295415959252,
+    "width": 1241.9694397283531,
+    "tabOrder": 4000
+  },
+  "visualGroup": {
+    "displayName": "Cantidades Generales",
+    "groupMode": "ScaleMode"
+  }
+}

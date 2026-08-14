@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Colombian Passengers Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1484b006-2d9d-4125-a00e-77db5047e2dd"
+  }
+}

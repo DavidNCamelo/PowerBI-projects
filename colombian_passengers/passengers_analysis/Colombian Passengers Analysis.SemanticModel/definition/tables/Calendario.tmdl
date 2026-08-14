@@ -1,0 +1,92 @@
+table Calendario
+	lineageTag: c03730a4-7d72-4a1b-9c03-084468b7c872
+
+	column Date
+		formatString: Short Date
+		lineageTag: a3d41658-645d-4f4e-afac-3c797c2f6d1d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: a9abdf44-24af-452a-b0c2-9c46a940106e
+			defaultHierarchy: localDateTable66d5cb13F83748a1952376af1569c514.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Mes
+		formatString: 0
+		lineageTag: 9259968f-8c55-4576-b968-ec763d833540
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Día
+		formatString: 0
+		lineageTag: 03952864-badf-48b2-9427-912f77c198ee
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [#Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: e0b940f1-c1c1-4389-bd9b-4e5ab9aec4ed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: e3a5e41f-a61f-46d9-be4a-d116335f47b2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		lineageTag: bd36c57b-b07d-4090-96db-f5e72297996c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AñoTrimestre
+		lineageTag: 886b04a0-2755-4ba1-b952-a382f98f57ed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AñoTrimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: 41336c02-45a2-4b10-91ec-1d11e0fb169e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = User
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				ADDCOLUMNS (
+				CALENDAR ( DATE( YEAR ( MIN (transporte[fecha_despacho])), 08, 01), DATE( YEAR( MAX( transporte[fecha_despacho]) ), 12, 31 ) ),
+				"Año", YEAR( [Date]),
+				"#Mes", MONTH ( [Date] ),
+				"#Día", DAY ( [Date] ),
+				"Trimestre", "T" & FORMAT ( [Date], "Q" ), 
+				"Mes", FORMAT ( [Date], "MMMM" ),
+				"Día", FORMAT ( [Date], "DDDD" ),
+				"AñoTrimestre", FORMAT ( [Date], "YYYY" ) & "-T" & FORMAT ( [Date], "Q" ) )
+				```
+
+	annotation PBI_Id = 4d3b712c8d244b738501ef9e721fc253
+

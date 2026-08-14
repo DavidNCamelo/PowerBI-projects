@@ -1,0 +1,17 @@
+relationship a9abdf44-24af-452a-b0c2-9c46a940106e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: localDateTable66d5cb13F83748a1952376af1569c514.Date
+
+relationship 633435d6-993a-0e90-9de7-efcea711b379
+	fromColumn: transporte.MUNICIPIO_ORIGEN_RUTA
+	toColumn: municipiosOrigen.codigo_municipio
+
+relationship 75e17e34-68d3-4377-0468-59c22402b597
+	fromColumn: transporte.MUNICIPIO_DESTINO_RUTA
+	toColumn: municipiosDestino.codigo_municipio
+
+relationship b74c59b9-87e3-21f7-7e48-18f909314ab0
+	fromColumn: transporte.FECHA_DESPACHO
+	toColumn: Calendario.Date
+

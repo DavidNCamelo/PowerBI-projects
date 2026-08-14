@@ -1,0 +1,198 @@
+table Medidas
+	lineageTag: 6ce62c5e-cd08-42c7-9d04-3956624c04bf
+
+	measure acumulado_despachos_por_departamentos = ```
+			
+			    VAR Total_Despachos = SUM(transporte[DESPACHOS])
+			    VAR Ranking = 
+			    RANKX(
+			        ALL(municipiosOrigen[departamento]), CALCULATE([total_despachos])
+			    )
+			    VAR Acumulado =
+			    SUMX(
+			    TOPN(Ranking, ALL(municipiosOrigen[departamento]),CALCULATE([total_despachos]), DESC),
+			    CALCULATE([total_despachos])
+			    )
+			    
+			RETURN Acumulado
+			```
+		formatString: 0
+		lineageTag: 28fa9c58-aebe-4188-9ecc-4b9818053775
+
+	measure total_despachos = SUM(transporte[DESPACHOS])
+		formatString: #,0
+		lineageTag: 42252f7c-f7f8-418d-b673-d7734f57c51d
+
+	measure total_despachos_general = ```
+			
+			    SUMX(
+			        ALL(transporte[MUNICIPIO_ORIGEN_RUTA]), [total_despachos])
+			```
+		formatString: #,0
+		lineageTag: c3f7c358-777c-4947-a7d6-a0e6ec373162
+
+	measure porcentaje_acum_despachos_por_departamentos = DIVIDE([acumulado_despachos_por_departamentos],[total_despachos_general],0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: f68e39e9-2086-4b62-be78-dc5948442b3a
+
+	measure despachos_periodo_anterior =
+			
+			CALCULATE([total_despachos], DATEADD(Calendario[Date], -1,YEAR))
+		formatString: 0
+		lineageTag: abfa5011-5ca2-42db-84ee-b5fcd521c10b
+
+	measure variacion_anual_despachos = ```
+			
+			VAR Despacho_A_Anterior = 
+			    CALCULATE([total_despachos], DATEADD(Calendario[Date], -1, YEAR))
+			
+			RETURN 
+			    IF(
+			        ISBLANK(Despacho_A_Anterior) || Despacho_A_Anterior = 0,
+			        BLANK(),
+			        DIVIDE(([total_despachos] - Despacho_A_Anterior), Despacho_A_Anterior,2)
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0f34426b-a9e2-4907-aa78-a3b8b1b3299b
+
+	measure total_pasajeros = SUM(transporte[PASAJEROS])
+		formatString: #,0
+		lineageTag: 90da7bdb-5cd2-4be5-8e1e-6f2ba6c3f066
+
+	measure variacion_anual_pasajeros = ```
+			
+			VAR Pasajeros_A_Anterior = 
+			    CALCULATE([total_pasajeros], DATEADD(Calendario[Date], -1, YEAR))
+			
+			RETURN 
+			    IF(
+			        ISBLANK(Pasajeros_A_Anterior) || Pasajeros_A_Anterior = 0,
+			        BLANK(),
+			        DIVIDE(([total_pasajeros] - Pasajeros_A_Anterior),Pasajeros_A_Anterior,2)
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ecb7b171-740e-4bf7-8722-1fd9f9a329b4
+
+	measure variacion_trimestral_despachos = ```
+			
+			VAR Despacho_T_Anterior = 
+			    CALCULATE([total_despachos], DATEADD(Calendario[Date], -1, QUARTER))
+			
+			RETURN 
+			    IF(
+			        ISBLANK(Despacho_T_Anterior)|| Despacho_T_Anterior = 0,
+			        BLANK(),
+			        DIVIDE(([total_despachos] - Despacho_T_Anterior), Despacho_T_Anterior,2)
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5b3e9460-fcec-4452-8d8c-7e92fb0a3fe1
+
+	measure variacion_trimestral_pasajeros = ```
+			
+			VAR Pasajeros_T_Anterior = 
+			    CALCULATE([total_pasajeros], DATEADD(Calendario[Date], -1, QUARTER))
+			
+			RETURN 
+			    IF(
+			        ISBLANK(Pasajeros_T_Anterior) || Pasajeros_T_Anterior = 0,
+			        BLANK(),
+			        DIVIDE(([total_pasajeros] - Pasajeros_T_Anterior), Pasajeros_T_Anterior,2)
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 34c8ed15-63f5-479b-b4bf-dd72b176beb5
+
+	measure acumulado_pasajeros_por_departamento_destino = ```
+			
+			    VAR Ranking = 
+			    RANKX(
+			        ALL(municipiosDestino[departamento]),
+			        [total_pasajeros]
+			    )
+			    VAR AcumuladoP =
+			    SUMX(
+			        TOPN(Ranking, ALL(municipiosDestino[departamento]),
+			            [total_pasajeros],
+			            DESC
+			        ),
+			        [total_pasajeros]
+			    )
+			    
+			RETURN AcumuladoP
+			```
+		formatString: 0
+		lineageTag: 6cbaa858-6866-421d-852e-e467167c28b4
+
+	measure total_pasajeros_general = ```
+			
+			    SUMX(
+			        ALL(transporte), [total_pasajeros])
+			```
+		formatString: #,0
+		lineageTag: 47c47a61-c060-42da-b91b-062e1c75d94f
+
+	measure porcentaje_acum_pasajeros_por_departamento_destino = DIVIDE([acumulado_pasajeros_por_departamento_destino],[total_pasajeros_general],0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ade9e413-8f90-484d-8cf5-aa79970726f8
+
+	measure total_mun_destino =
+			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosDestino[codigo_municipio]),
+				TREATAS(_codes, municipiosDestino[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 4720387a-7fc0-4e8f-8a38-04d07b105721
+
+	measure total_mun_origen =
+			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosOrigen[codigo_municipio]),
+				TREATAS(_codes, municipiosOrigen[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 6a69ff52-051b-4bee-aaa0-faf312ee4248
+
+	measure total_dpto_destino =
+			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosDestino[departamento]),
+				TREATAS(_codes, municipiosDestino[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 06c9d4fe-0d6c-4118-885e-ad4ed0515c95
+
+	measure total_dpto_origen =
+			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosOrigen[departamento]),
+				TREATAS(_codes, municipiosOrigen[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 740bec58-a438-4b16-b07f-4481e996dd54
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 3adf3c23-7c48-4d39-a8f1-8c27fbabe273
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 67ea607040f1472bb64386bbe6570853
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

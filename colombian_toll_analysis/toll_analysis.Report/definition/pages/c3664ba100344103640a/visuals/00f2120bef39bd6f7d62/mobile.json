@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.5.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 552,
+    "z": 1000,
+    "height": 280,
+    "width": 324,
+    "tabOrder": 1000
+  },
+  "objects": {
+    "general": [],
+    "legend": [
+      {
+        "properties": {}
+      }
+    ],
+    "bubbleLayer": [
+      {
+        "properties": {
+          "markerRangeType": {
+            "expr": {
+              "Literal": {
+                "Value": "'scatterDeprecated'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "mapControls": [
+      {
+        "properties": {
+          "autoZoomIncludesReferenceLayer": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "zoom": {
+            "expr": {
+              "Literal": {
+                "Value": "4.1D"
+              }
+            }
+          },
+          "centerLatitude": {
+            "expr": {
+              "Literal": {
+                "Value": "6.603787667264243D"
+              }
+            }
+          },
+          "centerLongitude": {
+            "expr": {
+              "Literal": {
+                "Value": "-74.48744683333649D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

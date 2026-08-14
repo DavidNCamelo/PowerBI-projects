@@ -1,0 +1,103 @@
+table municipiosOrigen
+	lineageTag: b0b50211-dbeb-4de6-abe4-93af1e790e98
+
+	column codigo_departamento
+		dataType: string
+		isHidden
+		lineageTag: 862447b5-9c4e-4993-ad1a-a4632f611a02
+		summarizeBy: none
+		sourceColumn: codigo_departamento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: 47abfebd-f72a-4cca-b4f6-52a870f06183
+		summarizeBy: none
+		sourceColumn: departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_municipio
+		dataType: string
+		isHidden
+		lineageTag: 4031f0ec-68d7-4537-b800-100b124af0a3
+		summarizeBy: none
+		sourceColumn: codigo_municipio
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column municipio
+		dataType: string
+		lineageTag: 91dfedd4-5be9-453c-bdfa-71666a04bb88
+		summarizeBy: none
+		sourceColumn: municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		isHidden
+		lineageTag: 1e673e3a-35d0-4e8e-9f31-c374f9a36897
+		summarizeBy: none
+		sourceColumn: tipo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitud
+		dataType: double
+		lineageTag: 9900a3bf-9d53-4e37-ac20-68e423c6006b
+		summarizeBy: none
+		sourceColumn: Longitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Latitud
+		dataType: double
+		lineageTag: bd969eda-80cb-4a72-90d9-efaad0c598e2
+		summarizeBy: none
+		sourceColumn: Latitud
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition municipiosOrigen = m
+		mode: import
+		source =
+				let
+				    Origen = R.Execute("library(httr)
+				                        #(lf)library(readxl)
+				                        #(lf)
+				                        #(lf)url <- ""https://geoportal.dane.gov.co/descargas/divipola/DIVIPOLA_Municipios.xlsx""
+				                        #(lf)
+				                        #(lf)headers <- c(
+				                        #(lf)  ""User-Agent"" = ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36""
+				                        #(lf))
+				                        #(lf)
+				                        #(lf)response <- GET(url, add_headers(headers))
+				                        #(lf)
+				                        #(lf)contenido <- content(response, as = ""raw"")
+				                        #(lf)
+				                        #(lf)tmpfile <- tempfile(fileext = "".xlsx"")
+				                        #(lf)writeBin(contenido, tmpfile)
+				                        #(lf)
+				                        #(lf)municipios <- read_xlsx(tmpfile, sheet = ""Municipios"", range = ""A11:G1132"")
+				                        #(lf)municipios"),
+				    municipios = Origen{[Name="municipios"]}[Value],
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(municipios,{{"Código...1", "codigo_departamento"}, {"Nombre...2", "departamento"}, {"Código...3", "codigo_municipio"}, {"Nombre...4", "municipio"}, {"Municipio#(cr)#(lf)Isla#(cr)#(lf)Área no municipalizada", "tipo"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

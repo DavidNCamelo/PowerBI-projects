@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 72.80000305175777
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 388.00000000000011,
+            "y": 647.13749885559082
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "c03730a4-7d72-4a1b-9c03-084468b7c872",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 872,
+            "y": 428.63749885559088
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "6ce62c5e-cd08-42c7-9d04-3956624c04bf",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 531.40000915527321,
+            "y": 191.99999999999986
+          },
+          "nodeIndex": "transporte",
+          "nodeLineageTag": "ec575c6c-4dda-45a4-9537-28e830dc9b05",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 85.999999999999929,
+            "y": 0
+          },
+          "nodeIndex": "municipiosDestino",
+          "nodeLineageTag": "1c93c5c5-321a-4025-a585-32fee2af2e5f",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 89.599990844727245,
+            "y": 350.49999999999994
+          },
+          "nodeIndex": "municipiosOrigen",
+          "nodeLineageTag": "b0b50211-dbeb-4de6-abe4-93af1e790e98",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100.00000000000007,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

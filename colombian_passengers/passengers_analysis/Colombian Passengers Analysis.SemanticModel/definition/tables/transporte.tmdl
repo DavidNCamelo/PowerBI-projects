@@ -1,0 +1,149 @@
+table transporte
+	lineageTag: ec575c6c-4dda-45a4-9537-28e830dc9b05
+
+	column TERMINAL
+		dataType: string
+		lineageTag: 81dd2edf-4993-4d0a-84dc-2f4560f43422
+		summarizeBy: none
+		sourceColumn: TERMINAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASE_VEHICULO
+		dataType: string
+		lineageTag: f6bc207c-95ef-4536-a1d7-ce000f7735fe
+		summarizeBy: none
+		sourceColumn: CLASE_VEHICULO
+
+		annotation SummarizationSetBy = Automatic
+
+	column NIVEL_SERVICIO
+		dataType: string
+		lineageTag: 90197d01-929f-4aff-9abf-48ec0e523610
+		summarizeBy: none
+		sourceColumn: NIVEL_SERVICIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column MUNICIPIO_ORIGEN_RUTA
+		dataType: string
+		isHidden
+		lineageTag: 2e9f342c-066f-4c50-88cf-593f51a96d03
+		summarizeBy: none
+		sourceColumn: MUNICIPIO_ORIGEN_RUTA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MUNICIPIO_DESTINO_RUTA
+		dataType: string
+		isHidden
+		lineageTag: 5fd179df-efd3-4169-8704-e81e0d4e1ded
+		summarizeBy: none
+		sourceColumn: MUNICIPIO_DESTINO_RUTA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_DESPACHO
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 73873c3b-d55d-4e62-b656-9a9c4762c7ab
+		summarizeBy: none
+		sourceColumn: FECHA_DESPACHO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HORA_DESPACHO
+		dataType: int64
+		formatString: 0
+		lineageTag: 45248bc4-8466-4aa5-a056-4bc0660a329c
+		summarizeBy: none
+		sourceColumn: HORA_DESPACHO
+
+		annotation SummarizationSetBy = User
+
+	column TIPO_DESPACHO
+		dataType: string
+		lineageTag: b4686063-c82c-41f5-bc17-5f3ed6b16223
+		summarizeBy: none
+		sourceColumn: TIPO_DESPACHO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESPACHOS
+		dataType: int64
+		formatString: #,0
+		lineageTag: ca93ab8b-1d7b-47f6-b43d-f59101d46190
+		summarizeBy: sum
+		sourceColumn: DESPACHOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column PASAJEROS
+		dataType: int64
+		formatString: #,0
+		lineageTag: 1b2cc509-b83a-43be-931f-87c501853ea9
+		summarizeBy: sum
+		sourceColumn: PASAJEROS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Transporte = m
+		mode: import
+		source = ```
+				let
+				    Origen = Python.Execute("import pandas as pd
+				                            #(lf)import requests
+				                            #(lf)from io import StringIO
+				                            #(lf)
+				                            #(lf)#Datos directamente desde la API
+				                            #(lf)# Definir la URL base
+				                            #(lf)base_url = ""https://www.datos.gov.co/resource/eh75-8ah6.csv""
+				                            #(lf)
+				                            #(lf)# Obtener el año actual
+				                            #(lf)current_year = pd.to_datetime(""today"").year
+				                            #(lf)
+				                            #(lf)# Crear una lista para almacenar los DataFrames por año
+				                            #(lf)dataframes = []
+				                            #(lf)
+				                            #(lf)
+				                            # Iterar a través de los años desde hace 3 años hasta el año actual
+				                            #(lf)for year in range(current_year - 3, current_year + 1):
+				                            #(lf)    # Construir la URL para el año actual
+				                            #(lf)    year_url = f""{base_url}?$where=fecha_despacho between '{year}-01-01T00:00:00' and '{year}-12-31T00:00:00'&$limit=10000000""
+				                            #(lf)    # Realizar una solicitud GET a la URL y obtener el contenido del CSV
+				                            #(lf)    response = requests.get(year_url)
+				                            #(lf)    
+				                            #(lf)    # Crear un DataFrame a partir del contenido del CSV
+				                            #(lf)    data = pd.read_csv(StringIO(response.text))
+				                            #(lf)    
+				                            #(lf)    # Agregar el DataFrame a la lista
+				                            #(lf)    dataframes.append(data)
+				                            #(lf)
+				                            #(lf)# Concatenar todos los DataFrames en uno solo
+				                            #(lf)data = pd.concat(dataframes, ignore_index=True)
+				                            #(lf)data.columns = map(str.upper, data.columns)
+				                            #(lf)# Tranformar el campo de fecha en el formato de mejor lectura
+				                            #(lf)data['FECHA_DESPACHO'] = pd.to_datetime(data['FECHA_DESPACHO'])
+				                            #(lf)data['FECHA_DESPACHO'] = data['FECHA_DESPACHO'].dt.date
+				                            #(lf)
+				                            #(lf)#Traer dataframe final
+				                            #(lf)data"),
+				    data1 = Origen{[Name="data"]}[Value],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(data1,{{"TERMINAL", type text}, {"CLASE_VEHICULO", type text}, {"NIVEL_SERVICIO", type text}, {"MUNICIPIO_ORIGEN_RUTA", type text}, {"MUNICIPIO_DESTINO_RUTA", type text}, {"FECHA_DESPACHO", type date}, {"HORA_DESPACHO", Int64.Type}, {"TIPO_DESPACHO", type text}, {"DESPACHOS", Int64.Type}, {"PASAJEROS", Int64.Type}})
+				in 
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navegación
+

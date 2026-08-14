@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Colombian Passengers Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9ab6b961-a67f-49ec-a083-964d2e7427be"
+  }
+}
