@@ -138,6 +138,46 @@ table Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: ade9e413-8f90-484d-8cf5-aa79970726f8
 
+	measure total_mun_destino =
+			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosDestino[codigo_municipio]),
+				TREATAS(_codes, municipiosDestino[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 4720387a-7fc0-4e8f-8a38-04d07b105721
+
+	measure total_mun_origen =
+			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosOrigen[codigo_municipio]),
+				TREATAS(_codes, municipiosOrigen[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 6a69ff52-051b-4bee-aaa0-faf312ee4248
+
+	measure total_dpto_destino =
+			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosDestino[departamento]),
+				TREATAS(_codes, municipiosDestino[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 06c9d4fe-0d6c-4118-885e-ad4ed0515c95
+
+	measure total_dpto_origen =
+			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
+			RETURN
+			CALCULATE(
+				DISTINCTCOUNT(municipiosOrigen[departamento]),
+				TREATAS(_codes, municipiosOrigen[codigo_municipio])
+			)
+		formatString: #,0
+		lineageTag: 740bec58-a438-4b16-b07f-4481e996dd54
+
 	column Column
 		isHidden
 		formatString: 0
@@ -147,48 +187,6 @@ table Medidas
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic
-
-	measure total_mun_destino = ```
-		VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
-		RETURN
-		CALCULATE(
-			DISTINCTCOUNT(municipiosDestino[codigo_municipio]),
-			TREATAS(_codes, municipiosDestino[codigo_municipio])
-		)
-		```
-		formatString: #,0
-
-
-	measure total_mun_origen = ```
-		VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
-		RETURN
-		CALCULATE(
-			DISTINCTCOUNT(municipiosOrigen[codigo_municipio]),
-			TREATAS(_codes, municipiosOrigen[codigo_municipio])
-		)
-		```
-		formatString: #,0
-
-
-	measure total_dpto_destino = ```
-		VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
-		RETURN
-		CALCULATE(
-			DISTINCTCOUNT(municipiosDestino[departamento]),
-			TREATAS(_codes, municipiosDestino[codigo_municipio])
-		)
-		```
-		formatString: #,0
-
-	measure total_dpto_origen = ```
-		VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
-		RETURN
-		CALCULATE(
-			DISTINCTCOUNT(municipiosOrigen[departamento]),
-			TREATAS(_codes, municipiosOrigen[codigo_municipio])
-		)
-		```
-		formatString: #,0
 
 	partition Medidas = calculated
 		mode: import

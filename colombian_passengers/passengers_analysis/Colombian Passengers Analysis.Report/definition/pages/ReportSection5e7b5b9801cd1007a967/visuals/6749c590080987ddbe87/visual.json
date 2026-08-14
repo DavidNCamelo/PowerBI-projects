@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "6749c590080987ddbe87",
   "position": {
     "x": 12.224108658743633,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Comportamiento de Transporte de Pasajeros por Carretera en Colombia desde 2019",
+                    "value": "Comportamiento de Transporte de Pasajeros por Carretera en Colombia en lo últimos 3 años",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Tahoma",

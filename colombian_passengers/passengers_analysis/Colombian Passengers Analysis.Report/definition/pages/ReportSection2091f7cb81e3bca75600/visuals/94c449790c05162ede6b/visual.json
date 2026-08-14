@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "94c449790c05162ede6b",
   "position": {
     "x": 1025.9547910657109,
@@ -18,11 +18,16 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "Medidas" } }, "Property": "total_dpto_destino"
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "total_mun_destino"
                 }
               },
-              "queryRef": "Medidas.total_dpto_destino",
-              "nativeQueryRef": "total_dpto_destino"
+              "queryRef": "Medidas.total_mun_destino",
+              "nativeQueryRef": "total_mun_destino"
             }
           ]
         }
@@ -32,7 +37,12 @@
           {
             "field": {
               "Measure": {
-                "Expression": { "SourceRef": { "Entity": "Medidas" } }, "Property": "total_dpto_destino"
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "total_mun_destino"
               }
             },
             "direction": "Descending"
