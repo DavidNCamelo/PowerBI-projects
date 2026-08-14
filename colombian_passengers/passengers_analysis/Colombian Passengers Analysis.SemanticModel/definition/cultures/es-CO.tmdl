@@ -680,6 +680,16 @@ cultureInfo es-CO
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Despachos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1629,7 +1639,7 @@ cultureInfo es-CO
 			          }
 			        },
 			        {
-			          "Origen Municipio": {
+			          "Destino Municipio": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

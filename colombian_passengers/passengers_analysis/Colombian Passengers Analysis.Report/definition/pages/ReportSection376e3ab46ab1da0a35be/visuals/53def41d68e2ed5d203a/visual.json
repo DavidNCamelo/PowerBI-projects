@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "municipiosDestino.municipio",
-              "nativeQueryRef": "Origen Municipio1",
+              "nativeQueryRef": "Destino Municipio",
               "active": true,
-              "displayName": "Origen Municipio"
+              "displayName": "Destino Municipio"
             }
           ]
         },
@@ -69,6 +69,21 @@
               "queryRef": "Medidas.total_pasajeros",
               "nativeQueryRef": "Pasajeros",
               "displayName": "Pasajeros"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "total_despachos_general"
+                }
+              },
+              "queryRef": "Medidas.total_despachos_general",
+              "nativeQueryRef": "Despachos",
+              "displayName": "Despachos"
             }
           ]
         }

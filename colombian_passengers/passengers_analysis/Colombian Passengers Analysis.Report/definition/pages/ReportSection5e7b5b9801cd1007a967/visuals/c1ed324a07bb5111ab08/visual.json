@@ -47,7 +47,8 @@
                 }
               },
               "queryRef": "Medidas.total_despachos",
-              "nativeQueryRef": "total_despachos"
+              "nativeQueryRef": "Total Despachos",
+              "displayName": "Total Despachos"
             }
           ]
         },
