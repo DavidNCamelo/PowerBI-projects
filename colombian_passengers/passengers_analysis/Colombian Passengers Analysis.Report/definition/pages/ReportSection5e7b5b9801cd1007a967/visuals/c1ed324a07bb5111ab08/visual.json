@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c1ed324a07bb5111ab08",
   "position": {
     "x": 187.0288624787776,
@@ -43,12 +43,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "total_despachos"
+                  "Property": "total_pasajeros"
                 }
               },
-              "queryRef": "Medidas.total_despachos",
-              "nativeQueryRef": "Total Despachos",
-              "displayName": "Total Despachos"
+              "queryRef": "Medidas.total_pasajeros",
+              "nativeQueryRef": "Total Pasajeros",
+              "displayName": "Total Pasajeros"
             }
           ]
         },
@@ -82,10 +82,10 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "porcentaje_acum_pasajeros_por_departamento_destino"
+                "Property": "total_pasajeros"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -97,7 +97,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Despachos'"
+                  "Value": "'Pasajeros'"
                 }
               }
             },
@@ -183,7 +183,45 @@
             "Property": "departamento"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "municipiosDestino",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "departamento"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
         "name": "25596eed4c203bba3094",
@@ -194,7 +232,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "total_despachos"
+            "Property": "total_pasajeros"
           }
         },
         "type": "Advanced"

@@ -3,23 +3,39 @@ table Medidas
 
 	/// Acumulado de despachos según el ranking de departamentos de origen.
 	measure acumulado_despachos_por_departamentos =
-			VAR Ranking =
-			    RANKX (
+			VAR _despachosActuales = [total_despachos]
+			VAR _departamentoActual = SELECTEDVALUE ( municipiosOrigen[departamento] )
+			VAR _departamentosConDatos =
+			    FILTER (
 			        ALL ( municipiosOrigen[departamento] ),
-			        CALCULATE ( [total_despachos] )
+			        municipiosOrigen[departamento] <> BLANK ()
+			            && NOT ISBLANK ( CALCULATE ( [total_despachos] ) )
 			    )
-			VAR Acumulado =
+			VAR _ranking =
+			    RANKX (
+			        _departamentosConDatos,
+			        CALCULATE ( [total_despachos] ),
+			        _despachosActuales,
+			        DESC,
+			        DENSE
+			    )
+			VAR _acumulado =
 			    SUMX (
 			        TOPN (
-			            Ranking,
-			            ALL ( municipiosOrigen[departamento] ),
+			            _ranking,
+			            _departamentosConDatos,
 			            CALCULATE ( [total_despachos] ),
 			            DESC
 			        ),
 			        CALCULATE ( [total_despachos] )
 			    )
 			RETURN
-			    Acumulado
+			    IF (
+			        ISBLANK ( _departamentoActual )
+			            || ISBLANK ( _despachosActuales ),
+			        BLANK (),
+			        _acumulado
+			    )
 		formatString: 0
 		displayFolder: Despachos
 		lineageTag: 28fa9c58-aebe-4188-9ecc-4b9818053775
@@ -31,11 +47,12 @@ table Medidas
 		lineageTag: 42252f7c-f7f8-418d-b673-d7734f57c51d
 
 	/// Total de despachos ignorando el filtro de municipio de origen.
-	measure total_despachos_general = ```
-			
-			    SUMX(
-			        ALL(transporte[MUNICIPIO_ORIGEN_RUTA]), [total_despachos])
-			```
+	measure total_despachos_general =
+			CALCULATE (
+			    [total_despachos],
+			    REMOVEFILTERS ( municipiosOrigen ),
+			    municipiosOrigen[departamento] <> BLANK ()
+			)
 		formatString: #,0
 		displayFolder: Despachos
 		lineageTag: c3f7c358-777c-4947-a7d6-a0e6ec373162
@@ -129,24 +146,40 @@ table Medidas
 		lineageTag: 34c8ed15-63f5-479b-b4bf-dd72b176beb5
 
 	/// Acumulado de pasajeros según el ranking de departamentos de destino.
-	measure acumulado_pasajeros_por_departamento_destino = ```
-			
-			    VAR Ranking = 
-			    RANKX(
-			        ALL(municipiosDestino[departamento]),
-			        [total_pasajeros]
+	measure acumulado_pasajeros_por_departamento_destino =
+			VAR _pasajerosActuales = [total_pasajeros]
+			VAR _departamentoActual = SELECTEDVALUE ( municipiosDestino[departamento] )
+			VAR _departamentosConDatos =
+			    FILTER (
+			        ALL ( municipiosDestino[departamento] ),
+			        municipiosDestino[departamento] <> BLANK ()
+			            && NOT ISBLANK ( CALCULATE ( [total_pasajeros] ) )
 			    )
-			    VAR AcumuladoP =
-			    SUMX(
-			        TOPN(Ranking, ALL(municipiosDestino[departamento]),
-			            [total_pasajeros],
+			VAR _ranking =
+			    RANKX (
+			        _departamentosConDatos,
+			        CALCULATE ( [total_pasajeros] ),
+			        _pasajerosActuales,
+			        DESC,
+			        DENSE
+			    )
+			VAR _acumulado =
+			    SUMX (
+			        TOPN (
+			            _ranking,
+			            _departamentosConDatos,
+			            CALCULATE ( [total_pasajeros] ),
 			            DESC
 			        ),
-			        [total_pasajeros]
+			        CALCULATE ( [total_pasajeros] )
 			    )
-			    
-			RETURN AcumuladoP
-			```
+			RETURN
+			    IF (
+			        ISBLANK ( _departamentoActual )
+			            || ISBLANK ( _pasajerosActuales ),
+			        BLANK (),
+			        _acumulado
+			    )
 		formatString: 0
 		displayFolder: Pasajeros
 		lineageTag: 6cbaa858-6866-421d-852e-e467167c28b4
@@ -155,7 +188,8 @@ table Medidas
 	measure total_pasajeros_general =
 			CALCULATE (
 			    [total_pasajeros],
-			    REMOVEFILTERS ( transporte )
+			    REMOVEFILTERS ( municipiosDestino ),
+			    municipiosDestino[departamento] <> BLANK ()
 			)
 		formatString: #,0
 		displayFolder: Pasajeros

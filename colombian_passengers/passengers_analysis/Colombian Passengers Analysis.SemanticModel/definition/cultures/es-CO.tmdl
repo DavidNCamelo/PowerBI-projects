@@ -1299,6 +1299,9 @@ cultureInfo es-CO
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "despacho": {
@@ -1315,6 +1318,9 @@ cultureInfo es-CO
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "pasajero": {
@@ -1700,141 +1706,181 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "medida.total_mun_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_mun_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mun destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mun_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate mun destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall mun destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_mun_origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_mun_origen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mun origen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mun_origen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate mun origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall mun origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_dpto_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_dpto_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total dpto destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_dpto_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate dpto destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall dpto destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_dpto_origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_dpto_origen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total dpto origen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_dpto_origen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate dpto origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall dpto origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "calendario_date_me_has_calendario_date_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.me": {
-			          "Target": {
-			            "Entity": "calendario.date.me"
-			          }
-			        },
-			        "calendario.date.día": {
-			          "Target": {
-			            "Entity": "calendario.date.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.día"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendario.date.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me"
-			        }
-			      ]
-			    },
-			    "calendario_date_trimestre_has_calendario_date_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "calendario.date.trimestre"
-			          }
-			        },
-			        "calendario.date.me": {
-			          "Target": {
-			            "Entity": "calendario.date.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres"
-			        }
-			      ]
-			    },
 			    "calendario_date_año_has_calendario_date_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendario"
@@ -2204,6 +2250,138 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "municipios_origen_has_medida_total_dpto_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "medida.total_dpto_origen": {
+			          "Target": {
+			            "Entity": "medida.total_dpto_origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "medida.total_dpto_origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_total_dpto_origen"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_medida_total_dpto_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "medida.total_dpto_destino": {
+			          "Target": {
+			            "Entity": "medida.total_dpto_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "medida.total_dpto_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_total_dpto_destino"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_medida_total_mun_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "medida.total_mun_origen": {
+			          "Target": {
+			            "Entity": "medida.total_mun_origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "medida.total_mun_origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_total_mun_origen"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_medida_total_mun_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "medida.total_mun_destino": {
+			          "Target": {
+			            "Entity": "medida.total_mun_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "medida.total_mun_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_total_mun_destino"
+			        }
+			      ]
+			    },
 			    "municipios_destino_has_latitud": {
 			      "Binding": {
 			        "ConceptualEntity": "municipiosDestino"
@@ -2465,72 +2643,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "municipios_origen_have_departamentos"
-			        }
-			      ]
-			    },
-			    "transporte_has_pasajero": {
-			      "Binding": {
-			        "ConceptualEntity": "transporte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "transporte": {
-			          "Target": {
-			            "Entity": "transporte"
-			          }
-			        },
-			        "transporte.pasajero": {
-			          "Target": {
-			            "Entity": "transporte.pasajero"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "transporte"
-			            },
-			            "Object": {
-			              "Role": "transporte.pasajero"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "transportes_have_pasajeros"
-			        }
-			      ]
-			    },
-			    "transporte_has_despacho": {
-			      "Binding": {
-			        "ConceptualEntity": "transporte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "transporte": {
-			          "Target": {
-			            "Entity": "transporte"
-			          }
-			        },
-			        "transporte.despacho": {
-			          "Target": {
-			            "Entity": "transporte.despacho"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "transporte"
-			            },
-			            "Object": {
-			              "Role": "transporte.despacho"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "transportes_have_despachos"
 			        }
 			      ]
 			    },
@@ -3389,6 +3501,138 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "calendario_date_trimestre_has_calendario_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.date.trimestre"
+			          }
+			        },
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_date_me_has_calendario_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        },
+			        "calendario.date.día": {
+			          "Target": {
+			            "Entity": "calendario.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
 			        }
 			      ]
 			    }
