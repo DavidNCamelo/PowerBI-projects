@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5b698e9dfd9323c37eb4",
   "position": {
     "x": 311.531566640686,
@@ -17,13 +17,24 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "DIM_Calendar"
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "DIM_Calendar"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
                     }
                   },
-                  "Property": "Date"
+                  "Level": "Año"
                 }
               },
               "queryRef": "DIM_Calendar.Date.Variación.Jerarquía de fechas.Año",
@@ -37,13 +48,24 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "HierarchyLevel": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "DIM_Calendar"
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DIM_Calendar"
+                          }
+                        },
+                        "Name": "Variación",
+                        "Property": "Date"
+                      }
+                    },
+                    "Hierarchy": "Jerarquía de fechas"
                   }
                 },
-                "Property": "Date"
+                "Level": "Año"
               }
             },
             "direction": "Ascending"

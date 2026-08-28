@@ -80,6 +80,7 @@ table transporte
 
 	column DESPACHOS
 		dataType: int64
+		isHidden
 		formatString: #,0
 		lineageTag: ca93ab8b-1d7b-47f6-b43d-f59101d46190
 		summarizeBy: sum
@@ -89,6 +90,7 @@ table transporte
 
 	column PASAJEROS
 		dataType: int64
+		isHidden
 		formatString: #,0
 		lineageTag: 1b2cc509-b83a-43be-931f-87c501853ea9
 		summarizeBy: sum

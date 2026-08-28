@@ -1,6 +1,7 @@
 model Model
 	culture: es-CO
 	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
 	sourceQueryCulture: es-CO
 	dataAccessOptions
 		legacyRedirects
