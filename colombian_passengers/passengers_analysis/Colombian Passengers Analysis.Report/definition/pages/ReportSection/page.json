@@ -8,11 +8,6 @@
   "visualInteractions": [
     {
       "source": "3db0fc11db7dbc74491b",
-      "target": "597136605e5dd40eeaad",
-      "type": "DataFilter"
-    },
-    {
-      "source": "3db0fc11db7dbc74491b",
       "target": "8ca3aec9125aea988c20",
       "type": "DataFilter"
     },
@@ -32,38 +27,8 @@
       "type": "DataFilter"
     },
     {
-      "source": "597136605e5dd40eeaad",
-      "target": "3db0fc11db7dbc74491b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "597136605e5dd40eeaad",
-      "target": "8ca3aec9125aea988c20",
-      "type": "DataFilter"
-    },
-    {
-      "source": "597136605e5dd40eeaad",
-      "target": "a9b76257c35977136940",
-      "type": "DataFilter"
-    },
-    {
-      "source": "597136605e5dd40eeaad",
-      "target": "db2a19455e8061671d51",
-      "type": "DataFilter"
-    },
-    {
-      "source": "597136605e5dd40eeaad",
-      "target": "e4bafed5b693cc169932",
-      "type": "DataFilter"
-    },
-    {
       "source": "8ca3aec9125aea988c20",
       "target": "3db0fc11db7dbc74491b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "8ca3aec9125aea988c20",
-      "target": "597136605e5dd40eeaad",
       "type": "DataFilter"
     },
     {
@@ -84,11 +49,6 @@
     {
       "source": "a9b76257c35977136940",
       "target": "3db0fc11db7dbc74491b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "a9b76257c35977136940",
-      "target": "597136605e5dd40eeaad",
       "type": "DataFilter"
     },
     {
@@ -109,11 +69,6 @@
     {
       "source": "db2a19455e8061671d51",
       "target": "3db0fc11db7dbc74491b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "db2a19455e8061671d51",
-      "target": "597136605e5dd40eeaad",
       "type": "DataFilter"
     },
     {
@@ -134,11 +89,6 @@
     {
       "source": "e4bafed5b693cc169932",
       "target": "3db0fc11db7dbc74491b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "e4bafed5b693cc169932",
-      "target": "597136605e5dd40eeaad",
       "type": "DataFilter"
     },
     {

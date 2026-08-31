@@ -38,7 +38,6 @@ table transporte
 
 	column MUNICIPIO_DESTINO_RUTA
 		dataType: string
-		isHidden
 		lineageTag: 5fd179df-efd3-4169-8704-e81e0d4e1ded
 		summarizeBy: none
 		sourceColumn: MUNICIPIO_DESTINO_RUTA
