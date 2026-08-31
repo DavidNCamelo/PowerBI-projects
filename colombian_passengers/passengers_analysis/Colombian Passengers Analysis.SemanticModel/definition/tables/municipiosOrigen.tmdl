@@ -90,7 +90,7 @@ table municipiosOrigen
 				                        #(lf)tmpfile <- tempfile(fileext = "".xlsx"")
 				                        #(lf)writeBin(contenido, tmpfile)
 				                        #(lf)
-				                        #(lf)municipios <- read_xlsx(tmpfile, sheet = ""Municipios"", range = ""A11:G1132"")
+				                        #(lf)municipios <- read_xlsx(tmpfile, sheet = ""Municipios"", range = ""A11:G1133"")
 				                        #(lf)municipios"),
 				    municipios = Origen{[Name="municipios"]}[Value],
 				    #"Columnas con nombre cambiado" = Table.RenameColumns(municipios,{{"Código...1", "codigo_departamento"}, {"Nombre...2", "departamento"}, {"Código...3", "codigo_municipio"}, {"Nombre...4", "municipio"}, {"Municipio#(cr)#(lf)Isla#(cr)#(lf)Área no municipalizada", "tipo"}})
