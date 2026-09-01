@@ -49,6 +49,7 @@ table colombianTollsFusion
 
 	column cantidadtrafico
 		dataType: double
+		isHidden
 		formatString: #,0.00
 		lineageTag: e7691929-cd75-4574-8e3f-08e36524c791
 		summarizeBy: sum
@@ -58,6 +59,7 @@ table colombianTollsFusion
 
 	column cantidadevasores
 		dataType: double
+		isHidden
 		lineageTag: 88165628-3fbb-446d-849f-6c329e3dcac1
 		summarizeBy: sum
 		sourceColumn: cantidadevasores
@@ -68,6 +70,7 @@ table colombianTollsFusion
 
 	column cantidadexentos787
 		dataType: double
+		isHidden
 		formatString: #,0.00
 		lineageTag: d4dc9621-b353-4613-a8c7-b9964d28a3f3
 		summarizeBy: sum

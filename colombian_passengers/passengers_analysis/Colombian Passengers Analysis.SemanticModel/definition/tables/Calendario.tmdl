@@ -1,7 +1,10 @@
 table Calendario
 	lineageTag: c03730a4-7d72-4a1b-9c03-084468b7c872
+	dataCategory: Time
 
 	column Date
+		dataType: dateTime
+		isUnique
 		formatString: Short Date
 		lineageTag: a3d41658-645d-4f4e-afac-3c797c2f6d1d
 		summarizeBy: none
@@ -18,7 +21,7 @@ table Calendario
 	column #Mes
 		formatString: 0
 		lineageTag: 9259968f-8c55-4576-b968-ec763d833540
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Mes]
 
@@ -27,7 +30,7 @@ table Calendario
 	column #Día
 		formatString: 0
 		lineageTag: 03952864-badf-48b2-9427-912f77c198ee
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Día]
 

@@ -80,6 +80,7 @@ table transporte
 
 	column DESPACHOS
 		dataType: int64
+		isHidden
 		formatString: #,0
 		lineageTag: ca93ab8b-1d7b-47f6-b43d-f59101d46190
 		summarizeBy: sum
@@ -89,6 +90,7 @@ table transporte
 
 	column PASAJEROS
 		dataType: int64
+		isHidden
 		formatString: #,0
 		lineageTag: 1b2cc509-b83a-43be-931f-87c501853ea9
 		summarizeBy: sum
@@ -119,7 +121,7 @@ table transporte
 				                            #(lf)for year in range(current_year - 3, current_year + 1):
 				                            #(lf)    # Construir la URL para el año actual
 				                            #(lf)    year_url = f""{base_url}?$where=fecha_despacho between '{year}-01-01T00:00:00' and '{year}-12-31T00:00:00'&$limit=10000000""
-				                            #(lf)    # Realizar una solicitud GET a la URL y obtener el contenido del CSV
+				                            #(lf)    # Realizar una solicitud GET y obtener el contenido del CSV
 				                            #(lf)    response = requests.get(year_url)
 				                            #(lf)    
 				                            #(lf)    # Crear un DataFrame a partir del contenido del CSV
@@ -138,9 +140,10 @@ table transporte
 				                            #(lf)#Traer dataframe final
 				                            #(lf)data"),
 				    data1 = Origen{[Name="data"]}[Value],
-				    #"Tipo cambiado" = Table.TransformColumnTypes(data1,{{"TERMINAL", type text}, {"CLASE_VEHICULO", type text}, {"NIVEL_SERVICIO", type text}, {"MUNICIPIO_ORIGEN_RUTA", type text}, {"MUNICIPIO_DESTINO_RUTA", type text}, {"FECHA_DESPACHO", type date}, {"HORA_DESPACHO", Int64.Type}, {"TIPO_DESPACHO", type text}, {"DESPACHOS", Int64.Type}, {"PASAJEROS", Int64.Type}})
-				in 
-				    #"Tipo cambiado"
+				    #"Tipo cambiado" = Table.TransformColumnTypes(data1,{{"TERMINAL", type text}, {"CLASE_VEHICULO", type text}, {"NIVEL_SERVICIO", type text}, {"MUNICIPIO_ORIGEN_RUTA", type text}, {"MUNICIPIO_DESTINO_RUTA", type text}, {"FECHA_DESPACHO", type date}, {"HORA_DESPACHO", Int64.Type}, {"TIPO_DESPACHO", type text}, {"DESPACHOS", Int64.Type}, {"PASAJEROS", Int64.Type}}),
+				    #"Codigos municipio normalizados" = Table.TransformColumns(#"Tipo cambiado", {{"MUNICIPIO_ORIGEN_RUTA", each if _ = null then null else let _text = Text.Trim(Text.From(_)) in if Text.Length(_text) = 4 then "0" & _text else _text, type text}, {"MUNICIPIO_DESTINO_RUTA", each if _ = null then null else let _text = Text.Trim(Text.From(_)) in if Text.Length(_text) = 4 then "0" & _text else _text, type text}})
+				in
+				    #"Codigos municipio normalizados"
 				```
 
 	annotation PBI_ResultType = Exception

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "53def41d68e2ed5d203a",
   "position": {
     "x": 179.6943972835314,
@@ -78,10 +78,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "total_despachos_general"
+                  "Property": "total_despachos"
                 }
               },
-              "queryRef": "Medidas.total_despachos_general",
+              "queryRef": "Medidas.total_despachos",
               "nativeQueryRef": "Despachos",
               "displayName": "Despachos"
             }

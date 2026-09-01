@@ -1,7 +1,10 @@
 table DIM_Calendar
 	lineageTag: b9fc2868-87e5-4f90-9754-c65fba464bf5
+	dataCategory: Time
 
 	column Date
+		dataType: dateTime
+		isUnique
 		formatString: General Date
 		lineageTag: 73a6364a-59bb-481e-be4f-416986c02658
 		summarizeBy: none
@@ -26,7 +29,7 @@ table DIM_Calendar
 	column #Year
 		formatString: 0
 		lineageTag: cb15e575-3306-4636-be80-0dff30604366
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Year]
 
@@ -35,7 +38,7 @@ table DIM_Calendar
 	column #Quarter
 		formatString: 0
 		lineageTag: 77b75328-12be-4700-882b-e3815daa8cd6
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Quarter]
 
@@ -44,7 +47,7 @@ table DIM_Calendar
 	column #Month
 		formatString: 0
 		lineageTag: 3772ea45-28de-40ca-b76a-27fdfa448ef8
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Month]
 
@@ -53,7 +56,7 @@ table DIM_Calendar
 	column #Day
 		formatString: 0
 		lineageTag: df24b724-5746-4c0f-9f0c-5196068e3363
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#Day]
 
@@ -86,7 +89,7 @@ table DIM_Calendar
 	column #WeekDay
 		formatString: 0
 		lineageTag: 77f5afea-2a4b-4906-957c-3689f41551cd
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#WeekDay]
 
@@ -95,7 +98,7 @@ table DIM_Calendar
 	column #WeekYear
 		formatString: 0
 		lineageTag: c25a9ac2-cbee-4b38-9dbf-3238e65493db
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [#WeekYear]
 

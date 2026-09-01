@@ -680,16 +680,6 @@ cultureInfo es-CO
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Despachos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1299,6 +1289,9 @@ cultureInfo es-CO
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "despacho": {
@@ -1315,6 +1308,9 @@ cultureInfo es-CO
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "pasajero": {
@@ -1697,6 +1693,178 @@ cultureInfo es-CO
 			        {
 			          "latitud": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_mun_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_mun_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mun destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mun_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate mun destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall mun destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_mun_origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_mun_origen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mun origen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mun_origen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate mun origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall mun origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_dpto_destino": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_dpto_destino"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total dpto destino": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_dpto_destino": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate dpto destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall dpto destino": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_dpto_origen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "total_dpto_origen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total dpto origen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_dpto_origen": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate dpto origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall dpto origen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -2204,6 +2372,138 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "municipios_origen_has_medida_total_dpto_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "medida.total_dpto_origen": {
+			          "Target": {
+			            "Entity": "medida.total_dpto_origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "medida.total_dpto_origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_total_dpto_origen"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_medida_total_dpto_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "medida.total_dpto_destino": {
+			          "Target": {
+			            "Entity": "medida.total_dpto_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "medida.total_dpto_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_total_dpto_destino"
+			        }
+			      ]
+			    },
+			    "municipios_origen_has_medida_total_mun_origen": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosOrigen"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_origen": {
+			          "Target": {
+			            "Entity": "municipios_origen"
+			          }
+			        },
+			        "medida.total_mun_origen": {
+			          "Target": {
+			            "Entity": "medida.total_mun_origen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_origen"
+			            },
+			            "Object": {
+			              "Role": "medida.total_mun_origen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_origen_have_total_mun_origen"
+			        }
+			      ]
+			    },
+			    "municipios_destino_has_medida_total_mun_destino": {
+			      "Binding": {
+			        "ConceptualEntity": "municipiosDestino"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "municipios_destino": {
+			          "Target": {
+			            "Entity": "municipios_destino"
+			          }
+			        },
+			        "medida.total_mun_destino": {
+			          "Target": {
+			            "Entity": "medida.total_mun_destino"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "municipios_destino"
+			            },
+			            "Object": {
+			              "Role": "medida.total_mun_destino"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "municipios_destinos_have_total_mun_destino"
+			        }
+			      ]
+			    },
 			    "municipios_destino_has_latitud": {
 			      "Binding": {
 			        "ConceptualEntity": "municipiosDestino"
@@ -2468,72 +2768,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_pasajero": {
-			      "Binding": {
-			        "ConceptualEntity": "transporte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "transporte": {
-			          "Target": {
-			            "Entity": "transporte"
-			          }
-			        },
-			        "transporte.pasajero": {
-			          "Target": {
-			            "Entity": "transporte.pasajero"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "transporte"
-			            },
-			            "Object": {
-			              "Role": "transporte.pasajero"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "transportes_have_pasajeros"
-			        }
-			      ]
-			    },
-			    "transporte_has_despacho": {
-			      "Binding": {
-			        "ConceptualEntity": "transporte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "transporte": {
-			          "Target": {
-			            "Entity": "transporte"
-			          }
-			        },
-			        "transporte.despacho": {
-			          "Target": {
-			            "Entity": "transporte.despacho"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "transporte"
-			            },
-			            "Object": {
-			              "Role": "transporte.despacho"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "transportes_have_despachos"
-			        }
-			      ]
-			    },
 			    "transporte_has_tipo_despacho": {
 			      "Binding": {
 			        "ConceptualEntity": "transporte"
@@ -2699,15 +2933,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_porcentaje_acum_pasajeros_por_departamento_destino": {
+			    "medida_has_porcentaje_acum_pasajeros_por_departamento_destino": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.porcentaje_acum_pasajeros_por_departamento_destino": {
@@ -2720,7 +2954,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.porcentaje_acum_pasajeros_por_departamento_destino"
@@ -2728,7 +2962,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_porcentaje_acum_pasajeros_por_departamento_destino"
+			          "ID": "medidas_have_porcentaje_acum_pasajeros_por_departamento_destino"
 			        }
 			      ]
 			    },
@@ -2765,15 +2999,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_acumulado_pasajeros_por_departamento_destino": {
+			    "medida_has_acumulado_pasajeros_por_departamento_destino": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.acumulado_pasajeros_por_departamento_destino": {
@@ -2786,7 +3020,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.acumulado_pasajeros_por_departamento_destino"
@@ -2794,7 +3028,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_acumulado_pasajeros_por_departamento_destino"
+			          "ID": "medidas_have_acumulado_pasajeros_por_departamento_destino"
 			        }
 			      ]
 			    },
@@ -2996,15 +3230,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_porcentaje_acum_despachos_por_departamentos": {
+			    "medida_has_porcentaje_acum_despachos_por_departamentos": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.porcentaje_acum_despachos_por_departamentos": {
@@ -3017,7 +3251,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.porcentaje_acum_despachos_por_departamentos"
@@ -3025,7 +3259,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_porcentaje_acum_despachos_por_departamentos"
+			          "ID": "medidas_have_porcentaje_acum_despachos_por_departamentos"
 			        }
 			      ]
 			    },
@@ -3095,15 +3329,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_acumulado_despachos_por_departamentos": {
+			    "medida_has_acumulado_despachos_por_departamentos": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.acumulado_despachos_por_departamentos": {
@@ -3116,7 +3350,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.acumulado_despachos_por_departamentos"
@@ -3124,7 +3358,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_acumulado_despachos_por_departamentos"
+			          "ID": "medidas_have_acumulado_despachos_por_departamentos"
 			        }
 			      ]
 			    },

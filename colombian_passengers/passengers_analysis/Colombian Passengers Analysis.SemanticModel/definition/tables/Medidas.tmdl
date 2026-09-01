@@ -1,46 +1,77 @@
 table Medidas
 	lineageTag: 6ce62c5e-cd08-42c7-9d04-3956624c04bf
 
-	measure acumulado_despachos_por_departamentos = ```
-			
-			    VAR Total_Despachos = SUM(transporte[DESPACHOS])
-			    VAR Ranking = 
-			    RANKX(
-			        ALL(municipiosOrigen[departamento]), CALCULATE([total_despachos])
+	/// Acumulado de despachos según el ranking de departamentos de origen.
+	measure acumulado_despachos_por_departamentos =
+			VAR _despachosActuales = [total_despachos]
+			VAR _departamentoActual = SELECTEDVALUE ( municipiosOrigen[departamento] )
+			VAR _departamentosConDatos =
+			    FILTER (
+			        ALL ( municipiosOrigen[departamento] ),
+			        municipiosOrigen[departamento] <> BLANK ()
+			            && NOT ISBLANK ( CALCULATE ( [total_despachos] ) )
 			    )
-			    VAR Acumulado =
-			    SUMX(
-			    TOPN(Ranking, ALL(municipiosOrigen[departamento]),CALCULATE([total_despachos]), DESC),
-			    CALCULATE([total_despachos])
+			VAR _ranking =
+			    RANKX (
+			        _departamentosConDatos,
+			        CALCULATE ( [total_despachos] ),
+			        _despachosActuales,
+			        DESC,
+			        DENSE
 			    )
-			    
-			RETURN Acumulado
-			```
-		formatString: 0
+			VAR _acumulado =
+			    SUMX (
+			        TOPN (
+			            _ranking,
+			            _departamentosConDatos,
+			            CALCULATE ( [total_despachos] ),
+			            DESC
+			        ),
+			        CALCULATE ( [total_despachos] )
+			    )
+			RETURN
+			    IF (
+			        ISBLANK ( _departamentoActual )
+			            || ISBLANK ( _despachosActuales ),
+			        BLANK (),
+			        _acumulado
+			    )
+		formatString: #,0
+		displayFolder: Despachos
 		lineageTag: 28fa9c58-aebe-4188-9ecc-4b9818053775
 
+	/// Total de despachos registrados en el contexto de filtros actual.
 	measure total_despachos = SUM(transporte[DESPACHOS])
 		formatString: #,0
+		displayFolder: Despachos
 		lineageTag: 42252f7c-f7f8-418d-b673-d7734f57c51d
 
-	measure total_despachos_general = ```
-			
-			    SUMX(
-			        ALL(transporte[MUNICIPIO_ORIGEN_RUTA]), [total_despachos])
-			```
+	/// Total de despachos ignorando el filtro de municipio de origen.
+	measure total_despachos_general =
+			CALCULATE (
+			    [total_despachos],
+			    REMOVEFILTERS ( municipiosOrigen ),
+			    municipiosOrigen[departamento] <> BLANK ()
+			)
 		formatString: #,0
+		displayFolder: Despachos
 		lineageTag: c3f7c358-777c-4947-a7d6-a0e6ec373162
 
+	/// Porcentaje acumulado de despachos por departamento de origen.
 	measure porcentaje_acum_despachos_por_departamentos = DIVIDE([acumulado_despachos_por_departamentos],[total_despachos_general],0)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Despachos
 		lineageTag: f68e39e9-2086-4b62-be78-dc5948442b3a
 
+	/// Despachos del mismo periodo del año anterior.
 	measure despachos_periodo_anterior =
 			
 			CALCULATE([total_despachos], DATEADD(Calendario[Date], -1,YEAR))
-		formatString: 0
+		formatString: #,0
+		displayFolder: Variaciones
 		lineageTag: abfa5011-5ca2-42db-84ee-b5fcd521c10b
 
+	/// Variación porcentual de despachos frente al año anterior.
 	measure variacion_anual_despachos = ```
 			
 			VAR Despacho_A_Anterior = 
@@ -53,13 +84,17 @@ table Medidas
 			        DIVIDE(([total_despachos] - Despacho_A_Anterior), Despacho_A_Anterior,2)
 			    )
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: #,0.00\ %;-#,0.00\ %;#,0.00\ %
+		displayFolder: Variaciones
 		lineageTag: 0f34426b-a9e2-4907-aa78-a3b8b1b3299b
 
+	/// Total de pasajeros registrados en el contexto de filtros actual.
 	measure total_pasajeros = SUM(transporte[PASAJEROS])
 		formatString: #,0
+		displayFolder: Pasajeros
 		lineageTag: 90da7bdb-5cd2-4be5-8e1e-6f2ba6c3f066
 
+	/// Variación porcentual de pasajeros frente al año anterior.
 	measure variacion_anual_pasajeros = ```
 			
 			VAR Pasajeros_A_Anterior = 
@@ -72,9 +107,11 @@ table Medidas
 			        DIVIDE(([total_pasajeros] - Pasajeros_A_Anterior),Pasajeros_A_Anterior,2)
 			    )
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: #,0.00\ %;-#,0.00\ %;#,0.00\ %
+		displayFolder: Variaciones
 		lineageTag: ecb7b171-740e-4bf7-8722-1fd9f9a329b4
 
+	/// Variación porcentual de despachos frente al trimestre anterior.
 	measure variacion_trimestral_despachos = ```
 			
 			VAR Despacho_T_Anterior = 
@@ -88,8 +125,10 @@ table Medidas
 			    )
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Variaciones
 		lineageTag: 5b3e9460-fcec-4452-8d8c-7e92fb0a3fe1
 
+	/// Variación porcentual de pasajeros frente al trimestre anterior.
 	measure variacion_trimestral_pasajeros = ```
 			
 			VAR Pasajeros_T_Anterior = 
@@ -103,41 +142,66 @@ table Medidas
 			    )
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Variaciones
 		lineageTag: 34c8ed15-63f5-479b-b4bf-dd72b176beb5
 
-	measure acumulado_pasajeros_por_departamento_destino = ```
-			
-			    VAR Ranking = 
-			    RANKX(
-			        ALL(municipiosDestino[departamento]),
-			        [total_pasajeros]
+	/// Acumulado de pasajeros según el ranking de departamentos de destino.
+	measure acumulado_pasajeros_por_departamento_destino =
+			VAR _pasajerosActuales = [total_pasajeros]
+			VAR _departamentoActual = SELECTEDVALUE ( municipiosDestino[departamento] )
+			VAR _departamentosConDatos =
+			    FILTER (
+			        ALL ( municipiosDestino[departamento] ),
+			        municipiosDestino[departamento] <> BLANK ()
+			            && NOT ISBLANK ( CALCULATE ( [total_pasajeros] ) )
 			    )
-			    VAR AcumuladoP =
-			    SUMX(
-			        TOPN(Ranking, ALL(municipiosDestino[departamento]),
-			            [total_pasajeros],
+			VAR _ranking =
+			    RANKX (
+			        _departamentosConDatos,
+			        CALCULATE ( [total_pasajeros] ),
+			        _pasajerosActuales,
+			        DESC,
+			        DENSE
+			    )
+			VAR _acumulado =
+			    SUMX (
+			        TOPN (
+			            _ranking,
+			            _departamentosConDatos,
+			            CALCULATE ( [total_pasajeros] ),
 			            DESC
 			        ),
-			        [total_pasajeros]
+			        CALCULATE ( [total_pasajeros] )
 			    )
-			    
-			RETURN AcumuladoP
-			```
-		formatString: 0
+			RETURN
+			    IF (
+			        ISBLANK ( _departamentoActual )
+			            || ISBLANK ( _pasajerosActuales ),
+			        BLANK (),
+			        _acumulado
+			    )
+		formatString: #,0
+		displayFolder: Pasajeros
 		lineageTag: 6cbaa858-6866-421d-852e-e467167c28b4
 
-	measure total_pasajeros_general = ```
-			
-			    SUMX(
-			        ALL(transporte), [total_pasajeros])
-			```
+	/// Total de pasajeros ignorando los filtros de la tabla de transporte.
+	measure total_pasajeros_general =
+			CALCULATE (
+			    [total_pasajeros],
+			    REMOVEFILTERS ( municipiosDestino ),
+			    municipiosDestino[departamento] <> BLANK ()
+			)
 		formatString: #,0
+		displayFolder: Pasajeros
 		lineageTag: 47c47a61-c060-42da-b91b-062e1c75d94f
 
+	/// Porcentaje acumulado de pasajeros por departamento de destino.
 	measure porcentaje_acum_pasajeros_por_departamento_destino = DIVIDE([acumulado_pasajeros_por_departamento_destino],[total_pasajeros_general],0)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Pasajeros
 		lineageTag: ade9e413-8f90-484d-8cf5-aa79970726f8
 
+	/// Cantidad de municipios de destino presentes en los datos filtrados.
 	measure total_mun_destino =
 			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
 			RETURN
@@ -146,8 +210,10 @@ table Medidas
 				TREATAS(_codes, municipiosDestino[codigo_municipio])
 			)
 		formatString: #,0
+		displayFolder: Geografía
 		lineageTag: 4720387a-7fc0-4e8f-8a38-04d07b105721
 
+	/// Cantidad de municipios de origen presentes en los datos filtrados.
 	measure total_mun_origen =
 			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
 			RETURN
@@ -156,8 +222,10 @@ table Medidas
 				TREATAS(_codes, municipiosOrigen[codigo_municipio])
 			)
 		formatString: #,0
+		displayFolder: Geografía
 		lineageTag: 6a69ff52-051b-4bee-aaa0-faf312ee4248
 
+	/// Cantidad de departamentos de destino presentes en los datos filtrados.
 	measure total_dpto_destino =
 			VAR _codes = VALUES(transporte[MUNICIPIO_DESTINO_RUTA])
 			RETURN
@@ -166,8 +234,10 @@ table Medidas
 				TREATAS(_codes, municipiosDestino[codigo_municipio])
 			)
 		formatString: #,0
+		displayFolder: Geografía
 		lineageTag: 06c9d4fe-0d6c-4118-885e-ad4ed0515c95
 
+	/// Cantidad de departamentos de origen presentes en los datos filtrados.
 	measure total_dpto_origen =
 			VAR _codes = VALUES(transporte[MUNICIPIO_ORIGEN_RUTA])
 			RETURN
@@ -176,6 +246,7 @@ table Medidas
 				TREATAS(_codes, municipiosOrigen[codigo_municipio])
 			)
 		formatString: #,0
+		displayFolder: Geografía
 		lineageTag: 740bec58-a438-4b16-b07f-4481e996dd54
 
 	column Column

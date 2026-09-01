@@ -46,7 +46,7 @@ Does not apply to fields used only as axes, legends, or filters (categories, dat
 
 ## Step-by-step process
 
-0. **Verify dedicated measures table** (via the MCP's `table_operations`): before creating any measure, confirm the model has a dedicated table to host them (e.g. `_Measures`, `Measures`, `Metrics`). If it doesn't exist:
+0. **Verify dedicated measures table** (via the MCP's `table_operations`): before creating any measure, confirm the model has a dedicated table to host them (e.g. `_Measures`, `Measures`, `Metrics`, `metrics`, `medidas`, `_Medidas`, `0. Medidas`). If it doesn't exist:
    - Create it via `table_operations.create` as a table with no rows and no relationships to the rest of the model.
    - Hide any dummy column it comes with by default (`column_operations.update`).
    - All new measures (and, when reasonable, existing ones loose in fact tables) get organized here, not in `Sales_Table`, `Customers_Table`, etc.
