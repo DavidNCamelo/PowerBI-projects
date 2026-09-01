@@ -36,7 +36,7 @@ table Medidas
 			        BLANK (),
 			        _acumulado
 			    )
-		formatString: 0
+		formatString: #,0
 		displayFolder: Despachos
 		lineageTag: 28fa9c58-aebe-4188-9ecc-4b9818053775
 
@@ -67,7 +67,7 @@ table Medidas
 	measure despachos_periodo_anterior =
 			
 			CALCULATE([total_despachos], DATEADD(Calendario[Date], -1,YEAR))
-		formatString: 0
+		formatString: #,0
 		displayFolder: Variaciones
 		lineageTag: abfa5011-5ca2-42db-84ee-b5fcd521c10b
 
@@ -84,7 +84,7 @@ table Medidas
 			        DIVIDE(([total_despachos] - Despacho_A_Anterior), Despacho_A_Anterior,2)
 			    )
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: #,0.00\ %;-#,0.00\ %;#,0.00\ %
 		displayFolder: Variaciones
 		lineageTag: 0f34426b-a9e2-4907-aa78-a3b8b1b3299b
 
@@ -107,7 +107,7 @@ table Medidas
 			        DIVIDE(([total_pasajeros] - Pasajeros_A_Anterior),Pasajeros_A_Anterior,2)
 			    )
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: #,0.00\ %;-#,0.00\ %;#,0.00\ %
 		displayFolder: Variaciones
 		lineageTag: ecb7b171-740e-4bf7-8722-1fd9f9a329b4
 
@@ -180,7 +180,7 @@ table Medidas
 			        BLANK (),
 			        _acumulado
 			    )
-		formatString: 0
+		formatString: #,0
 		displayFolder: Pasajeros
 		lineageTag: 6cbaa858-6866-421d-852e-e467167c28b4
 

@@ -680,16 +680,6 @@ cultureInfo es-CO
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "Despachos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1881,6 +1871,138 @@ cultureInfo es-CO
 			    }
 			  },
 			  "Relationships": {
+			    "calendario_date_me_has_calendario_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        },
+			        "calendario.date.día": {
+			          "Target": {
+			            "Entity": "calendario.date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "calendario_date_trimestre_has_calendario_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario.date.trimestre"
+			          }
+			        },
+			        "calendario.date.me": {
+			          "Target": {
+			            "Entity": "calendario.date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario.date.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
 			    "calendario_date_año_has_calendario_date_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendario"
@@ -2811,15 +2933,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_porcentaje_acum_pasajeros_por_departamento_destino": {
+			    "medida_has_porcentaje_acum_pasajeros_por_departamento_destino": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.porcentaje_acum_pasajeros_por_departamento_destino": {
@@ -2832,7 +2954,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.porcentaje_acum_pasajeros_por_departamento_destino"
@@ -2840,7 +2962,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_porcentaje_acum_pasajeros_por_departamento_destino"
+			          "ID": "medidas_have_porcentaje_acum_pasajeros_por_departamento_destino"
 			        }
 			      ]
 			    },
@@ -2877,15 +2999,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_acumulado_pasajeros_por_departamento_destino": {
+			    "medida_has_acumulado_pasajeros_por_departamento_destino": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.acumulado_pasajeros_por_departamento_destino": {
@@ -2898,7 +3020,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.acumulado_pasajeros_por_departamento_destino"
@@ -2906,7 +3028,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_acumulado_pasajeros_por_departamento_destino"
+			          "ID": "medidas_have_acumulado_pasajeros_por_departamento_destino"
 			        }
 			      ]
 			    },
@@ -3108,15 +3230,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_porcentaje_acum_despachos_por_departamentos": {
+			    "medida_has_porcentaje_acum_despachos_por_departamentos": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.porcentaje_acum_despachos_por_departamentos": {
@@ -3129,7 +3251,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.porcentaje_acum_despachos_por_departamentos"
@@ -3137,7 +3259,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_porcentaje_acum_despachos_por_departamentos"
+			          "ID": "medidas_have_porcentaje_acum_despachos_por_departamentos"
 			        }
 			      ]
 			    },
@@ -3207,15 +3329,15 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "transporte_has_medida_acumulado_despachos_por_departamentos": {
+			    "medida_has_acumulado_despachos_por_departamentos": {
 			      "Binding": {
-			        "ConceptualEntity": "transporte"
+			        "ConceptualEntity": "Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "transporte": {
+			        "medida": {
 			          "Target": {
-			            "Entity": "transporte"
+			            "Entity": "medida"
 			          }
 			        },
 			        "medida.acumulado_despachos_por_departamentos": {
@@ -3228,7 +3350,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "transporte"
+			              "Role": "medida"
 			            },
 			            "Object": {
 			              "Role": "medida.acumulado_despachos_por_departamentos"
@@ -3236,7 +3358,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "transportes_have_acumulado_despachos_por_departamentos"
+			          "ID": "medidas_have_acumulado_despachos_por_departamentos"
 			        }
 			      ]
 			    },
@@ -3501,138 +3623,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendarios_have_dates"
-			        }
-			      ]
-			    },
-			    "calendario_date_trimestre_has_calendario_date_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "calendario.date.trimestre"
-			          }
-			        },
-			        "calendario.date.me": {
-			          "Target": {
-			            "Entity": "calendario.date.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "calendario_date_me_has_calendario_date_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario.date.me": {
-			          "Target": {
-			            "Entity": "calendario.date.me"
-			          }
-			        },
-			        "calendario.date.día": {
-			          "Target": {
-			            "Entity": "calendario.date.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.me"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario.date.día"
-			            },
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendario.date.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendario.date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me"
 			        }
 			      ]
 			    }
