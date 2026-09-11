@@ -138,8 +138,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#2F80ED'"
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.2
                     }
                   }
                 }
