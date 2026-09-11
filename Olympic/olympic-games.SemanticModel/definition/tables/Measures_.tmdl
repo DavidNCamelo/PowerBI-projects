@@ -1,0 +1,372 @@
+table Measures_
+	lineageTag: 7d78a5ab-93f7-4786-915f-ae61f3d14546
+
+	/// Global medals won by NOC
+	measure 'Total Gobal Medals' = SUM('Olympic Prizes'[Global Medals])
+		formatString: #,0
+		displayFolder: Medals By Country General View
+		lineageTag: 870186d3-873e-48f7-adab-a83ba9b7286e
+
+	/// Medals won by Athlete
+	measure 'Total Medals by Athlete' = SUM('Olympic medalists'[Medals by Athlete])
+		formatString: #,0
+		displayFolder: Medals by Athletes
+		lineageTag: a46e8e55-c131-4ece-9b57-ab0dc5231e0f
+
+	/// Gold medals won by NOC
+	measure 'Gold Medals By NOC' = ```
+			
+			VAR gold = 
+			    CALCULATE(
+			        [Total Gobal Medals],
+			        'Olympic Prizes'[Medal Type by Country] = "Gold"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(gold),
+			    0,
+			    gold
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals By Country General View
+		lineageTag: f6a8253e-7780-42d9-ab60-35a83aea3575
+
+	/// Bronze medals won by NOC
+	measure 'Bronze Medals By NOC' = ```
+			
+			VAR bronze = 
+			    CALCULATE(
+			        [Total Gobal Medals],
+			        'Olympic Prizes'[Medal Type by Country] = "Bronze"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(bronze),
+			    0,
+			    bronze
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals By Country General View
+		lineageTag: 4255fae2-92ab-4cb4-b43c-8544c47fbb3e
+
+	/// Silver medals won by NOC
+	measure 'Silver Medals By NOC' = ```
+			
+			VAR silver = 
+			    CALCULATE(
+			        [Total Gobal Medals],
+			        'Olympic Prizes'[Medal Type by Country] = "Silver"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(silver),
+			    0,
+			    silver
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals By Country General View
+		lineageTag: 8dd9558c-2288-4722-9b39-25c501264368
+
+	/// Gold medals won by Athlete
+	measure 'Gold Medals By Athlete' = ```
+			
+			VAR gold = 
+			    CALCULATE(
+			        [Total Medals by Athlete],
+			        'Olympic medalists'[Medal type by Athlete] = "Gold"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(gold),
+			    0,
+			    gold
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals by Athletes
+		lineageTag: 2c01461e-24b9-4ab1-8d6d-7e2417528431
+
+	/// Silver medals won by Athlete
+	measure 'Silver Medals By Athlete' = ```
+			
+			VAR silver = 
+			    CALCULATE(
+			        [Total Medals by Athlete],
+			        'Olympic medalists'[Medal type by Athlete] = "Silver"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(silver),
+			    0,
+			    silver
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals by Athletes
+		lineageTag: f911bdc3-ea76-4c12-b704-5b64241cae2f
+
+	/// Bronze medals won by Athlete
+	measure 'Bronze Medals By Athlete' = ```
+			
+			VAR bronze = 
+			    CALCULATE(
+			        [Total Medals by Athlete],
+			        'Olympic medalists'[Medal type by Athlete] = "Bronze"
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(bronze),
+			    0,
+			    bronze
+			)
+			```
+		formatString: #,0
+		displayFolder: Medals by Athletes
+		lineageTag: 4858b4ee-d42e-4920-90c7-002231734e78
+
+	/// Count the total of Olympic session showed on the timeline
+	measure 'Olympic Games' = DISTINCTCOUNT('Olympic Overview'[Olympic Session])
+		formatString: #,0
+		lineageTag: f2497a59-9614-463b-a9c9-5d3005827b8f
+
+	/// Count the athletes who have won medals during Olympic Games history
+	measure 'Total Athletes with Medals' = DISTINCTCOUNT('Olympic medalists'[Athlete])
+		formatString: #,0
+		lineageTag: 9bdb8531-3285-4c6b-af6d-721c5b33621b
+
+	/// Show the average of Athletes quantity who participate by Olympic session
+	measure 'Avg Athletes by Olympics' = ROUNDDOWN(AVERAGE('Olympic Overview'[Athletes]), 0)
+		formatString: #,0
+		lineageTag: bb54f4a7-a63d-46d7-953e-1defb8f30329
+
+	/// Count the different disciplines showed in Olympic games during its history
+	measure Sports = DISTINCTCOUNT('Olympic medalists'[Sport])
+		formatString: #,0
+		lineageTag: 0236e520-9f85-484a-8d0c-c63bf044a1f5
+
+	measure 'Start Year' = ```
+			
+			CALCULATE(
+			    MIN('Olympic Overview'[Year]),
+			    RELATEDTABLE('Olympic medalists')
+			)
+			
+			```
+		lineageTag: f14a4a75-6ae9-4b39-90d5-13d09f9f4a66
+
+	measure 'End Year' = ```
+			
+			CALCULATE(
+			    MAX('Olympic Overview'[Year]),
+			    RELATEDTABLE('Olympic medalists')
+			)
+			
+			```
+		lineageTag: 63c55e11-5717-437b-9f50-b2da81b1b77f
+
+	/// Show the Olympic Logos created by each session, just by its corresponding value, and shows the general IOC logo if there aren't any filter.
+	measure Logos =
+			
+			VAR sessions = SELECTEDVALUE('Olympic Overview'[Olympic Logo URL])
+			
+			RETURN
+			IF(
+			    ISBLANK(sessions),
+			    "https://img.olympics.com/images/image/private/t_16-9_760/f_auto/primary/ey95c9ba2tw9hsbzszyx",
+			    sessions
+			)
+		lineageTag: 08c228d2-f97a-480d-84bd-80feaa46c9d9
+		dataCategory: ImageUrl
+
+	/// Retrieve just the tops 5 awarded NOC based on its won medals, showed just based on Gold medals
+	measure 'Top 5 Countries' = ```
+			
+			VAR tops =
+			    TOPN(
+			        5,
+			        ADDCOLUMNS(
+			            ALL('Olympic Countrires'[NOC]),
+			            "Gold", [Gold Medals By NOC],
+			            "Silver", [Silver Medals By NOC],
+			            "Bronze", [Bronze Medals By NOC]
+			        ),
+			        [Gold], DESC,
+			        [Silver], DESC,
+			        [Bronze], DESC
+			    )
+			RETURN
+			CALCULATE(
+			    [Gold Medals By NOC],
+			    KEEPFILTERS(tops)
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: Top Rankings
+		lineageTag: fdbd6885-f57f-4b22-9fa9-f5113ea74f09
+
+	/// Sort the Top values according to the medals quantities won by each NOC
+	measure 'NOC''s Rank' =
+			
+			RANKX(
+			    ALL('Olympic Countrires'[NOC]),
+			    [Gold Medals By NOC] * 10000 + [Silver Medals By NOC] * 100 + [Bronze Medals By NOC],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		displayFolder: Top Rankings
+		lineageTag: dedab7d1-866a-4e59-82c4-8e929854fdd5
+
+	/// It shows all the total Olympic Sessions, without being affected by any filter (at least by the Overview table). Main use of the general text
+	measure 'Fixed Sessions' =
+			
+			CALCULATE(
+			    [Olympic Games],
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		formatString: 0
+		displayFolder: Text Values
+		lineageTag: 091d0763-c7bf-4f3c-af98-9911d1aa7924
+
+	/// It shows the total summer-existing Olympic Sessions, without being affected by any filter (at least by the Overview table). Main use of the general text
+	measure 'Fixed Summer Session' =
+			
+			CALCULATE(
+			    [Olympic Games],
+			    'Olympic Overview'[Season] = "Summer",
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		formatString: 0
+		displayFolder: Text Values
+		lineageTag: b903d9d7-616f-4c7a-be66-5100e137d202
+
+	/// It shows the total winter-existing Olympic Sessions, without being affected by any filter (at least by the Overview table). Main use of the general text
+	measure 'Fixed Winter Sessions' =
+			
+			CALCULATE(
+			    [Olympic Games],
+			    'Olympic Overview'[Season] = "Winter",
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		formatString: 0
+		displayFolder: Text Values
+		lineageTag: 1f89059a-dc74-4d05-9aab-05bce48c3548
+
+	/// It shows the first Winter Olympic Sessions, without being affected by any filter
+	/// Main use of the general text
+	measure 'First Event' =
+			
+			CALCULATE(
+			    MIN('Olympic Overview'[Year]),
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		displayFolder: Text Values
+		lineageTag: 4720f833-6f17-45f7-b8a1-b2fd492c70d5
+
+	/// It shows the first Winter Olympic Sessions, without being affected by any filter
+	/// Main use of the general text
+	measure 'First Winter Event' =
+			
+			CALCULATE(
+			    MIN('Olympic Overview'[Year]),
+			    'Olympic Overview'[Season] = "Winter",
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		displayFolder: Text Values
+		lineageTag: b474be11-f4ee-46ff-9a95-c4647f45a9cc
+
+	/// It shows the total locations where the Olympic Games have happened in history without being affected by any filter.
+	/// Main use of the general text.
+	measure 'Host Cities' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Olympic Overview'[Location]),
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		formatString: 0
+		displayFolder: Text Values
+		lineageTag: a903c6f8-f9b1-4ac0-aedf-52fea4cda693
+
+	/// It shows the host countries where the Olympic Games have happened in history without being affected by any filter.
+	/// Main use of the general text.
+	measure 'Host Countries' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Olympic Overview'[Host Country]),
+			    REMOVEFILTERS('Olympic Overview')
+			)
+		formatString: 0
+		displayFolder: Text Values
+		lineageTag: af3f2c27-d809-4dde-9b01-5a53d0e27e5d
+
+	/// Sort the Top values according to the medals quantities won by each Athlete
+	measure 'Athletes''s Rank' =
+			//Sort the awared athletes by its respectfull medals quantity
+			RANKX(
+			    ALL('Olympic medalists'[Athlete]),
+			    [Gold Medals By Athlete] * 10000 + [Silver Medals By Athlete] * 100 + [Bronze Medals By Athlete],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		displayFolder: Medals by Athletes
+		lineageTag: 253b99e9-a918-465d-ae0b-26f97f54b4f7
+
+	measure 'Interactive Medals' =
+			
+			VAR athlete = SELECTEDVALUE('Olympic medalists'[Athlete])
+			
+			RETURN
+			IF(
+			    ISBLANK(athlete),
+			    [Total Gobal Medals],
+			    [Total Medals by Athlete]
+			)
+		formatString: 0
+		lineageTag: f81bfd2c-e1b8-437d-b861-e76ee8f18958
+
+	/// First Olympic year represented by a country in the medalists data, respecting report filters.
+	measure 'Country Participation Start Year' = MINX('Olympic medalists', VALUE(RIGHT('Olympic medalists'[Event], 4)))
+		formatString: 0
+		displayFolder: Country Participation Timeline
+		lineageTag: ac6424e3-a2a1-4010-905b-e73796828bfb
+
+	/// Span in years between the first and last Olympic events represented by a country in the medalists data, including the terminal year.
+	measure 'Country Participation Duration' =
+			VAR _startYear = [Country Participation Start Year]
+			VAR _endYear = MAXX('Olympic medalists', VALUE(RIGHT('Olympic medalists'[Event], 4)))
+			RETURN
+			    IF(ISBLANK(_startYear) || ISBLANK(_endYear), BLANK(), _endYear - _startYear + 1)
+		formatString: 0
+		displayFolder: Country Participation Timeline
+		lineageTag: 2402bdbf-993c-49a8-9f93-2965582ce1ff
+
+	column Column
+		formatString: 0
+		lineageTag: 4a3f7a84-7cf2-45cf-8ae3-21f2dff5da5c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measures_ = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 8755773669a2429daaeba5a5c81474be
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

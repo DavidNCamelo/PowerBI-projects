@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 1059.6684864227143
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 751,
+            "y": 1675.7637750748902
+          },
+          "nodeIndex": "Olympic Countrires",
+          "nodeLineageTag": "5e7cf5d7-c362-4a7b-9817-626b008e9334",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 447,
+            "y": 1511.7637750748902
+          },
+          "nodeIndex": "Olympic medalists",
+          "nodeLineageTag": "530ecdcd-5ca6-42ab-b45b-9762e251b437",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 69,
+            "y": 1627.7637750748902
+          },
+          "nodeIndex": "Olympic Overview",
+          "nodeLineageTag": "f9436941-2190-4a3c-98ee-2c8834c4f39f",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 457,
+            "y": 1823.7637750748902
+          },
+          "nodeIndex": "Olympic Prizes",
+          "nodeLineageTag": "bee02253-13ff-4aa1-990f-96f003458294",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1048,
+            "y": 1676.2637750748902
+          },
+          "nodeIndex": "Medals Type",
+          "nodeLineageTag": "627a056c-dfd0-4cf9-af0e-84762f790ab8",
+          "size": {
+            "height": 151.88339411866127,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 855.72527923966823,
+            "y": 1060.1038252246706
+          },
+          "nodeIndex": "Measures_",
+          "nodeLineageTag": "7d78a5ab-93f7-4786-915f-ae61f3d14546",
+          "size": {
+            "height": 372.21184180297962,
+            "width": 354.67399133639469
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 61.228937770737673,
+            "y": 1344.7454595967756
+          },
+          "nodeIndex": "Years_Series",
+          "nodeLineageTag": "6a4dc801-a920-4ee1-850a-1153e83eb5a3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1270.7710622292623,
+            "y": 1006.96875
+          },
+          "nodeIndex": "IOC Logo",
+          "nodeLineageTag": "d93033ef-5589-4fa1-966f-b8a306835675",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 79.553182037699784,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

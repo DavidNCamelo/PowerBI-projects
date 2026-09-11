@@ -1,0 +1,58 @@
+table 'Olympic Prizes'
+	lineageTag: bee02253-13ff-4aa1-990f-96f003458294
+
+	column 'Event Name'
+		dataType: string
+		lineageTag: 18018bed-f02b-4248-9e7a-e41b794047e4
+		summarizeBy: none
+		sourceColumn: Event Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Code'
+		dataType: string
+		isHidden
+		lineageTag: e7f2ea7f-2966-41f4-99b7-68025762a8c0
+		summarizeBy: none
+		sourceColumn: Country Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medal Type by Country'
+		dataType: string
+		isHidden
+		lineageTag: c7c7d439-a17e-4e77-ac11-022cc53d8f08
+		summarizeBy: none
+		sourceColumn: Medal Type by Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Global Medals'
+		dataType: int64
+		formatString: 0
+		lineageTag: d109c4fd-8542-4e05-9218-fdd1f4d29192
+		summarizeBy: sum
+		sourceColumn: Global Medals
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Olympic Prizes' = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\Olympic Prizes.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Event Name", type text}, {"Country Code", type text}, {"Gold", Int64.Type}, {"Silver", Int64.Type}, {"Bronze", Int64.Type}}),
+				    #"Se ha anulado la dinamización de las columnas seleccionadas únicamente." = Table.Unpivot(#"Tipo cambiado", {"Gold", "Silver", "Bronze"}, "Atributo", "Valor"),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Se ha anulado la dinamización de las columnas seleccionadas únicamente.",{{"Atributo", "Medal Type by Country"}, {"Valor", "Global Medals"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,77 @@
+table 'Olympic medalists'
+	lineageTag: 530ecdcd-5ca6-42ab-b45b-9762e251b437
+
+	column Event
+		dataType: string
+		isHidden
+		lineageTag: 42c9b2e4-ef01-4b36-a6ea-5a53f4b24ea4
+		summarizeBy: none
+		sourceColumn: Event
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		isHidden
+		lineageTag: 1a46c4c9-ea2f-4a11-a0e7-1d835547ffd5
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Athlete
+		dataType: string
+		lineageTag: 6d3329b9-5cd2-4eda-b397-202bc1f59747
+		summarizeBy: none
+		sourceColumn: Athlete
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sport
+		dataType: string
+		lineageTag: 2cd661f5-cee1-470d-b522-e0f7a66612e5
+		summarizeBy: none
+		sourceColumn: Sport
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medal type by Athlete'
+		dataType: string
+		isHidden
+		lineageTag: 02ee1ea0-022d-4a2c-becf-0b1ac7856640
+		summarizeBy: none
+		sourceColumn: Medal type by Athlete
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medals by Athlete'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d986b5f-60f4-4621-b51b-35b29eae6f30
+		summarizeBy: sum
+		sourceColumn: Medals by Athlete
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Olympic medalists' = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\Olympic medalists.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Event", type text}, {"Country", type text}, {"Athlete", type text}, {"Sport", type text}, {"Gold", Int64.Type}, {"Silver", Int64.Type}, {"Bronze", Int64.Type}}),
+				    #"Se ha anulado la dinamización de las columnas seleccionadas únicamente." = Table.Unpivot(#"Tipo cambiado", {"Gold", "Silver", "Bronze"}, "Atributo", "Valor"),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Se ha anulado la dinamización de las columnas seleccionadas únicamente.",{{"Atributo", "Medal type by Athlete"}, {"Valor", "Medals by Athlete"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

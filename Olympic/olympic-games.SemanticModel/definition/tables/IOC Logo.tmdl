@@ -1,0 +1,23 @@
+table 'IOC Logo'
+	lineageTag: d93033ef-5589-4fa1-966f-b8a306835675
+
+	column 'IOC Logo'
+		dataType: string
+		lineageTag: cb334518-6339-4c53-96e6-305505f92a83
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: IOC Logo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'IOC Logo' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WyigpKSi20tcvLsnMySlKLdbLz6nMLchMLtZLzs/Vz8xNTE8t1i/ShTIyUhNTUot0c/LT83Uz85P1isvSlWJjAQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"IOC Logo" = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"IOC Logo", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

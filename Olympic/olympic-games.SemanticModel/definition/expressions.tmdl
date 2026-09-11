@@ -1,0 +1,29 @@
+expression past_olympics = ```
+		let
+		    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\past_olympics.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}, {"Column2", type text}}),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
+		    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"URL", type text}, {"City", type text}}),
+		    #"Valor reemplazado" = Table.ReplaceValue(
+		    #"Tipo cambiado1", 
+		        each [City], // Columna a modificar
+		        each Text.Proper(Text.Trim(Text.Replace([City], "-", " "))), 
+		        Replacer.ReplaceValue, 
+		        {"City"}
+		),
+		    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Valor reemplazado",{{"City", type text}}),
+		    #"Índice agregado" = Table.AddIndexColumn(#"Tipo cambiado2", "Índice", 1, 1, Int64.Type),
+		    #"Valor reemplazado1" = Table.ReplaceValue(#"Índice agregado","Cortina D Ampezzo 1956","Cortina d'Ampezzo 1956",Replacer.ReplaceText,{"City"}),
+		    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Pyeongchang 2018","PyeongChang 2018",Replacer.ReplaceText,{"City"}),
+		    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2","Garmisch Partenkirchen 1936","Garmisch-Partenkirchen 1936",Replacer.ReplaceText,{"City"}),
+		    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3","St ","St. ",Replacer.ReplaceText,{"URL"}),
+		    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4","Milano Cortina 2026","Milano-Cortina 2026",Replacer.ReplaceText,{"City"})
+		in
+		    #"Valor reemplazado5"
+		```
+	lineageTag: dacce169-2b86-4fab-a4b6-a7bb32ffeecc
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "fb2bc71b54e6377e1192",
+  "displayName": "Top five and Sport's timelines",
+  "displayOption": "FitToPage",
+  "height": 1480,
+  "width": 1500,
+  "visualInteractions": [
+    {
+      "source": "f2db06b8113b14dfaf4e",
+      "target": "9fa7ce659d11c2da55f4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "9fa7ce659d11c2da55f4",
+      "target": "f2db06b8113b14dfaf4e",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3ac2fd198360c04b4dc7",
+      "target": "e82d12054a50895a49b0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3ac2fd198360c04b4dc7",
+      "target": "fbfb570415d6bdb43450",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3ac2fd198360c04b4dc7",
+      "target": "f2db06b8113b14dfaf4e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3ac2fd198360c04b4dc7",
+      "target": "9fa7ce659d11c2da55f4",
+      "type": "NoFilter"
+    }
+  ]
+}

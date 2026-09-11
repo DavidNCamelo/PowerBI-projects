@@ -1,0 +1,29 @@
+relationship AutoDetected_776bd46e-7dc4-4140-bea1-e6ebc97364bc
+	fromColumn: 'Olympic Prizes'.'Country Code'
+	toColumn: 'Olympic Countrires'.NOC
+
+relationship AutoDetected_59aa3280-16f4-4230-99b5-d70621d8ac52
+	fromColumn: 'Olympic Prizes'.'Event Name'
+	toColumn: 'Olympic Overview'.'Olympic Session'
+
+relationship ba22d5ad-656b-c011-2043-132ef46cb4c2
+	fromColumn: 'Olympic medalists'.Country
+	toColumn: 'Olympic Countrires'.NOC
+
+relationship af4966b5-b79d-0fc5-271c-b8cbae5ac5ec
+	fromColumn: 'Olympic medalists'.Event
+	toColumn: 'Olympic Overview'.'Host City - Year'
+
+relationship d7646994-0802-9bab-5ff0-e8cb9a01100f
+	fromColumn: 'Olympic medalists'.'Medal type by Athlete'
+	toColumn: 'Medals Type'.Medal_Type
+
+relationship 8cd7d234-1207-4a7f-e7f9-d3151d07ee9c
+	fromColumn: 'Olympic Prizes'.'Medal Type by Country'
+	toColumn: 'Medals Type'.Medal_Type
+
+relationship fdf6e1b8-10ff-6541-bd31-d1dfd6b64d82
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Olympic Overview'.Year
+	toColumn: Years_Series.Years
+

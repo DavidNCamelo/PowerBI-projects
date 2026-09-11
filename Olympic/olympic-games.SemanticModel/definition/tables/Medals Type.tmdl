@@ -1,0 +1,50 @@
+table 'Medals Type'
+	lineageTag: 627a056c-dfd0-4cf9-af0e-84762f790ab8
+
+	column Medal_Type
+		dataType: string
+		isHidden
+		lineageTag: 0057aac2-9ab5-423c-bf4f-6e21624cb0d0
+		summarizeBy: none
+		sourceColumn: Medal_Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sort medal'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9b5d5bef-d2f8-45d6-bf02-5e68b165c221
+		summarizeBy: sum
+		sourceColumn: Sort medal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medal Type'
+		dataType: string
+		lineageTag: 18324224-e753-4f92-82f7-e5440077acee
+		summarizeBy: none
+		sourceColumn: Medal Type
+		sortByColumn: 'Sort medal'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Medals Type' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wcs/PSVHSUTIE4g/zl7YrgPmxOtFKwZk5ZalFQGEjiFSHAlQEJOlUlJ9XlYqQ7FSAisTGAgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Medal_Type = _t, #"Sort medal" = _t, #"Medal Type" = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Medal_Type", type text}, {"Sort medal", Int64.Type}, {"Medal Type", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
