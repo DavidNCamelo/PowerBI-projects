@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "fbfb570415d6bdb43450",
+  "position": {
+    "x": 0,
+    "y": 412.84210526315792,
+    "z": 2000,
+    "height": 650.421052631579,
+    "width": 851,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pythonVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Olympic medalists"
+                    }
+                  },
+                  "Property": "Sport"
+                }
+              },
+              "queryRef": "Olympic medalists.Sport",
+              "nativeQueryRef": "Sport"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Years_Series"
+                    }
+                  },
+                  "Property": "Years"
+                }
+              },
+              "queryRef": "Years_Series.Years",
+              "nativeQueryRef": "Years"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Olympic medalists"
+                  }
+                },
+                "Property": "Sport"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# El código siguiente, que crea un dataframe y quita las filas duplicadas, siempre se ejecuta y actúa como un preámbulo del script: \n\n# dataset = pandas.DataFrame(Sport, Years)\n# dataset = dataset.drop_duplicates()\n\n# Pegue o escriba aquí el código de script:\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport numpy as np\n\n# Agrupar los datos por deporte y años activos\nsports_data = dataset.groupby(''Sport'')[''Years''].apply(list).reset_index()\n\n# Verificar si el dataset está vacío\nif sports_data.empty:\n    # Caso donde no hay datos: gráfico vacío con mensaje\n    fig, ax = plt.subplots(figsize=(12, 4))  # Altura fija para el mensaje\n    ax.text(0.5, 0.5, ''No hay datos disponibles para el filtro aplicado'', \n            ha=''center'', va=''center'', fontsize=14, color=''gray'', transform=ax.transAxes)\n    ax.axis(''off'')  # Ocultar ejes\n    plt.tight_layout()\n    plt.show()\nelse:\n    # Generar un mapa para compactar los años (ordinal en vez de continuo)\n    unique_years = sorted(dataset[''Years''].unique())\n    year_map = {year: idx for idx, year in enumerate(unique_years)}\n\n    # Usar colores de tab20\n    colors = plt.cm.get_cmap(''tab20'', len(sports_data))  # Hasta 20 colores distintos\n\n    # Calcular la altura del gráfico: dinámica con un mínimo de 6 unidades\n    height = max(len(sports_data) / 2, 6)\n\n    # Crear el gráfico\n    fig, ax = plt.subplots(figsize=(12, height))\n\n    # Recorrer los deportes y graficar sus períodos activos\n    for idx, row in sports_data.iterrows():\n        color = colors(idx)  # Seleccionar color por deporte\n        for year in row[''Years'']:\n            ax.hlines(y=idx, xmin=year_map[year], xmax=year_map[year] + 1, color=color, linewidth=6)\n\n    # Configurar el gráfico\n    ax.set_xlabel(\"Year\", fontsize=12)  # Etiqueta del eje X\n    ax.set_title(\"Winter''s Sports Timeline\", fontsize=16)  # Título del gráfico\n\n    # Configurar ticks del eje X\n    ax.set_xticks(range(len(unique_years)))\n    ax.set_xticklabels(unique_years, rotation=45, fontsize=10)\n\n    # Configurar ticks del eje Y\n    ax.set_yticks(range(len(sports_data)))\n    ax.set_yticklabels(sports_data[''Sport''], fontsize=10)\n\n    # Ajustar márgenes\n    plt.tight_layout()\n    plt.show()\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Python'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Winter Sport Timeline'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "925b777e067188290c06",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1e0fe6dc53c736530f30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Olympic Overview"
+              }
+            },
+            "Property": "Season"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "Olympic Overview",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "o"
+                          }
+                        },
+                        "Property": "Season"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Winter'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

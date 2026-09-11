@@ -1,0 +1,25 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Olympic Countrires","Olympic medalists","Olympic Prizes","Olympic Overview","past_olympics","Medals Type","IOC Logo"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Olympic Countrires'
+ref table 'Olympic medalists'
+ref table 'Olympic Prizes'
+ref table 'Olympic Overview'
+ref table Measures_
+ref table Years_Series
+ref table 'Medals Type'
+ref table 'IOC Logo'
+
+ref cultureInfo es-ES
+

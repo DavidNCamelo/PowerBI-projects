@@ -1,0 +1,39 @@
+table Years_Series
+	lineageTag: 6a4dc801-a920-4ee1-850a-1153e83eb5a3
+
+	column Years
+		formatString: 0
+		lineageTag: 967aeb25-7b88-492e-a166-ef4945dc1c60
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = User
+
+	partition Years_Series = calculated
+		mode: import
+		source = ```
+				
+				VAR StartYear = 1896
+				VAR SummerEndYear = 1992
+				VAR WinterStartYear = 1992
+				VAR EndYear = 2026
+				VAR SummerCycle = 4
+				VAR WinterCycle = 2
+				
+				-- Generar los años de las sesiones de verano (cada 4 años desde 1896 hasta 1992)
+				VAR SummerYears = GENERATESERIES(StartYear, SummerEndYear, SummerCycle)
+				
+				-- Generar los años de las sesiones de invierno (cada 2 años desde 1992)
+				VAR WinterYears = GENERATESERIES(WinterStartYear, EndYear, WinterCycle)
+				
+				-- Unir las dos series sin duplicar el año 1992
+				RETURN
+				UNION(
+				    SummerYears, 
+				    FILTER(WinterYears, [Value] > SummerEndYear)
+				)
+				
+				```
+
+	annotation PBI_Id = df1c5e8a78b04ac1ad8c052170e0299a
+

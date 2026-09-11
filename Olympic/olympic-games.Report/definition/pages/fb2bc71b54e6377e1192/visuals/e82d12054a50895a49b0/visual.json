@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "e82d12054a50895a49b0",
+  "position": {
+    "x": 11.111455108359134,
+    "y": 414.78947368421052,
+    "z": 2000,
+    "height": 798.421052631579,
+    "width": 677.68421052631584,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pythonVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Olympic medalists"
+                    }
+                  },
+                  "Property": "Sport"
+                }
+              },
+              "queryRef": "Olympic medalists.Sport",
+              "nativeQueryRef": "Sport"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Years_Series"
+                    }
+                  },
+                  "Property": "Years"
+                }
+              },
+              "queryRef": "Years_Series.Years",
+              "nativeQueryRef": "Years"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Olympic medalists"
+                  }
+                },
+                "Property": "Sport"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# El código siguiente, que crea un dataframe y quita las filas duplicadas, siempre se ejecuta y actúa como un preámbulo del script: \n\n# dataset = pandas.DataFrame(Sport, Years)\n# dataset = dataset.drop_duplicates()\n\n# Pegue o escriba aquí el código de script:\nimport matplotlib.pyplot as plt\nimport matplotlib.cm as cm\nimport numpy as np\n\n# Agrupar los datos por deporte y años activos\nsports_data = dataset.groupby(''Sport'')[''Years''].apply(list).reset_index()\n\n# Verificar si el dataset está vacío\nif sports_data.empty:\n    # Caso donde no hay datos: gráfico vacío con mensaje\n    fig, ax = plt.subplots(figsize=(12, 8))\n    ax.text(0.5, 0.5, ''No hay datos disponibles para el filtro aplicado'', \n            ha=''center'', va=''center'', fontsize=14, color=''gray'', transform=ax.transAxes)\n    ax.axis(''off'')  # Ocultar ejes\n    plt.show()\nelse:\n    # Generar un mapa para compactar los años (ordinal en vez de continuo)\n    unique_years = sorted(dataset[''Years''].unique())\n    year_map = {year: idx for idx, year in enumerate(unique_years)}\n\n    # Usar una paleta continua para asignar colores a los deportes\n    num_sports = len(sports_data)\n    colors = cm.viridis(np.linspace(0, 1, num_sports))\n\n    # Crear el gráfico con altura fija\n    fig, ax = plt.subplots(figsize=(12, 15))  # Altura fija de 15 para mantener consistencia\n\n    # Recorrer los deportes y graficar sus períodos activos con color por deporte\n    for idx, row in sports_data.iterrows():\n        color = colors[idx]  # Color para el deporte\n        years = row[''Years'']  # Lista de años activos\n\n        if len(years) == 1:\n            # Si solo hay un año, dibujar un punto\n            ax.plot(year_map[years[0]], idx, marker=''o'', color=color, markersize=8)\n        else:\n            # Dibujar una barra horizontal para el rango de años\n            min_year = min(years, key=lambda x: year_map[x])\n            max_year = max(years, key=lambda x: year_map[x])\n            ax.hlines(y=idx, xmin=year_map[min_year], xmax=year_map[max_year], color=color, linewidth=6)\n\n    # Configuración del gráfico\n    ax.set_xlabel(\"Year\", fontsize=12)\n    ax.set_title(\"Summer''s Sports Timeline\", fontsize=14)\n\n    # Configurar ticks del eje X con los años mapeados\n    ax.set_xticks(range(len(unique_years)))\n    ax.set_xticklabels(unique_years, rotation=45, fontsize=10)\n\n    # Configurar ticks del eje Y con los deportes\n    ax.set_yticks(range(len(sports_data)))\n    ax.set_yticklabels(sports_data[''Sport''], fontsize=10)\n\n    # Mejorar legibilidad ajustando márgenes\n    plt.tight_layout(pad=1.0)\n\n    # Mostrar el gráfico\n    plt.show()\n\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Python'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Summer Sport Timeline'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "89f06e5a2e7850e3a5a6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1e0fe6dc53c736530f30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Olympic Overview"
+              }
+            },
+            "Property": "Season"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "Olympic Overview",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "o"
+                          }
+                        },
+                        "Property": "Season"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Summer'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

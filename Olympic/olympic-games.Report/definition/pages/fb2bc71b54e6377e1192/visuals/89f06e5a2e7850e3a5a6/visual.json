@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "89f06e5a2e7850e3a5a6",
+  "position": {
+    "x": 5.2941176470588234,
+    "y": 250,
+    "z": 4000,
+    "height": 1213.2241813602016,
+    "width": 1490,
+    "tabOrder": 5000
+  },
+  "visualGroup": {
+    "displayName": "Summer Visuals",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

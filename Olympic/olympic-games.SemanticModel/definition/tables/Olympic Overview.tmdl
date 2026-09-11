@@ -1,0 +1,157 @@
+table 'Olympic Overview'
+	lineageTag: f9436941-2190-4a3c-98ee-2c8834c4f39f
+
+	column Date
+		dataType: string
+		lineageTag: 0844b9ac-b65e-4ac9-ab30-aead9e453491
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Host Country'
+		dataType: string
+		lineageTag: 88cfd54b-7677-4c10-aa8a-bf4781dd2f06
+		summarizeBy: none
+		sourceColumn: Host Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Athletes
+		dataType: int64
+		formatString: #,0
+		lineageTag: d8ae64ef-2de4-4fc6-8484-f7950516a936
+		summarizeBy: sum
+		sourceColumn: Athletes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Teams
+		dataType: int64
+		formatString: #,0
+		lineageTag: 4bf16c87-24f8-426c-be66-08e80c02a0ef
+		summarizeBy: sum
+		sourceColumn: Teams
+
+		annotation SummarizationSetBy = Automatic
+
+	column Events
+		dataType: int64
+		formatString: #,0
+		lineageTag: 75a3f5a7-8f21-4fbd-9aee-7283dfb6f5e3
+		summarizeBy: sum
+		sourceColumn: Events
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Olympic Session'
+		dataType: string
+		lineageTag: edba9582-2e2b-4fdb-905c-c43316d4a5c4
+		summarizeBy: none
+		sourceColumn: Olympic Session
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Olympic Logo URL'
+		dataType: string
+		lineageTag: 66b6c79d-1ab4-439b-8d23-761fdcfff56a
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Olympic Logo URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Season
+		dataType: string
+		lineageTag: 371a62ba-9ee6-45f0-90c7-8aaaed73c95c
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = Automatic
+
+	column Índice
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a7de0286-9171-4a26-bd81-032272b87890
+		summarizeBy: sum
+		sourceColumn: Índice
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: bd515de2-24a4-45f1-8132-2969ae8ae9ff
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Host City - Year'
+		dataType: string
+		isHidden
+		lineageTag: f684084c-0332-4fd4-8080-725c88be17f2
+		summarizeBy: none
+		sourceColumn: Host City - Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		isHidden
+		lineageTag: 73c0cd4a-6690-4fd7-928e-e015c8864475
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: 2e24f3ae-3e5f-4af6-9d3f-0a15bb68efc2
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Olympic Overview' = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\Olympic Overview.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Date", type text}, {"Country", type text}, {"Athletes", Int64.Type}, {"Teams", Int64.Type}, {"Events", Int64.Type}, {"Event Name", type text}, {"Olympic Logo URL", type text}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Season", each if Text.Contains([Event Name], "Winter") then "Winter" else "Summer"),
+				    #"Texto insertado después del delimitador" = Table.AddColumn(#"Personalizada agregada", "Host City - Year", each Text.AfterDelimiter([Event Name], "Games "), type text),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Texto insertado después del delimitador",{{"Season", type text}}),
+				    TrimmedSeason = Table.TransformColumns(#"Texto insertado después del delimitador", {{"Season", each Text.Trim(_)}}),
+				    ChangedType = Table.TransformColumnTypes(TrimmedSeason, {{"Season", type text}}),
+				    #"Índice agregado" = Table.AddIndexColumn(ChangedType, "Índice", 1, 1, Int64.Type),
+				    #"Texto insertado antes del delimitador" = Table.AddColumn(#"Índice agregado", "Host City", each Text.BeforeDelimiter([#"Host City - Year"], " ", {0, RelativePosition.FromEnd}), type text),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Texto insertado antes del delimitador","United States","United States of America",Replacer.ReplaceText,{"Country"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","China","People's Republic of China",Replacer.ReplaceText,{"Country"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Australia, Sweden","Australia",Replacer.ReplaceText,{"Country"}),
+				    #"Texto insertado después del delimitador1" = Table.AddColumn(#"Valor reemplazado2", "Year", each Text.AfterDelimiter([Event Name], " ", {0, RelativePosition.FromEnd}), type text),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Texto insertado después del delimitador1",".","",Replacer.ReplaceText,{"Host City - Year"}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Valor reemplazado3", {"Host City - Year"}, past_olympics, {"City"}, "past_olympics", JoinKind.LeftOuter),
+				    #"Se expandió past_olympics" = Table.ExpandTableColumn(#"Consultas combinadas1", "past_olympics", {"URL"}, {"URL"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Se expandió past_olympics","St ","St. ",Replacer.ReplaceText,{"Host City - Year"}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Valor reemplazado4", {"Country"}, #"Olympic Countrires", {"Country Name"}, "Olympic Countrires", JoinKind.LeftOuter),
+				    #"Se expandió Olympic Countrires" = Table.ExpandTableColumn(#"Consultas combinadas", "Olympic Countrires", {"NOC"}, {"NOC"}),
+				    #"Columnas combinadas" = Table.CombineColumns(#"Se expandió Olympic Countrires",{"NOC", "Host City"},Combiner.CombineTextByDelimiter(", ", QuoteStyle.None),"Location"),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas combinadas",{{"Country", "Host Country"}, {"Event Name", "Olympic Session"}}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Columnas con nombre cambiado","Olympic Winter Games Milano-Cortina 2026","Olympic Winter Games Milano Cortina 2026",Replacer.ReplaceText,{"Olympic Session"}),
+				    #"Valor reemplazado6" = Table.ReplaceValue(#"Valor reemplazado5","Milano-Cortina 2026","Milano Cortina 2026",Replacer.ReplaceText,{"Host City - Year"})
+				in
+				    #"Valor reemplazado6"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
