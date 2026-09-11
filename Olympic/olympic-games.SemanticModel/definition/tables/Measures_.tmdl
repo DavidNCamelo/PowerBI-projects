@@ -187,7 +187,7 @@ table Measures_
 		lineageTag: 08c228d2-f97a-480d-84bd-80feaa46c9d9
 		dataCategory: ImageUrl
 
-	/// Retrieve just the tops 5 awarded NOC based on its won medals, showed just based on Gold medals 
+	/// Retrieve just the tops 5 awarded NOC based on its won medals, showed just based on Gold medals
 	measure 'Top 5 Countries' = ```
 			
 			VAR tops =
@@ -336,6 +336,22 @@ table Measures_
 			)
 		formatString: 0
 		lineageTag: f81bfd2c-e1b8-437d-b861-e76ee8f18958
+
+	/// First Olympic year represented by a country in the medalists data, respecting report filters.
+	measure 'Country Participation Start Year' = MINX('Olympic medalists', VALUE(RIGHT('Olympic medalists'[Event], 4)))
+		formatString: 0
+		displayFolder: Country Participation Timeline
+		lineageTag: ac6424e3-a2a1-4010-905b-e73796828bfb
+
+	/// Span in years between the first and last Olympic events represented by a country in the medalists data, including the terminal year.
+	measure 'Country Participation Duration' =
+			VAR _startYear = [Country Participation Start Year]
+			VAR _endYear = MAXX('Olympic medalists', VALUE(RIGHT('Olympic medalists'[Event], 4)))
+			RETURN
+			    IF(ISBLANK(_startYear) || ISBLANK(_endYear), BLANK(), _endYear - _startYear + 1)
+		formatString: 0
+		displayFolder: Country Participation Timeline
+		lineageTag: 2402bdbf-993c-49a8-9f93-2965582ce1ff
 
 	column Column
 		formatString: 0

@@ -1590,7 +1590,7 @@
               ]
             },
             "singleVisual": {
-              "visualType": "pythonVisual",
+              "visualType": "barChart",
               "objects": {},
               "orderBy": [
                 {
@@ -1699,7 +1699,7 @@
               ]
             },
             "singleVisual": {
-              "visualType": "pythonVisual",
+              "visualType": "barChart",
               "objects": {},
               "orderBy": [
                 {
