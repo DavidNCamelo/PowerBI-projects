@@ -63,7 +63,7 @@ table 'Olympic medalists'
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\Olympic medalists.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic medalists.csv"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Event", type text}, {"Country", type text}, {"Athlete", type text}, {"Sport", type text}, {"Gold", Int64.Type}, {"Silver", Int64.Type}, {"Bronze", Int64.Type}}),
 				    #"Se ha anulado la dinamización de las columnas seleccionadas únicamente." = Table.Unpivot(#"Tipo cambiado", {"Gold", "Silver", "Bronze"}, "Atributo", "Valor"),
@@ -74,4 +74,3 @@ table 'Olympic medalists'
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
-

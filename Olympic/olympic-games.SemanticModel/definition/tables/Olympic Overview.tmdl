@@ -124,7 +124,7 @@ table 'Olympic Overview'
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\Olympic Overview.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Overview.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Date", type text}, {"Country", type text}, {"Athletes", Int64.Type}, {"Teams", Int64.Type}, {"Events", Int64.Type}, {"Event Name", type text}, {"Olympic Logo URL", type text}}),
 				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Season", each if Text.Contains([Event Name], "Winter") then "Winter" else "Summer"),
@@ -154,4 +154,3 @@ table 'Olympic Overview'
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
-

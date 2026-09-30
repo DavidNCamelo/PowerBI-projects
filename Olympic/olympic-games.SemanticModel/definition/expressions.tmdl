@@ -1,6 +1,6 @@
 expression past_olympics = ```
 		let
-		    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\Olympic\past_olympics.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\past_olympics.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}, {"Column2", type text}}),
 		    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
 		    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"URL", type text}, {"City", type text}}),
@@ -26,4 +26,3 @@ expression past_olympics = ```
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
-
