@@ -22,13 +22,18 @@ table 'Olympic Countrires'
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Countrires.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}, {"Column2", type text}}),
-				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
-				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Country Code", type text}, {"Country Name", type text}}),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado1",{{"Country Code", "NOC"}})
+				    // Loaded the country lookup data from the project CSV.
+				    Source = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Countrires.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    // Set text types before promoting the source headers.
+				    #"Assigned Initial Column Types" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}}),
+				    // Used the first CSV row as the column headers.
+				    #"Promoted Column Headers" = Table.PromoteHeaders(#"Assigned Initial Column Types", [PromoteAllScalars=true]),
+				    // Set the data types for the country lookup fields.
+				    #"Typed Country Fields" = Table.TransformColumnTypes(#"Promoted Column Headers",{{"Country Code", type text}, {"Country Name", type text}}),
+				    // Renamed the country code to the model's NOC field name.
+				    #"Renamed Country Code to NOC" = Table.RenameColumns(#"Typed Country Fields",{{"Country Code", "NOC"}})
 				in
-				    #"Columnas con nombre cambiado"
+				    #"Renamed Country Code to NOC"
 
 	annotation PBI_NavigationStepName = Navegación
 

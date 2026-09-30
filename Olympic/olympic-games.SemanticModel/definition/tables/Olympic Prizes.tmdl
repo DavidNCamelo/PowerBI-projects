@@ -44,13 +44,18 @@ table 'Olympic Prizes'
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Prizes.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Event Name", type text}, {"Country Code", type text}, {"Gold", Int64.Type}, {"Silver", Int64.Type}, {"Bronze", Int64.Type}}),
-				    #"Se ha anulado la dinamización de las columnas seleccionadas únicamente." = Table.Unpivot(#"Tipo cambiado", {"Gold", "Silver", "Bronze"}, "Atributo", "Valor"),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Se ha anulado la dinamización de las columnas seleccionadas únicamente.",{{"Atributo", "Medal Type by Country"}, {"Valor", "Global Medals"}})
+				    // Loaded country medal totals from the project CSV.
+				    Source = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Prizes.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    // Used the first CSV row as the column headers.
+				    #"Promoted Column Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    // Set text and whole-number types for the source fields.
+				    #"Typed Country and Medal Fields" = Table.TransformColumnTypes(#"Promoted Column Headers",{{"Event Name", type text}, {"Country Code", type text}, {"Gold", Int64.Type}, {"Silver", Int64.Type}, {"Bronze", Int64.Type}}),
+				    // Converted medal columns into one row per country and medal type.
+				    #"Unpivoted Medal Counts" = Table.Unpivot(#"Typed Country and Medal Fields", {"Gold", "Silver", "Bronze"}, "Atributo", "Valor"),
+				    // Applied the medal field names used by the semantic model.
+				    #"Renamed Medal Output Columns" = Table.RenameColumns(#"Unpivoted Medal Counts",{{"Atributo", "Medal Type by Country"}, {"Valor", "Global Medals"}})
 				in
-				    #"Columnas con nombre cambiado"
+				    #"Renamed Medal Output Columns"
 
 	annotation PBI_NavigationStepName = Navegación
 

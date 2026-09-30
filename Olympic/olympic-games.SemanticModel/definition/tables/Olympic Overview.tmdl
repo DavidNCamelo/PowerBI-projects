@@ -124,32 +124,54 @@ table 'Olympic Overview'
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Overview.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Date", type text}, {"Country", type text}, {"Athletes", Int64.Type}, {"Teams", Int64.Type}, {"Events", Int64.Type}, {"Event Name", type text}, {"Olympic Logo URL", type text}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Season", each if Text.Contains([Event Name], "Winter") then "Winter" else "Summer"),
-				    #"Texto insertado después del delimitador" = Table.AddColumn(#"Personalizada agregada", "Host City - Year", each Text.AfterDelimiter([Event Name], "Games "), type text),
-				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Texto insertado después del delimitador",{{"Season", type text}}),
-				    TrimmedSeason = Table.TransformColumns(#"Texto insertado después del delimitador", {{"Season", each Text.Trim(_)}}),
-				    ChangedType = Table.TransformColumnTypes(TrimmedSeason, {{"Season", type text}}),
-				    #"Índice agregado" = Table.AddIndexColumn(ChangedType, "Índice", 1, 1, Int64.Type),
-				    #"Texto insertado antes del delimitador" = Table.AddColumn(#"Índice agregado", "Host City", each Text.BeforeDelimiter([#"Host City - Year"], " ", {0, RelativePosition.FromEnd}), type text),
-				    #"Valor reemplazado" = Table.ReplaceValue(#"Texto insertado antes del delimitador","United States","United States of America",Replacer.ReplaceText,{"Country"}),
-				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","China","People's Republic of China",Replacer.ReplaceText,{"Country"}),
-				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1","Australia, Sweden","Australia",Replacer.ReplaceText,{"Country"}),
-				    #"Texto insertado después del delimitador1" = Table.AddColumn(#"Valor reemplazado2", "Year", each Text.AfterDelimiter([Event Name], " ", {0, RelativePosition.FromEnd}), type text),
-				    #"Valor reemplazado3" = Table.ReplaceValue(#"Texto insertado después del delimitador1",".","",Replacer.ReplaceText,{"Host City - Year"}),
-				    #"Consultas combinadas1" = Table.NestedJoin(#"Valor reemplazado3", {"Host City - Year"}, past_olympics, {"City"}, "past_olympics", JoinKind.LeftOuter),
-				    #"Se expandió past_olympics" = Table.ExpandTableColumn(#"Consultas combinadas1", "past_olympics", {"URL"}, {"URL"}),
-				    #"Valor reemplazado4" = Table.ReplaceValue(#"Se expandió past_olympics","St ","St. ",Replacer.ReplaceText,{"Host City - Year"}),
-				    #"Consultas combinadas" = Table.NestedJoin(#"Valor reemplazado4", {"Country"}, #"Olympic Countrires", {"Country Name"}, "Olympic Countrires", JoinKind.LeftOuter),
-				    #"Se expandió Olympic Countrires" = Table.ExpandTableColumn(#"Consultas combinadas", "Olympic Countrires", {"NOC"}, {"NOC"}),
-				    #"Columnas combinadas" = Table.CombineColumns(#"Se expandió Olympic Countrires",{"NOC", "Host City"},Combiner.CombineTextByDelimiter(", ", QuoteStyle.None),"Location"),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas combinadas",{{"Country", "Host Country"}, {"Event Name", "Olympic Session"}}),
-				    #"Valor reemplazado5" = Table.ReplaceValue(#"Columnas con nombre cambiado","Olympic Winter Games Milano-Cortina 2026","Olympic Winter Games Milano Cortina 2026",Replacer.ReplaceText,{"Olympic Session"}),
-				    #"Valor reemplazado6" = Table.ReplaceValue(#"Valor reemplazado5","Milano-Cortina 2026","Milano Cortina 2026",Replacer.ReplaceText,{"Host City - Year"})
+				    // Loaded Olympic host statistics from the project CSV.
+				    Source = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\Olympic Overview.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    // Used the first CSV row as the column headers.
+				    #"Promoted Column Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    // Set text and whole-number types for the source fields.
+				    #"Typed Olympic Overview Fields" = Table.TransformColumnTypes(#"Promoted Column Headers",{{"Date", type text}, {"Country", type text}, {"Athletes", Int64.Type}, {"Teams", Int64.Type}, {"Events", Int64.Type}, {"Event Name", type text}, {"Olympic Logo URL", type text}}),
+				    // Derived each event's season from its name.
+				    #"Added Olympic Season" = Table.AddColumn(#"Typed Olympic Overview Fields", "Season", each if Text.Contains([Event Name], "Winter") then "Winter" else "Summer"),
+				    // Extracted the host city and year portion of the event name.
+				    #"Added Host City and Year" = Table.AddColumn(#"Added Olympic Season", "Host City - Year", each Text.AfterDelimiter([Event Name], "Games "), type text),
+				    // Set the season field to text before trimming its values.
+				    #"Typed Olympic Season" = Table.TransformColumnTypes(#"Added Host City and Year",{{"Season", type text}}),
+				    // Removed leading and trailing whitespace from season labels.
+				    #"Trimmed Olympic Season Labels" = Table.TransformColumns(#"Typed Olympic Season", {{"Season", each Text.Trim(_)}}),
+				    // Added a sequential row index for downstream report usage.
+				    #"Added Olympic Row Index" = Table.AddIndexColumn(#"Trimmed Olympic Season Labels", "Índice", 1, 1, Int64.Type),
+				    // Extracted each host city from the city-year label.
+				    #"Extracted Host City" = Table.AddColumn(#"Added Olympic Row Index", "Host City", each Text.BeforeDelimiter([#"Host City - Year"], " ", {0, RelativePosition.FromEnd}), type text),
+				    // Expanded the United States country name for consistent matching.
+				    #"Standardized United States Country Name" = Table.ReplaceValue(#"Extracted Host City","United States","United States of America",Replacer.ReplaceText,{"Country"}),
+				    // Expanded China's country name for consistent matching.
+				    #"Standardized China Country Name" = Table.ReplaceValue(#"Standardized United States Country Name","China","People's Republic of China",Replacer.ReplaceText,{"Country"}),
+				    // Resolved a combined country value to its host country.
+				    #"Corrected Australia Host Country" = Table.ReplaceValue(#"Standardized China Country Name","Australia, Sweden","Australia",Replacer.ReplaceText,{"Country"}),
+				    // Extracted the event year from the final word of the event name.
+				    #"Extracted Olympic Year" = Table.AddColumn(#"Corrected Australia Host Country", "Year", each Text.AfterDelimiter([Event Name], " ", {0, RelativePosition.FromEnd}), type text),
+				    // Removed periods so city-year values match the history lookup.
+				    #"Removed Host City Year Periods" = Table.ReplaceValue(#"Extracted Olympic Year",".","",Replacer.ReplaceText,{"Host City - Year"}),
+				    // Matched host city-year values to historical event URLs.
+				    #"Joined Historical Event URLs" = Table.NestedJoin(#"Removed Host City Year Periods", {"Host City - Year"}, past_olympics, {"City"}, "past_olympics", JoinKind.LeftOuter),
+				    // Expanded any matching historical URL for each Olympic event.
+				    #"Expanded Historical Event URLs" = Table.ExpandTableColumn(#"Joined Historical Event URLs", "past_olympics", {"URL"}, {"URL"}),
+				    // Standardized the St. abbreviation in host city-year values.
+				    #"Standardized Host City Abbreviation" = Table.ReplaceValue(#"Expanded Historical Event URLs","St ","St. ",Replacer.ReplaceText,{"Host City - Year"}),
+				    // Matched host countries to their National Olympic Committee codes.
+				    #"Joined Olympic Country Codes" = Table.NestedJoin(#"Standardized Host City Abbreviation", {"Country"}, #"Olympic Countrires", {"Country Name"}, "Olympic Countrires", JoinKind.LeftOuter),
+				    // Expanded any matching NOC code for each host event.
+				    #"Expanded Olympic Country Codes" = Table.ExpandTableColumn(#"Joined Olympic Country Codes", "Olympic Countrires", {"NOC"}, {"NOC"}),
+				    // Combined each NOC code and host city into a location label.
+				    #"Combined Olympic Location" = Table.CombineColumns(#"Expanded Olympic Country Codes",{"NOC", "Host City"},Combiner.CombineTextByDelimiter(", ", QuoteStyle.None),"Location"),
+				    // Renamed source fields to their semantic-model names.
+				    #"Renamed Olympic Overview Fields" = Table.RenameColumns(#"Combined Olympic Location",{{"Country", "Host Country"}, {"Event Name", "Olympic Session"}}),
+				    // Standardized punctuation in the Milano-Cortina session name.
+				    #"Standardized Milano Cortina Session" = Table.ReplaceValue(#"Renamed Olympic Overview Fields","Olympic Winter Games Milano-Cortina 2026","Olympic Winter Games Milano Cortina 2026",Replacer.ReplaceText,{"Olympic Session"}),
+				    // Standardized punctuation in the Milano-Cortina host city label.
+				    #"Standardized Milano Cortina Host City" = Table.ReplaceValue(#"Standardized Milano Cortina Session","Milano-Cortina 2026","Milano Cortina 2026",Replacer.ReplaceText,{"Host City - Year"})
 				in
-				    #"Valor reemplazado6"
+				    #"Standardized Milano Cortina Host City"
 
 	annotation PBI_NavigationStepName = Navegación
 
