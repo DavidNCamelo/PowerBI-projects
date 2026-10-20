@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b2ce2310d3989980108c",
   "position": {
     "x": 7.6216712580348949,
@@ -102,10 +102,10 @@
                     "Entity": "Measures_"
                   }
                 },
-                "Property": "Athletes's Rank"
+                "Property": "Gold Medals By Athlete"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -436,52 +436,123 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Olympic Countrires"
+                "Entity": "Olympic medalists"
               }
             },
-            "Property": "NOC"
+            "Property": "Country"
           }
         },
-        "type": "Advanced",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "o",
-              "Entity": "Olympic Countrires",
+              "Name": "m",
+              "Entity": "Olympic medalists",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "o"
-                            }
-                          },
-                          "Property": "NOC"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "null"
-                        }
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "Country"
                       }
                     }
-                  }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'COL'"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "8dcb4a469b8d28445780",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures_"
+              }
+            },
+            "Property": "Athletes's Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4ae3a9320371b49b2b9b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Olympic medalists"
+              }
+            },
+            "Property": "Athlete"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "407251081a880049fc39",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures_"
+              }
+            },
+            "Property": "Gold Medals By Athlete"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8d42fa6180fa457fdcc3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures_"
+              }
+            },
+            "Property": "Silver Medals By Athlete"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "33a260bbc4c08604fd94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures_"
+              }
+            },
+            "Property": "Bronze Medals By Athlete"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

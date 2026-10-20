@@ -314,7 +314,7 @@ table Measures_
 	measure 'Athletes''s Rank' =
 			//Sort the awared athletes by its respectfull medals quantity
 			RANKX(
-			    ALL('Olympic medalists'[Athlete]),
+			    ALLSELECTED('Olympic medalists'[Athlete]),
 			    [Gold Medals By Athlete] * 10000 + [Silver Medals By Athlete] * 100 + [Bronze Medals By Athlete],
 			    ,
 			    DESC,
@@ -352,6 +352,22 @@ table Measures_
 		formatString: 0
 		displayFolder: Country Participation Timeline
 		lineageTag: 2402bdbf-993c-49a8-9f93-2965582ce1ff
+
+	/// Indicates whether the athlete has medal records for a selected NOC.
+	measure 'Athlete Has Selected NOC' =
+			VAR _matchingRows =
+			    CALCULATE(
+			        COUNTROWS('Olympic medalists'),
+			        TREATAS(
+			            VALUES('Olympic Countrires'[NOC]),
+			            'Olympic medalists'[Country]
+			        )
+			    )
+			RETURN
+			    IF(_matchingRows > 0, 1, BLANK())
+		formatString: 0
+		displayFolder: Medals by Athletes
+		lineageTag: 436ef0fa-96aa-4cf6-84e1-684145c8024a
 
 	column Column
 		formatString: 0
