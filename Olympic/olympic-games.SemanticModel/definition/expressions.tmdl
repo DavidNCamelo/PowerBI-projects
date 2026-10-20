@@ -1,4 +1,4 @@
-expression past_olympics = ```
+expression past_olympics =
 		let
 		    // Loaded historical Olympic host links from the project CSV.
 		    Source = Csv.Document(File.Contents("C:\Users\NICOL\OneDrive\28 octubre\HV\ProcesosSelección\Extra\PowerBI-projects\Olympic\data\past_olympics.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
@@ -30,9 +30,9 @@ expression past_olympics = ```
 		    #"Corrected Milano Cortina City Name" = Table.ReplaceValue(#"Standardized Historical Event URLs","Milano Cortina 2026","Milano-Cortina 2026",Replacer.ReplaceText,{"City"})
 		in
 		    #"Corrected Milano Cortina City Name"
-		```
 	lineageTag: dacce169-2b86-4fab-a4b6-a7bb32ffeecc
 
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
+
