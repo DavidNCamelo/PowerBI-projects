@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "5dbd247976b127a94176",
   "position": {
     "x": 718.75,
@@ -138,34 +138,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "57feb673d0d19143a42d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "total_despachos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8b569ff3298e57aa2109",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "porcentaje_acum_despachos_por_departamentos"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "556efa6a1191073d26bd",
         "field": {

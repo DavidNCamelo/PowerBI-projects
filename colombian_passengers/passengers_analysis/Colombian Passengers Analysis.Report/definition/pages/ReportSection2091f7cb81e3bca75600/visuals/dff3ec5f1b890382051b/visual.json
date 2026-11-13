@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dff3ec5f1b890382051b",
   "position": {
     "x": 551.81818181818176,
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "transporte.NIVEL_SERVICIO",
-              "nativeQueryRef": "NIVEL_SERVICIO",
-              "active": true
+              "nativeQueryRef": "Nivel de Servicio",
+              "active": true,
+              "displayName": "Nivel de Servicio"
             }
           ]
         },
@@ -155,6 +156,19 @@
             ]
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -165,6 +179,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Pasajeros por Nivel de Servicio'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }

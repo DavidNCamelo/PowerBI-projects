@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "c1ed324a07bb5111ab08",
   "position": {
     "x": 187.0288624787776,
@@ -158,20 +158,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "837347151768080db793",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "porcentaje_acum_pasajeros_por_departamento_destino"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "109e13f30e0ad9a81d7e",
         "field": {
           "Column": {
@@ -222,20 +208,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "25596eed4c203bba3094",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "total_pasajeros"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
