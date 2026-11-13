@@ -189,6 +189,13 @@
                   "Value": "'Histórico Pasajeros y Despachos'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

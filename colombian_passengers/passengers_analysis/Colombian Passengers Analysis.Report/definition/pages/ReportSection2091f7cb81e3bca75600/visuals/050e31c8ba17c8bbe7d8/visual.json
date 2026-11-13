@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "050e31c8ba17c8bbe7d8",
   "position": {
     "x": 185.45454545454544,
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "transporte.NIVEL_SERVICIO",
-              "nativeQueryRef": "NIVEL_SERVICIO1",
-              "active": true
+              "nativeQueryRef": "Nivel de Servicio",
+              "active": true,
+              "displayName": "Nivel de Servicio"
             }
           ]
         },
@@ -121,7 +122,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#a0a7d8'"
+                      "Value": "'#009E73'"
                     }
                   }
                 }
@@ -155,6 +156,19 @@
             ]
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -165,6 +179,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Despachos por Nivel de Servicio'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }

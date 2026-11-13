@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "db2a19455e8061671d51",
   "position": {
     "x": 661.33333333333337,
@@ -98,7 +98,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -139,7 +139,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -180,7 +180,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -221,7 +221,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -262,7 +262,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -303,7 +303,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -344,7 +344,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -385,7 +385,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -426,7 +426,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -467,7 +467,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -508,7 +508,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -549,7 +549,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -590,7 +590,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -631,7 +631,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -672,7 +672,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -713,7 +713,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -754,7 +754,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -795,7 +795,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -836,7 +836,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -877,7 +877,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -918,7 +918,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -959,7 +959,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1000,7 +1000,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1041,7 +1041,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1082,7 +1082,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1123,7 +1123,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1164,7 +1164,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1205,7 +1205,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1246,7 +1246,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1287,7 +1287,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1328,7 +1328,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1369,7 +1369,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1410,7 +1410,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1451,7 +1451,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1492,7 +1492,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1533,7 +1533,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -1574,7 +1574,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#118DFF'"
+                      "Value": "'#0072B2'"
                     }
                   }
                 }
@@ -2777,7 +2777,7 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "4.83D"
+                  "Value": "4.8D"
                 }
               }
             },

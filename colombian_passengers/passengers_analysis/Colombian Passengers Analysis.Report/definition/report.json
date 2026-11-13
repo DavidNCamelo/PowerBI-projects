@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Custom3570150705142121.json",
+      "name": "Custom-800fb061.json",
       "reportVersionAtImport": {
         "visual": "1.8.82",
         "report": "2.0.82",
@@ -65,8 +65,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Custom3570150705142121.json",
-          "path": "Custom3570150705142121.json",
+          "name": "Custom-800fb061.json",
+          "path": "Custom-800fb061.json",
           "type": "CustomTheme"
         }
       ]
