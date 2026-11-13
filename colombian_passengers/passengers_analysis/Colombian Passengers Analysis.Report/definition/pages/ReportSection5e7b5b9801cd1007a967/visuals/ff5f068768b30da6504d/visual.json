@@ -5,7 +5,7 @@
     "x": 205.69681328887026,
     "y": 2.7312269940418705,
     "z": 2000,
-    "height": 57.45331069609508,
+    "height": 72,
     "width": 182.13921901528013,
     "tabOrder": 4000
   },
@@ -71,7 +71,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "21D"
                 }
               }
             }
@@ -132,7 +132,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "13D"
                 }
               }
             }
@@ -167,7 +167,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#A7C0DA'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
