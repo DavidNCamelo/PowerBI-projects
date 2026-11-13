@@ -450,6 +450,19 @@
             ]
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {

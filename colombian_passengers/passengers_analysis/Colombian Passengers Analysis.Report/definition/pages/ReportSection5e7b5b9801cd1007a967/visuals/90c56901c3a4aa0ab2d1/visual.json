@@ -148,6 +148,13 @@
                   "Value": "'Despachos por Departamento de Origen'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

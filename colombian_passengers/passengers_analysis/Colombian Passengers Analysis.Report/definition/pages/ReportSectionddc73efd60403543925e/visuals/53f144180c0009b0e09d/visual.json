@@ -137,6 +137,13 @@
                   "Value": "'Pasajeros y Despachos por Hora de Despacho'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

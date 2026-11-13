@@ -123,6 +123,13 @@
                   "Value": "'Variación Trimestral Pasajeros y Despachos'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

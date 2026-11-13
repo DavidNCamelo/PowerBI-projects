@@ -148,6 +148,13 @@
                   "Value": "'Pasajeros por Departamento Destino'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

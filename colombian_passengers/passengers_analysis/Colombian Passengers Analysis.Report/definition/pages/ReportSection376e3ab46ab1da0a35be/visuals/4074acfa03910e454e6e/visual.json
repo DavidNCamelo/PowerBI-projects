@@ -222,6 +222,13 @@
                   "Value": "'Pasajeros y Despachos por Tipo de Vehículo'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }

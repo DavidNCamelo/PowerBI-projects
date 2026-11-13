@@ -94,6 +94,13 @@
                   "Value": "'Pasajeros por Tipo de Despacho'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }
